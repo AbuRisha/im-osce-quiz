@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>IM OSCE Study Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:#0f172a;color:#e2e8f0;padding:16px;max-width:1100px;margin:0 auto;-webkit-text-size-adjust:100%}
+h1{text-align:center;font-size:1.6em;margin-bottom:6px;color:#38bdf8}
+.sub{text-align:center;color:#94a3b8;margin-bottom:16px;font-size:.9em}
+.ctrls{text-align:center;margin-bottom:16px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.ctrls button{background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:10px 14px;border-radius:6px;cursor:pointer;font-size:.85em}
+.cc{background:#1e293b;border:1px solid #334155;border-radius:12px;margin-bottom:14px;overflow:hidden}
+.ch{padding:14px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ch h2{font-size:1em;color:#38bdf8;flex:1}
+.tg{font-size:.7em;background:#0ea5e9;color:#0f172a;padding:2px 7px;border-radius:10px;font-weight:600;white-space:nowrap}
+.score-badge{font-size:.7em;background:#334155;color:#94a3b8;padding:2px 7px;border-radius:10px;margin-left:4px;white-space:nowrap}
+.score-badge.done{background:#22c55e;color:#0f172a}
+.score-badge.partial{background:#f59e0b;color:#0f172a}
+.ar{transition:transform .2s;font-size:1.1em;color:#64748b;flex-shrink:0}
+.cc.open .ar{transform:rotate(90deg)}
+.cb{display:none;padding:0 16px 16px}
+.cc.open .cb{display:block}
+.st{background:#0f172a;padding:12px;border-radius:8px;margin-bottom:12px;border-left:3px solid #0ea5e9;line-height:1.6;font-size:.9em}
+.ic{text-align:center;margin:12px 0}
+.ic img{max-width:100%;height:auto;border-radius:8px;border:1px solid #334155}
+.qblock{margin-bottom:14px;padding:12px;background:#0f172a;border-radius:8px;border:1px solid #1e293b}
+.qblock .qlabel{font-weight:600;color:#38bdf8;margin-bottom:8px;font-size:.9em;line-height:1.4}
+.qblock textarea{width:100%;background:#1e293b;border:1px solid #334155;color:#e2e8f0;border-radius:6px;padding:10px;font-family:inherit;font-size:16px;resize:vertical;min-height:70px;margin-bottom:8px;-webkit-appearance:none}
+.qblock textarea:focus{outline:none;border-color:#0ea5e9}
+.qblock textarea:disabled{opacity:.7}
+.reveal-btn{background:#0ea5e9;color:#0f172a;border:none;padding:10px 16px;border-radius:6px;cursor:pointer;font-weight:600;font-size:.9em;width:100%;-webkit-appearance:none}
+.reveal-btn:disabled{background:#334155;color:#64748b;cursor:default}
+.model-ans{display:none;margin-top:10px;padding:12px;background:#162032;border-radius:6px;border-left:3px solid #22c55e;line-height:1.6;font-size:.9em}
+.model-ans.show{display:block}
+.model-ans .ma-label{color:#22c55e;font-weight:600;font-size:.85em;margin-bottom:4px}
+.grade-btns{margin-top:8px;display:none;gap:6px}
+.grade-btns.show{display:flex;flex-wrap:wrap}
+.grade-btn{padding:10px 0;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:.9em;flex:1;min-width:80px;text-align:center;-webkit-appearance:none}
+.grade-btn.correct{background:#22c55e;color:#0f172a}
+.grade-btn.partial-btn{background:#f59e0b;color:#0f172a}
+.grade-btn.wrong{background:#ef4444;color:white}
+.grade-btn:disabled{opacity:.5;cursor:default}
+.grade-result{margin-top:6px;padding:4px 10px;border-radius:4px;font-size:.85em;font-weight:600;display:none}
+.grade-result.show{display:inline-block}
+.grade-result.g-correct{background:#22c55e20;color:#22c55e;border:1px solid #22c55e40}
+.grade-result.g-partial{background:#f59e0b20;color:#f59e0b;border:1px solid #f59e0b40}
+.grade-result.g-wrong{background:#ef444420;color:#ef4444;border:1px solid #ef444440}
+.score-bar{margin-top:14px;padding:12px;background:#0f172a;border-radius:8px;border:1px solid #334155;text-align:center}
+.score-bar .score-text{font-size:1em;font-weight:700;color:#38bdf8}
+.score-bar .score-fill{height:8px;border-radius:4px;background:#334155;margin-top:8px;overflow:hidden}
+.score-bar .score-fill-inner{height:100%;border-radius:4px;transition:width .4s ease,background .4s ease}
+.reset-btn{background:#334155;color:#94a3b8;border:none;padding:10px 16px;border-radius:6px;cursor:pointer;font-size:.85em;margin-top:10px;width:100%;-webkit-appearance:none}
+.at{background:#0ea5e9;color:#0f172a;border:none;padding:12px 20px;border-radius:6px;cursor:pointer;font-weight:600;font-size:.95em;width:100%;-webkit-appearance:none}
+.ak{display:none;background:#162032;padding:14px;border-radius:8px;border-left:3px solid #22c55e;margin-top:12px;text-align:left}
+.ak.v{display:block}
+.ak h3{color:#22c55e;margin-bottom:10px;font-size:1em}
+.ak ol{padding-left:20px}
+.ak li{margin-bottom:8px;line-height:1.5;font-size:.9em}
+.pl{background:#1a1a2e;padding:12px;border-radius:8px;margin-top:12px;border-left:3px solid #f59e0b;font-size:.9em}
+.pl strong{color:#f59e0b}
+.rc{background:#1e293b;border:1px solid #334155;border-radius:12px;margin-bottom:14px;overflow:hidden}
+.rh{padding:14px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#162032}
+.rh h2{font-size:1em;color:#f59e0b}
+.rb{display:none;padding:16px}
+.rc.open .rb{display:block}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.85em}
+th{background:#0f172a;color:#38bdf8;padding:6px 8px;text-align:left;border:1px solid #334155}
+td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
+</style>
+</head>
+<body>
+<h1>IM OSCE Study Guide</h1>
+<p class="sub">16 Cases &bull; Type answers, check, grade yourself</p>
+<div class="ctrls">
+<button onclick="toggleAll(true)">Expand All</button>
+<button onclick="toggleAll(false)">Collapse All</button>
+<button onclick="document.getElementById('refs').scrollIntoView({behavior:'smooth'})">Reference Sheets</button>
+<button onclick="resetAll()" style="background:#7f1d1d;color:#fca5a5">Reset All</button>
+</div>
+<div class="cc" id="c1">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 1 &mdash; Miliary TB <span class="score-badge" id="c1_badge"></span></h2>
+<div><span class="tg">CXR</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">38-year-old male, presents to ER with marked fatigue, difficulty breathing, low-grade fever, night sweats, anorexia and weight loss for 4 months.</div>
+<div class="ic"><img src="img/case1.png" alt="Case 1" loading="lazy"></div>
+<div class="qblock" id="c1q0">
+<div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
+<textarea id="c1q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c1q0_rev" onclick="revealAnswer('c1q0')">Check Answer</button>
+<div class="model-ans" id="c1q0_ma"><div class="ma-label">Model Answer:</div>Diffuse bilateral fine nodular (miliary) opacities in a uniform millet-seed pattern.</div>
+<div class="grade-btns" id="c1q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c1q0',1,1,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c1q0',0.5,1,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c1q0',0,1,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c1q0_gr"></div>
+</div>
+<div class="qblock" id="c1q1">
+<div class="qlabel">Q2. Give the differential diagnosis.</div>
+<textarea id="c1q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c1q1_rev" onclick="revealAnswer('c1q1')">Check Answer</button>
+<div class="model-ans" id="c1q1_ma"><div class="ma-label">Model Answer:</div>Miliary TB, sarcoidosis, metastatic malignancy, fungal infection (histoplasmosis).</div>
+<div class="grade-btns" id="c1q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c1q1',1,1,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c1q1',0.5,1,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c1q1',0,1,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c1q1_gr"></div>
+</div>
+<div class="qblock" id="c1q2">
+<div class="qlabel">Q3. List further investigations to reach the final diagnosis.</div>
+<textarea id="c1q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c1q2_rev" onclick="revealAnswer('c1q2')">Check Answer</button>
+<div class="model-ans" id="c1q2_ma"><div class="ma-label">Model Answer:</div>Sputum AFB smear + culture + GeneXpert (TB-PCR) &mdash; the most important. Plus: tuberculin skin test / IGRA, HRCT chest, CBC, ESR/CRP, HIV test, baseline LFTs.</div>
+<div class="grade-btns" id="c1q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c1q2',1,1,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c1q2',0.5,1,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c1q2',0,1,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c1q2_gr"></div>
+</div>
+<div class="qblock" id="c1q3">
+<div class="qlabel">Q4. What medications would you start the patient on?</div>
+<textarea id="c1q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c1q3_rev" onclick="revealAnswer('c1q3')">Check Answer</button>
+<div class="model-ans" id="c1q3_ma"><div class="ma-label">Model Answer:</div>Full RIPE regimen: Rifampicin + Isoniazid + Pyrazinamide + Ethambutol (2 months intensive, then R+I for 4 months). Add Pyridoxine (B6) with isoniazid to prevent neuropathy.</div>
+<div class="grade-btns" id="c1q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c1q3',1,1,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c1q3',0.5,1,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c1q3',0,1,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c1q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c1_sb">
+<div class="score-text" id="c1_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c1_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(1,4)">Reset Case 1</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Diffuse bilateral fine nodular (miliary) opacities in a uniform millet-seed pattern.</li><li>Miliary TB, sarcoidosis, metastatic malignancy, fungal infection (histoplasmosis).</li><li>Sputum AFB smear + culture + GeneXpert (TB-PCR) &mdash; the most important. Plus: tuberculin skin test / IGRA, HRCT chest, CBC, ESR/CRP, HIV test, baseline LFTs.</li><li>Full RIPE regimen: Rifampicin + Isoniazid + Pyrazinamide + Ethambutol (2 months intensive, then R+I for 4 months). Add Pyridoxine (B6) with isoniazid to prevent neuropathy.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Miliary = millet seeds = 1-3 mm uniform nodules. Young adult + months of night sweats + weight loss = TB until proven otherwise. Sputum AFB/GeneXpert is your move.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c2">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 2 &mdash; Lung Mass (Bronchogenic Ca) <span class="score-badge" id="c2_badge"></span></h2>
+<div><span class="tg">CXR</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">66-year-old male, heavy smoker. Pulmonology clinic with left-sided chest pain, progressive exertional dyspnea and marked weight loss over 4 months.</div>
+<div class="ic"><img src="img/case2.png" alt="Case 2" loading="lazy"></div>
+<div class="qblock" id="c2q0">
+<div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
+<textarea id="c2q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c2q0_rev" onclick="revealAnswer('c2q0')">Check Answer</button>
+<div class="model-ans" id="c2q0_ma"><div class="ma-label">Model Answer:</div>Large, well-defined, rounded, homogenous opacity (mass) in the left upper lobe. Soft-tissue density, no air bronchogram.</div>
+<div class="grade-btns" id="c2q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c2q0',1,2,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c2q0',0.5,2,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c2q0',0,2,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c2q0_gr"></div>
+</div>
+<div class="qblock" id="c2q1">
+<div class="qlabel">Q2. Give the differential diagnosis.</div>
+<textarea id="c2q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c2q1_rev" onclick="revealAnswer('c2q1')">Check Answer</button>
+<div class="model-ans" id="c2q1_ma"><div class="ma-label">Model Answer:</div>Bronchogenic carcinoma (top), solitary metastasis, tuberculoma, sarcoidosis, lung abscess, hydatid cyst, pulmonary infarction.</div>
+<div class="grade-btns" id="c2q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c2q1',1,2,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c2q1',0.5,2,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c2q1',0,2,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c2q1_gr"></div>
+</div>
+<div class="qblock" id="c2q2">
+<div class="qlabel">Q3. List investigations needed to reach the final diagnosis.</div>
+<textarea id="c2q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c2q2_rev" onclick="revealAnswer('c2q2')">Check Answer</button>
+<div class="model-ans" id="c2q2_ma"><div class="ma-label">Model Answer:</div>ESR, CRP, CBC, tuberculin skin test, sputum AFB. CT chest (characterize + stage). Biopsy of the mass (CT-guided or bronchoscopy) for histology &mdash; the definitive diagnostic step. PET-CT for staging.</div>
+<div class="grade-btns" id="c2q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c2q2',1,2,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c2q2',0.5,2,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c2q2',0,2,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c2q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c2_sb">
+<div class="score-text" id="c2_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c2_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(2,3)">Reset Case 2</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Large, well-defined, rounded, homogenous opacity (mass) in the left upper lobe. Soft-tissue density, no air bronchogram.</li><li>Bronchogenic carcinoma (top), solitary metastasis, tuberculoma, sarcoidosis, lung abscess, hydatid cyst, pulmonary infarction.</li><li>ESR, CRP, CBC, tuberculin skin test, sputum AFB. CT chest (characterize + stage). Biopsy of the mass (CT-guided or bronchoscopy) for histology &mdash; the definitive diagnostic step. PET-CT for staging.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Smoker + mass + weight loss = lung cancer until biopsy says otherwise. Mass >3 cm; nodule &le;3 cm. Tissue is the issue &mdash; diagnosis is never confirmed by imaging alone.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c3">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 3 &mdash; Pleural Effusion <span class="score-badge" id="c3_badge"></span></h2>
+<div><span class="tg">CXR</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">68-year-old female diagnosed with ovarian cancer, on chemotherapy. Presents to ER with chest pain and mild dyspnea.</div>
+<div class="ic"><img src="img/case3.png" alt="Case 3" loading="lazy"></div>
+<div class="qblock" id="c3q0">
+<div class="qlabel">Q1. What is the abnormality in the chest X-ray?</div>
+<textarea id="c3q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c3q0_rev" onclick="revealAnswer('c3q0')">Check Answer</button>
+<div class="model-ans" id="c3q0_ma"><div class="ma-label">Model Answer:</div>Right-sided pleural effusion: homogenous opacity in the right lower zone with obliterated (blunted) right costophrenic angle and meniscus sign.</div>
+<div class="grade-btns" id="c3q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c3q0',1,3,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c3q0',0.5,3,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c3q0',0,3,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c3q0_gr"></div>
+</div>
+<div class="qblock" id="c3q1">
+<div class="qlabel">Q2. What is the cause?</div>
+<textarea id="c3q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c3q1_rev" onclick="revealAnswer('c3q1')">Check Answer</button>
+<div class="model-ans" id="c3q1_ma"><div class="ma-label">Model Answer:</div>Malignant pleural effusion secondary to metastatic ovarian cancer.</div>
+<div class="grade-btns" id="c3q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c3q1',1,3,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c3q1',0.5,3,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c3q1',0,3,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c3q1_gr"></div>
+</div>
+<div class="qblock" id="c3q2">
+<div class="qlabel">Q3. Name 4 other causes that can lead to the same X-ray abnormality.</div>
+<textarea id="c3q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c3q2_rev" onclick="revealAnswer('c3q2')">Check Answer</button>
+<div class="model-ans" id="c3q2_ma"><div class="ma-label">Model Answer:</div>Trauma (hemothorax), pulmonary embolism with infarction, pneumonia (parapneumonic effusion), tuberculosis. Also: heart failure (transudate), cirrhosis, nephrotic syndrome.</div>
+<div class="grade-btns" id="c3q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c3q2',1,3,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c3q2',0.5,3,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c3q2',0,3,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c3q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c3_sb">
+<div class="score-text" id="c3_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c3_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(3,3)">Reset Case 3</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Right-sided pleural effusion: homogenous opacity in the right lower zone with obliterated (blunted) right costophrenic angle and meniscus sign.</li><li>Malignant pleural effusion secondary to metastatic ovarian cancer.</li><li>Trauma (hemothorax), pulmonary embolism with infarction, pneumonia (parapneumonic effusion), tuberculosis. Also: heart failure (transudate), cirrhosis, nephrotic syndrome.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Transudate (low protein): HF, cirrhosis, nephrotic. Exudate (high protein): malignancy, pneumonia, TB, PE. Sorted by: pleural tap + Light's criteria.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c4">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 4 &mdash; Cavitary Lesion (CAVITY mnemonic) <span class="score-badge" id="c4_badge"></span></h2>
+<div><span class="tg">CXR</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">40-year-old male, young immunosuppressed patient with cough and fever.</div>
+<div class="ic"><img src="img/case4.png" alt="Case 4" loading="lazy"></div>
+<div class="qblock" id="c4q0">
+<div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
+<textarea id="c4q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c4q0_rev" onclick="revealAnswer('c4q0')">Check Answer</button>
+<div class="model-ans" id="c4q0_ma"><div class="ma-label">Model Answer:</div>Well-circumscribed, thick-walled cavitary lesion with air-fluid level in the right upper zone.</div>
+<div class="grade-btns" id="c4q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c4q0',1,4,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c4q0',0.5,4,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c4q0',0,4,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c4q0_gr"></div>
+</div>
+<div class="qblock" id="c4q1">
+<div class="qlabel">Q2. Give the causes / differential diagnosis (use the CAVITY mnemonic).</div>
+<textarea id="c4q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c4q1_rev" onclick="revealAnswer('c4q1')">Check Answer</button>
+<div class="model-ans" id="c4q1_ma"><div class="ma-label">Model Answer:</div><b>C</b>ancer (SCC, cavitating mets), <b>A</b>utoimmune (GPA/Wegener's, RA nodules), <b>V</b>ascular (septic/bland emboli), <b>I</b>nfection (lung abscess, TB, fungal), <b>T</b>rauma (pneumatoceles), <b>Y</b>(C)PAM/congenital (bronchogenic cyst, sequestration).</div>
+<div class="grade-btns" id="c4q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c4q1',1,4,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c4q1',0.5,4,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c4q1',0,4,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c4q1_gr"></div>
+</div>
+<div class="qblock" id="c4q2">
+<div class="qlabel">Q3. List the investigations needed to reach the final diagnosis.</div>
+<textarea id="c4q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c4q2_rev" onclick="revealAnswer('c4q2')">Check Answer</button>
+<div class="model-ans" id="c4q2_ma"><div class="ma-label">Model Answer:</div>Sputum Gram stain + culture, AFB smear + culture + GeneXpert, blood cultures, HIV test. CBC, ESR, CRP, anti-CCP. CT chest. Bronchoscopy + biopsy if cultures unrevealing.</div>
+<div class="grade-btns" id="c4q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c4q2',1,4,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c4q2',0.5,4,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c4q2',0,4,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c4q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c4_sb">
+<div class="score-text" id="c4_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c4_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(4,3)">Reset Case 4</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Well-circumscribed, thick-walled cavitary lesion with air-fluid level in the right upper zone.</li><li><b>C</b>ancer (SCC, cavitating mets), <b>A</b>utoimmune (GPA/Wegener's, RA nodules), <b>V</b>ascular (septic/bland emboli), <b>I</b>nfection (lung abscess, TB, fungal), <b>T</b>rauma (pneumatoceles), <b>Y</b>(C)PAM/congenital (bronchogenic cyst, sequestration).</li><li>Sputum Gram stain + culture, AFB smear + culture + GeneXpert, blood cultures, HIV test. CBC, ESR, CRP, anti-CCP. CT chest. Bronchoscopy + biopsy if cultures unrevealing.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Cavity = black hole with white wall. SCC is the cancer that cavitates. Immunosuppressed + fever + cavity = abscess/TB/fungus.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c5">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 5 &mdash; Post-ARDS Pulmonary Fibrosis (PFT) <span class="score-badge" id="c5_badge"></span></h2>
+<div><span class="tg">PFT</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">57-year-old male, persisting exertional dyspnea and hypoxia 4 weeks after ICU discharge. Admitted with severe RUL pneumonia complicated by ARDS, ventilated 22 days. PFT: FEV1 70%, FVC 67%, FEV1/FVC 82%, DLco 38%, Kco 64%.</div>
+<div class="ic"><img src="img/case5.png" alt="Case 5" loading="lazy"></div>
+<div class="qblock" id="c5q0">
+<div class="qlabel">Q1. What does the lung function test show?</div>
+<textarea id="c5q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c5q0_rev" onclick="revealAnswer('c5q0')">Check Answer</button>
+<div class="model-ans" id="c5q0_ma"><div class="ma-label">Model Answer:</div>Restrictive pattern (both FEV1 and FVC reduced with preserved/high ratio of 82%) with significantly reduced gas transfer (low DLco 38% and Kco 64%).</div>
+<div class="grade-btns" id="c5q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c5q0',1,5,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c5q0',0.5,5,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c5q0',0,5,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c5q0_gr"></div>
+</div>
+<div class="qblock" id="c5q1">
+<div class="qlabel">Q2. What could be causing this patient's persisting dyspnea?</div>
+<textarea id="c5q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c5q1_rev" onclick="revealAnswer('c5q1')">Check Answer</button>
+<div class="model-ans" id="c5q1_ma"><div class="ma-label">Model Answer:</div>Pulmonary fibrosis &mdash; post-ARDS / post-ventilation fibrotic lung damage.</div>
+<div class="grade-btns" id="c5q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c5q1',1,5,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c5q1',0.5,5,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c5q1',0,5,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c5q1_gr"></div>
+</div>
+<div class="qblock" id="c5q2">
+<div class="qlabel">Q3. What investigations are needed?</div>
+<textarea id="c5q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c5q2_rev" onclick="revealAnswer('c5q2')">Check Answer</button>
+<div class="model-ans" id="c5q2_ma"><div class="ma-label">Model Answer:</div>ABG (confirm hypoxia), chest X-ray, HRCT chest (gold standard for fibrosis), CBC, ESR, CRP, blood &amp; sputum culture.</div>
+<div class="grade-btns" id="c5q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c5q2',1,5,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c5q2',0.5,5,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c5q2',0,5,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c5q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c5_sb">
+<div class="score-text" id="c5_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c5_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(5,3)">Reset Case 5</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Restrictive pattern (both FEV1 and FVC reduced with preserved/high ratio of 82%) with significantly reduced gas transfer (low DLco 38% and Kco 64%).</li><li>Pulmonary fibrosis &mdash; post-ARDS / post-ventilation fibrotic lung damage.</li><li>ABG (confirm hypoxia), chest X-ray, HRCT chest (gold standard for fibrosis), CBC, ESR, CRP, blood &amp; sputum culture.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Ratio first: low = obstructive, normal/high = restrictive. Restrictive + low DLco = lung tissue disease (fibrosis). Restrictive + normal DLco = chest wall/muscle.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c6">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 6 &mdash; Warfarin Over-anticoagulation <span class="score-badge" id="c6_badge"></span></h2>
+<div><span class="tg">Coag</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">57-year-old male, diabetic and cardiac, on oral anticoagulant therapy. Presents with epistaxis, melena, hematuria for 2 days. BP controlled, no UTI. Profile: PT 60s, INR 3, PTT 40s, platelets 280,000, bleeding time 7 min.</div>
+<div class="ic"><img src="img/case6.png" alt="Case 6" loading="lazy"></div>
+<div class="qblock" id="c6q0">
+<div class="qlabel">Q1. Interpret the bleeding profile.</div>
+<textarea id="c6q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c6q0_rev" onclick="revealAnswer('c6q0')">Check Answer</button>
+<div class="model-ans" id="c6q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PT/INR (extrinsic pathway) with normal PTT, normal platelet count, and normal bleeding time.</div>
+<div class="grade-btns" id="c6q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c6q0',1,6,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c6q0',0.5,6,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c6q0',0,6,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c6q0_gr"></div>
+</div>
+<div class="qblock" id="c6q1">
+<div class="qlabel">Q2. What drug is responsible?</div>
+<textarea id="c6q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c6q1_rev" onclick="revealAnswer('c6q1')">Check Answer</button>
+<div class="model-ans" id="c6q1_ma"><div class="ma-label">Model Answer:</div>Warfarin (vitamin K antagonist).</div>
+<div class="grade-btns" id="c6q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c6q1',1,6,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c6q1',0.5,6,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c6q1',0,6,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c6q1_gr"></div>
+</div>
+<div class="qblock" id="c6q2">
+<div class="qlabel">Q3. Mention two other causes of the same abnormality.</div>
+<textarea id="c6q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c6q2_rev" onclick="revealAnswer('c6q2')">Check Answer</button>
+<div class="model-ans" id="c6q2_ma"><div class="ma-label">Model Answer:</div>Liver disease/dysfunction, vitamin K deficiency, factor VII deficiency.</div>
+<div class="grade-btns" id="c6q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c6q2',1,6,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c6q2',0.5,6,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c6q2',0,6,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c6q2_gr"></div>
+</div>
+<div class="qblock" id="c6q3">
+<div class="qlabel">Q4. What is the antidote?</div>
+<textarea id="c6q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c6q3_rev" onclick="revealAnswer('c6q3')">Check Answer</button>
+<div class="model-ans" id="c6q3_ma"><div class="ma-label">Model Answer:</div>Vitamin K. For active/severe bleeding: add PCC or FFP for immediate factor replacement.</div>
+<div class="grade-btns" id="c6q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c6q3',1,6,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c6q3',0.5,6,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c6q3',0,6,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c6q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c6_sb">
+<div class="score-text" id="c6_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c6_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(6,4)">Reset Case 6</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Isolated prolonged PT/INR (extrinsic pathway) with normal PTT, normal platelet count, and normal bleeding time.</li><li>Warfarin (vitamin K antagonist).</li><li>Liver disease/dysfunction, vitamin K deficiency, factor VII deficiency.</li><li>Vitamin K. For active/severe bleeding: add PCC or FFP for immediate factor replacement.</li></ol>
+<div class="pl"><strong>Pearl:</strong> PT = exTrinsic = Warfarin. Warfarin hits factors 1972 (II, IX, VII, X); VII drops first. Antidote: vitamin K (+PCC/FFP if bleeding).</div></div>
+</div>
+</div></div>
+<div class="cc" id="c7">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 7 &mdash; Heparin Over-anticoagulation + Thrombophilia <span class="score-badge" id="c7_badge"></span></h2>
+<div><span class="tg">Coag</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">35-year-old male, repeated DVTs in both lower limbs, now PE. Admitted to ICU on heparin infusion. After 1 day develops massive epistaxis, melena, hematuria. Profile: PT 12s, INR 1, PTT 87s, platelets 280,000, bleeding time 7 min.</div>
+<div class="ic"><img src="img/case7.png" alt="Case 7" loading="lazy"></div>
+<div class="qblock" id="c7q0">
+<div class="qlabel">Q1. Interpret the bleeding profile.</div>
+<textarea id="c7q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c7q0_rev" onclick="revealAnswer('c7q0')">Check Answer</button>
+<div class="model-ans" id="c7q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PTT (intrinsic pathway) with normal PT, INR, platelet count, and bleeding time.</div>
+<div class="grade-btns" id="c7q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c7q0',1,7,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c7q0',0.5,7,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c7q0',0,7,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c7q0_gr"></div>
+</div>
+<div class="qblock" id="c7q1">
+<div class="qlabel">Q2. What is the cause? Mention another cause.</div>
+<textarea id="c7q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c7q1_rev" onclick="revealAnswer('c7q1')">Check Answer</button>
+<div class="model-ans" id="c7q1_ma"><div class="ma-label">Model Answer:</div>Heparin (over-anticoagulation). Other causes: Hemophilia A (VIII) / B (IX), von Willebrand disease.</div>
+<div class="grade-btns" id="c7q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c7q1',1,7,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c7q1',0.5,7,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c7q1',0,7,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c7q1_gr"></div>
+</div>
+<div class="qblock" id="c7q2">
+<div class="qlabel">Q3. What is the antidote?</div>
+<textarea id="c7q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c7q2_rev" onclick="revealAnswer('c7q2')">Check Answer</button>
+<div class="model-ans" id="c7q2_ma"><div class="ma-label">Model Answer:</div>Protamine sulfate.</div>
+<div class="grade-btns" id="c7q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c7q2',1,7,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c7q2',0.5,7,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c7q2',0,7,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c7q2_gr"></div>
+</div>
+<div class="qblock" id="c7q3">
+<div class="qlabel">Q4. Mention three causes of recurrent thrombosis in a young patient.</div>
+<textarea id="c7q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c7q3_rev" onclick="revealAnswer('c7q3')">Check Answer</button>
+<div class="model-ans" id="c7q3_ma"><div class="ma-label">Model Answer:</div>Inherited: Protein C deficiency, Protein S deficiency, Antithrombin III deficiency, Factor V Leiden. Acquired: Antiphospholipid syndrome.</div>
+<div class="grade-btns" id="c7q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c7q3',1,7,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c7q3',0.5,7,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c7q3',0,7,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c7q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c7_sb">
+<div class="score-text" id="c7_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c7_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(7,4)">Reset Case 7</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Isolated prolonged PTT (intrinsic pathway) with normal PT, INR, platelet count, and bleeding time.</li><li>Heparin (over-anticoagulation). Other causes: Hemophilia A (VIII) / B (IX), von Willebrand disease.</li><li>Protamine sulfate.</li><li>Inherited: Protein C deficiency, Protein S deficiency, Antithrombin III deficiency, Factor V Leiden. Acquired: Antiphospholipid syndrome.</li></ol>
+<div class="pl"><strong>Pearl:</strong> PTT = heParin = Protamine (intrinsic). APS paradox: prolonged PTT in lab but causes CLOTTING in patient.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c8">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 8 &mdash; Hemophilia A <span class="score-badge" id="c8_badge"></span></h2>
+<div><span class="tg">Coag</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">12-year-old boy, bleeding per gum and nose, spontaneous ecchymoses on upper and lower limbs without trauma for >2 months. Profile: PT 14s, INR 1.1, PTT 60s, platelets 200,000, bleeding time 7 min, factor VIII level LOW.</div>
+<div class="ic"><img src="img/case8.png" alt="Case 8" loading="lazy"></div>
+<div class="qblock" id="c8q0">
+<div class="qlabel">Q1. Interpret the bleeding profile.</div>
+<textarea id="c8q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c8q0_rev" onclick="revealAnswer('c8q0')">Check Answer</button>
+<div class="model-ans" id="c8q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PTT with low factor VIII level. Normal PT, INR, platelet count, and bleeding time.</div>
+<div class="grade-btns" id="c8q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c8q0',1,8,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c8q0',0.5,8,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c8q0',0,8,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c8q0_gr"></div>
+</div>
+<div class="qblock" id="c8q1">
+<div class="qlabel">Q2. What is the diagnosis?</div>
+<textarea id="c8q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c8q1_rev" onclick="revealAnswer('c8q1')">Check Answer</button>
+<div class="model-ans" id="c8q1_ma"><div class="ma-label">Model Answer:</div>Hemophilia A (factor VIII deficiency). X-linked recessive.</div>
+<div class="grade-btns" id="c8q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c8q1',1,8,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c8q1',0.5,8,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c8q1',0,8,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c8q1_gr"></div>
+</div>
+<div class="qblock" id="c8q2">
+<div class="qlabel">Q3. What is the plan of management?</div>
+<textarea id="c8q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c8q2_rev" onclick="revealAnswer('c8q2')">Check Answer</button>
+<div class="model-ans" id="c8q2_ma"><div class="ma-label">Model Answer:</div>Factor VIII replacement (plasma-derived or recombinant). Desmopressin (DDAVP) for mild cases. Emicizumab for prophylaxis. Cryoprecipitate (backup). Avoid NSAIDs/aspirin/IM injections. Genetic counseling.</div>
+<div class="grade-btns" id="c8q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c8q2',1,8,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c8q2',0.5,8,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c8q2',0,8,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c8q2_gr"></div>
+</div>
+<div class="qblock" id="c8q3">
+<div class="qlabel">Q4. What are the complications?</div>
+<textarea id="c8q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c8q3_rev" onclick="revealAnswer('c8q3')">Check Answer</button>
+<div class="model-ans" id="c8q3_ma"><div class="ma-label">Model Answer:</div>Hemarthrosis (classic). Deep/intracranial bleeding. Transfusion-transmitted infection. Factor VIII inhibitor development.</div>
+<div class="grade-btns" id="c8q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c8q3',1,8,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c8q3',0.5,8,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c8q3',0,8,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c8q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c8_sb">
+<div class="score-text" id="c8_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c8_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(8,4)">Reset Case 8</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Isolated prolonged PTT with low factor VIII level. Normal PT, INR, platelet count, and bleeding time.</li><li>Hemophilia A (factor VIII deficiency). X-linked recessive.</li><li>Factor VIII replacement (plasma-derived or recombinant). Desmopressin (DDAVP) for mild cases. Emicizumab for prophylaxis. Cryoprecipitate (backup). Avoid NSAIDs/aspirin/IM injections. Genetic counseling.</li><li>Hemarthrosis (classic). Deep/intracranial bleeding. Transfusion-transmitted infection. Factor VIII inhibitor development.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Boy + spontaneous bleeds + long PTT + low factor VIII = Hemophilia A. A = VIII, B = IX. Hemarthrosis is the hallmark.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c9">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 9 &mdash; Rheumatoid Arthritis (Swan-neck) <span class="score-badge" id="c9_badge"></span></h2>
+<div><span class="tg">MSK</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">42-year-old male, pain, swelling and morning stiffness >1 hour in bilateral small joints of the hands for >7 years. Never treated. Now disfigurement and inability to move fingers of right hand.</div>
+<div class="ic"><img src="img/case9.png" alt="Case 9" loading="lazy"></div>
+<div class="qblock" id="c9q0">
+<div class="qlabel">Q1. Describe the findings on inspecting the hand.</div>
+<textarea id="c9q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c9q0_rev" onclick="revealAnswer('c9q0')">Check Answer</button>
+<div class="model-ans" id="c9q0_ma"><div class="ma-label">Model Answer:</div>Swan-neck deformity: hyperextension of the PIP joint with flexion of the DIP joint. May also see ulnar deviation, boutonniere deformity, Z-thumb, wasting of small hand muscles. Spares DIP joints.</div>
+<div class="grade-btns" id="c9q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c9q0',1,9,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c9q0',0.5,9,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c9q0',0,9,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c9q0_gr"></div>
+</div>
+<div class="qblock" id="c9q1">
+<div class="qlabel">Q2. What is your diagnosis?</div>
+<textarea id="c9q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c9q1_rev" onclick="revealAnswer('c9q1')">Check Answer</button>
+<div class="model-ans" id="c9q1_ma"><div class="ma-label">Model Answer:</div>Rheumatoid arthritis.</div>
+<div class="grade-btns" id="c9q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c9q1',1,9,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c9q1',0.5,9,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c9q1',0,9,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c9q1_gr"></div>
+</div>
+<div class="qblock" id="c9q2">
+<div class="qlabel">Q3. List investigations to confirm.</div>
+<textarea id="c9q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c9q2_rev" onclick="revealAnswer('c9q2')">Check Answer</button>
+<div class="model-ans" id="c9q2_ma"><div class="ma-label">Model Answer:</div>RF, Anti-CCP (most specific), ESR &amp; CRP, CBC, X-ray of hands.</div>
+<div class="grade-btns" id="c9q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c9q2',1,9,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c9q2',0.5,9,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c9q2',0,9,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c9q2_gr"></div>
+</div>
+<div class="qblock" id="c9q3">
+<div class="qlabel">Q4. What is the plan of management?</div>
+<textarea id="c9q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c9q3_rev" onclick="revealAnswer('c9q3')">Check Answer</button>
+<div class="model-ans" id="c9q3_ma"><div class="ma-label">Model Answer:</div>NSAIDs + corticosteroids. Conventional DMARDs: methotrexate (first-line), leflunomide, hydroxychloroquine, sulfasalazine. Biologic DMARDs: adalimumab, etanercept, infliximab, rituximab, tocilizumab. Physio/OT, surgery.</div>
+<div class="grade-btns" id="c9q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c9q3',1,9,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c9q3',0.5,9,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c9q3',0,9,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c9q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c9_sb">
+<div class="score-text" id="c9_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c9_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(9,4)">Reset Case 9</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Swan-neck deformity: hyperextension of the PIP joint with flexion of the DIP joint. May also see ulnar deviation, boutonniere deformity, Z-thumb, wasting of small hand muscles. Spares DIP joints.</li><li>Rheumatoid arthritis.</li><li>RF, Anti-CCP (most specific), ESR &amp; CRP, CBC, X-ray of hands.</li><li>NSAIDs + corticosteroids. Conventional DMARDs: methotrexate (first-line), leflunomide, hydroxychloroquine, sulfasalazine. Biologic DMARDs: adalimumab, etanercept, infliximab, rituximab, tocilizumab. Physio/OT, surgery.</li></ol>
+<div class="pl"><strong>Pearl:</strong> RA = Symmetric, Small joints, Stiffness >1hr, Spares DIP. Anti-CCP = most specific. Methotrexate = first-line DMARD.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c10">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 10 &mdash; Osteoarthritis (Heberden's nodes) <span class="score-badge" id="c10_badge"></span></h2>
+<div><span class="tg">MSK</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">66-year-old female, worried about small swellings in her fingers causing disfigurement. On examination swellings are hard, non-mobile, and non-tender.</div>
+<div class="ic"><img src="img/case10.png" alt="Case 10" loading="lazy"></div>
+<div class="qblock" id="c10q0">
+<div class="qlabel">Q1. Describe findings + differential + provisional diagnosis.</div>
+<textarea id="c10q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c10q0_rev" onclick="revealAnswer('c10q0')">Check Answer</button>
+<div class="model-ans" id="c10q0_ma"><div class="ma-label">Model Answer:</div>Heberden's nodes: hard, bony, non-tender prominences at DIP joints. (PIP = Bouchard's.) DDx: RA, gouty tophus, Osler/Janeway, ganglion cyst, neurofibroma. Provisional: Osteoarthritis.</div>
+<div class="grade-btns" id="c10q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c10q0',1,10,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c10q0',0.5,10,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c10q0',0,10,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c10q0_gr"></div>
+</div>
+<div class="qblock" id="c10q1">
+<div class="qlabel">Q2. List investigations to confirm.</div>
+<textarea id="c10q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c10q1_rev" onclick="revealAnswer('c10q1')">Check Answer</button>
+<div class="model-ans" id="c10q1_ma"><div class="ma-label">Model Answer:</div>RF and anti-CCP (negative in OA). ESR, CRP (normal in OA). CBC. X-ray: LOSS (Loss of joint space, Osteophytes, Subchondral sclerosis, Subchondral cysts).</div>
+<div class="grade-btns" id="c10q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c10q1',1,10,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c10q1',0.5,10,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c10q1',0,10,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c10q1_gr"></div>
+</div>
+<div class="qblock" id="c10q2">
+<div class="qlabel">Q3. What is the plan of management?</div>
+<textarea id="c10q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c10q2_rev" onclick="revealAnswer('c10q2')">Check Answer</button>
+<div class="model-ans" id="c10q2_ma"><div class="ma-label">Model Answer:</div>Conservative: rest, splints, ice, physio, weight loss. Analgesia: paracetamol/topical NSAIDs, then oral NSAIDs; intra-articular steroids. Surgery for severe disease. NO DMARDs.</div>
+<div class="grade-btns" id="c10q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c10q2',1,10,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c10q2',0.5,10,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c10q2',0,10,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c10q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c10_sb">
+<div class="score-text" id="c10_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c10_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(10,3)">Reset Case 10</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Heberden's nodes: hard, bony, non-tender prominences at DIP joints. (PIP = Bouchard's.) DDx: RA, gouty tophus, Osler/Janeway, ganglion cyst, neurofibroma. Provisional: Osteoarthritis.</li><li>RF and anti-CCP (negative in OA). ESR, CRP (normal in OA). CBC. X-ray: LOSS (Loss of joint space, Osteophytes, Subchondral sclerosis, Subchondral cysts).</li><li>Conservative: rest, splints, ice, physio, weight loss. Analgesia: paracetamol/topical NSAIDs, then oral NSAIDs; intra-articular steroids. Surgery for severe disease. NO DMARDs.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Heberden = DIP, Bouchard = PIP. OA = hard/bony/non-tender, older, DIP, no stiffness, normal ESR/CRP, X-ray = LOSS.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c11">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 11 &mdash; DKA (Diabetic Ketoacidosis) <span class="score-badge" id="c11_badge"></span></h2>
+<div><span class="tg">ABG</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">18-year-old female, ER with abdominal pain, vomiting, drowsiness. Polyuria + fatigue for a month. BP 100/60, pulse 100. Labs: Cr 1, RBS 420, Na 145, K 4.7, Cl 98. ABG: pH 7.15, PCO2 22, PO2 110, HCO3 10.</div>
+<div class="ic"><img src="img/case11.png" alt="Case 11" loading="lazy"></div>
+<div class="qblock" id="c11q0">
+<div class="qlabel">Q1. Interpret the ABG and calculate the anion gap.</div>
+<textarea id="c11q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c11q0_rev" onclick="revealAnswer('c11q0')">Check Answer</button>
+<div class="model-ans" id="c11q0_ma"><div class="ma-label">Model Answer:</div>Low pH (7.15) = acidosis. HCO3 (10) and PCO2 (22) both low = metabolic acidosis with respiratory compensation. AG = 145 &minus; (98+10) = <b>37</b> &rarr; HAGMA.</div>
+<div class="grade-btns" id="c11q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c11q0',1,11,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c11q0',0.5,11,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c11q0',0,11,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c11q0_gr"></div>
+</div>
+<div class="qblock" id="c11q1">
+<div class="qlabel">Q2. What is the diagnosis?</div>
+<textarea id="c11q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c11q1_rev" onclick="revealAnswer('c11q1')">Check Answer</button>
+<div class="model-ans" id="c11q1_ma"><div class="ma-label">Model Answer:</div>Diabetic Ketoacidosis (DKA) &mdash; high glucose + HAGMA + ketosis.</div>
+<div class="grade-btns" id="c11q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c11q1',1,11,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c11q1',0.5,11,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c11q1',0,11,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c11q1_gr"></div>
+</div>
+<div class="qblock" id="c11q2">
+<div class="qlabel">Q3. What is the plan of management?</div>
+<textarea id="c11q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c11q2_rev" onclick="revealAnswer('c11q2')">Check Answer</button>
+<div class="model-ans" id="c11q2_ma"><div class="ma-label">Model Answer:</div><b>Three pillars:</b> (1) IV NS 0.9% 1L first hour. (2) Insulin 0.1 u/kg/hr; add dextrose when glucose &lt;14 mmol/L. (3) Potassium replacement. Plus: treat precipitant.</div>
+<div class="grade-btns" id="c11q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c11q2',1,11,3)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c11q2',0.5,11,3)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c11q2',0,11,3)">Incorrect</button>
+</div>
+<div class="grade-result" id="c11q2_gr"></div>
+</div>
+
+<div class="score-bar" id="c11_sb">
+<div class="score-text" id="c11_st">Score: 0 / 3</div>
+<div class="score-fill"><div class="score-fill-inner" id="c11_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(11,3)">Reset Case 11</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Low pH (7.15) = acidosis. HCO3 (10) and PCO2 (22) both low = metabolic acidosis with respiratory compensation. AG = 145 &minus; (98+10) = <b>37</b> &rarr; HAGMA.</li><li>Diabetic Ketoacidosis (DKA) &mdash; high glucose + HAGMA + ketosis.</li><li><b>Three pillars:</b> (1) IV NS 0.9% 1L first hour. (2) Insulin 0.1 u/kg/hr; add dextrose when glucose &lt;14 mmol/L. (3) Potassium replacement. Plus: treat precipitant.</li></ol>
+<div class="pl"><strong>Pearl:</strong> AG = Na &minus; (Cl + HCO3), normal 8-12. MUDPILES. DKA = Fluids + Insulin + Potassium.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c12">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 12 &mdash; Metabolic Alkalosis (Furosemide) <span class="score-badge" id="c12_badge"></span></h2>
+<div><span class="tg">ABG</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">50-year-old female, hypertensive + cardiac, on furosemide. Drowsiness, abdominal pain, lower-limb cramps, V+D for 4 days. BP 90/50, pulse 100. Labs: Cr 1.2, RBS 90, Na 128, K 2.8, Cl 88. ABG: pH 7.58, PCO2 45, PO2 97, HCO3 38.</div>
+<div class="ic"><img src="img/case12.png" alt="Case 12" loading="lazy"></div>
+<div class="qblock" id="c12q0">
+<div class="qlabel">Q1. Interpret the ABG.</div>
+<textarea id="c12q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c12q0_rev" onclick="revealAnswer('c12q0')">Check Answer</button>
+<div class="model-ans" id="c12q0_ma"><div class="ma-label">Model Answer:</div>High pH (7.58), high HCO3 (38), PCO2 high-normal (45) &rarr; metabolic alkalosis with respiratory compensation.</div>
+<div class="grade-btns" id="c12q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c12q0',1,12,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c12q0',0.5,12,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c12q0',0,12,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c12q0_gr"></div>
+</div>
+<div class="qblock" id="c12q1">
+<div class="qlabel">Q2. What are the chemistry abnormalities?</div>
+<textarea id="c12q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c12q1_rev" onclick="revealAnswer('c12q1')">Check Answer</button>
+<div class="model-ans" id="c12q1_ma"><div class="ma-label">Model Answer:</div>Hyponatremia (128), hypokalemia (2.8), hypochloremia (88).</div>
+<div class="grade-btns" id="c12q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c12q1',1,12,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c12q1',0.5,12,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c12q1',0,12,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c12q1_gr"></div>
+</div>
+<div class="qblock" id="c12q2">
+<div class="qlabel">Q3. Mention two causes responsible.</div>
+<textarea id="c12q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c12q2_rev" onclick="revealAnswer('c12q2')">Check Answer</button>
+<div class="model-ans" id="c12q2_ma"><div class="ma-label">Model Answer:</div>Furosemide (loop diuretic). Vomiting &amp; diarrhea. Secondary hyperaldosteronism.</div>
+<div class="grade-btns" id="c12q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c12q2',1,12,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c12q2',0.5,12,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c12q2',0,12,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c12q2_gr"></div>
+</div>
+<div class="qblock" id="c12q3">
+<div class="qlabel">Q4. Plan of management?</div>
+<textarea id="c12q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c12q3_rev" onclick="revealAnswer('c12q3')">Check Answer</button>
+<div class="model-ans" id="c12q3_ma"><div class="ma-label">Model Answer:</div>Saline infusion, potassium replacement, magnesium replacement, chloride replacement, stop furosemide.</div>
+<div class="grade-btns" id="c12q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c12q3',1,12,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c12q3',0.5,12,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c12q3',0,12,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c12q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c12_sb">
+<div class="score-text" id="c12_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c12_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(12,4)">Reset Case 12</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>High pH (7.58), high HCO3 (38), PCO2 high-normal (45) &rarr; metabolic alkalosis with respiratory compensation.</li><li>Hyponatremia (128), hypokalemia (2.8), hypochloremia (88).</li><li>Furosemide (loop diuretic). Vomiting &amp; diarrhea. Secondary hyperaldosteronism.</li><li>Saline infusion, potassium replacement, magnesium replacement, chloride replacement, stop furosemide.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Loop diuretics &rarr; hypokalemic hypochloremic metabolic alkalosis. Chloride-responsive &rarr; saline + KCl. Can't fix K without fixing Mg.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c13">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 13 &mdash; Spherocytic Hemolytic Anemia <span class="score-badge" id="c13_badge"></span></h2>
+<div><span class="tg">Blood Film</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">14-year-old female, ER with fatigue, pallor &amp; jaundice for 2 days. Recent tonsillitis. Labs: Hb 7.8, MCV 80, MCH 28, PLT 210, WBC 8,000. Bilirubin: total 3, direct 0.8, indirect 2.2.</div>
+<div class="ic"><img src="img/case13.png" alt="Case 13" loading="lazy"></div>
+<div class="qblock" id="c13q0">
+<div class="qlabel">Q1. Comment on the labs.</div>
+<textarea id="c13q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c13q0_rev" onclick="revealAnswer('c13q0')">Check Answer</button>
+<div class="model-ans" id="c13q0_ma"><div class="ma-label">Model Answer:</div>Normocytic normochromic anemia + raised indirect bilirubin &rarr; hemolysis.</div>
+<div class="grade-btns" id="c13q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c13q0',1,13,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c13q0',0.5,13,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c13q0',0,13,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c13q0_gr"></div>
+</div>
+<div class="qblock" id="c13q1">
+<div class="qlabel">Q2. Comment on the blood film.</div>
+<textarea id="c13q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c13q1_rev" onclick="revealAnswer('c13q1')">Check Answer</button>
+<div class="model-ans" id="c13q1_ma"><div class="ma-label">Model Answer:</div>Spherocytes &mdash; small spherical cells with decreased diameter, dense staining, and <b>loss of central pallor</b>.</div>
+<div class="grade-btns" id="c13q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c13q1',1,13,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c13q1',0.5,13,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c13q1',0,13,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c13q1_gr"></div>
+</div>
+<div class="qblock" id="c13q2">
+<div class="qlabel">Q3. Differential diagnosis?</div>
+<textarea id="c13q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c13q2_rev" onclick="revealAnswer('c13q2')">Check Answer</button>
+<div class="model-ans" id="c13q2_ma"><div class="ma-label">Model Answer:</div>Hereditary spherocytosis (HS) vs Autoimmune hemolytic anemia (AIHA).</div>
+<div class="grade-btns" id="c13q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c13q2',1,13,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c13q2',0.5,13,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c13q2',0,13,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c13q2_gr"></div>
+</div>
+<div class="qblock" id="c13q3">
+<div class="qlabel">Q4. Further investigations?</div>
+<textarea id="c13q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c13q3_rev" onclick="revealAnswer('c13q3')">Check Answer</button>
+<div class="model-ans" id="c13q3_ma"><div class="ma-label">Model Answer:</div>Direct antiglobulin (Coombs) test: + in AIHA, &minus; in HS. Osmotic fragility test: + in both. Reticulocyte count, LDH, haptoglobin.</div>
+<div class="grade-btns" id="c13q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c13q3',1,13,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c13q3',0.5,13,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c13q3',0,13,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c13q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c13_sb">
+<div class="score-text" id="c13_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c13_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(13,4)">Reset Case 13</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Normocytic normochromic anemia + raised indirect bilirubin &rarr; hemolysis.</li><li>Spherocytes &mdash; small spherical cells with decreased diameter, dense staining, and <b>loss of central pallor</b>.</li><li>Hereditary spherocytosis (HS) vs Autoimmune hemolytic anemia (AIHA).</li><li>Direct antiglobulin (Coombs) test: + in AIHA, &minus; in HS. Osmotic fragility test: + in both. Reticulocyte count, LDH, haptoglobin.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Spherocytes = LOSS of central pallor (dense balls). Coombs splits: AIHA +, HS &minus;.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c14">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 14 &mdash; Sickle Cell Crisis <span class="score-badge" id="c14_badge"></span></h2>
+<div><span class="tg">Blood Film</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">21-year-old female, ER with acute abdominal pain, vomiting, severe hip + wrist pain. Recent bronchitis. Marked pallor. Labs: Hb 6, MCV 81, MCH 27.5, PLT 218, WBC 10,000.</div>
+<div class="ic"><img src="img/case14.png" alt="Case 14" loading="lazy"></div>
+<div class="qblock" id="c14q0">
+<div class="qlabel">Q1. Comment on the CBC.</div>
+<textarea id="c14q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c14q0_rev" onclick="revealAnswer('c14q0')">Check Answer</button>
+<div class="model-ans" id="c14q0_ma"><div class="ma-label">Model Answer:</div>Normocytic normochromic anemia (Hb 6).</div>
+<div class="grade-btns" id="c14q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c14q0',1,14,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c14q0',0.5,14,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c14q0',0,14,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c14q0_gr"></div>
+</div>
+<div class="qblock" id="c14q1">
+<div class="qlabel">Q2. List two blood film abnormalities.</div>
+<textarea id="c14q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c14q1_rev" onclick="revealAnswer('c14q1')">Check Answer</button>
+<div class="model-ans" id="c14q1_ma"><div class="ma-label">Model Answer:</div><b>Sickle cells</b> + <b>target cells</b> (bullseye).</div>
+<div class="grade-btns" id="c14q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c14q1',1,14,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c14q1',0.5,14,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c14q1',0,14,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c14q1_gr"></div>
+</div>
+<div class="qblock" id="c14q2">
+<div class="qlabel">Q3. Diagnosis?</div>
+<textarea id="c14q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c14q2_rev" onclick="revealAnswer('c14q2')">Check Answer</button>
+<div class="model-ans" id="c14q2_ma"><div class="ma-label">Model Answer:</div>Sickle cell anemia &mdash; vaso-occlusive crisis.</div>
+<div class="grade-btns" id="c14q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c14q2',1,14,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c14q2',0.5,14,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c14q2',0,14,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c14q2_gr"></div>
+</div>
+<div class="qblock" id="c14q3">
+<div class="qlabel">Q4. Management?</div>
+<textarea id="c14q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c14q3_rev" onclick="revealAnswer('c14q3')">Check Answer</button>
+<div class="model-ans" id="c14q3_ma"><div class="ma-label">Model Answer:</div>Hydration, analgesia (opioids), oxygen, antibiotics, transfusion, LMWH. Long-term: hydroxyurea, folic acid. Confirm: Hb electrophoresis.</div>
+<div class="grade-btns" id="c14q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c14q3',1,14,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c14q3',0.5,14,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c14q3',0,14,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c14q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c14_sb">
+<div class="score-text" id="c14_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c14_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(14,4)">Reset Case 14</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Normocytic normochromic anemia (Hb 6).</li><li><b>Sickle cells</b> + <b>target cells</b> (bullseye).</li><li>Sickle cell anemia &mdash; vaso-occlusive crisis.</li><li>Hydration, analgesia (opioids), oxygen, antibiotics, transfusion, LMWH. Long-term: hydroxyurea, folic acid. Confirm: Hb electrophoresis.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Sickle + TARGET cells (not helmet). Target = bullseye = hemoglobinopathy. Helmet = fragment = microangiopathy.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c15">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 15 &mdash; Megaloblastic Anemia <span class="score-badge" id="c15_badge"></span></h2>
+<div><span class="tg">Blood Film</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">36-year-old female, clinic with fatigability and marked pallor. Labs: Hb 9, MCV 108, MCH 28, PLT 210, WBC 8,000.</div>
+<div class="ic"><img src="img/case15.png" alt="Case 15" loading="lazy"></div>
+<div class="qblock" id="c15q0">
+<div class="qlabel">Q1. Comment on the CBC.</div>
+<textarea id="c15q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c15q0_rev" onclick="revealAnswer('c15q0')">Check Answer</button>
+<div class="model-ans" id="c15q0_ma"><div class="ma-label">Model Answer:</div>Macrocytic normochromic anemia (high MCV 108, normal MCH).</div>
+<div class="grade-btns" id="c15q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c15q0',1,15,5)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c15q0',0.5,15,5)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c15q0',0,15,5)">Incorrect</button>
+</div>
+<div class="grade-result" id="c15q0_gr"></div>
+</div>
+<div class="qblock" id="c15q1">
+<div class="qlabel">Q2. Comment on the blood film.</div>
+<textarea id="c15q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c15q1_rev" onclick="revealAnswer('c15q1')">Check Answer</button>
+<div class="model-ans" id="c15q1_ma"><div class="ma-label">Model Answer:</div>Macrocytosis + hypersegmented neutrophils (&ge;5-6 lobes).</div>
+<div class="grade-btns" id="c15q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c15q1',1,15,5)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c15q1',0.5,15,5)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c15q1',0,15,5)">Incorrect</button>
+</div>
+<div class="grade-result" id="c15q1_gr"></div>
+</div>
+<div class="qblock" id="c15q2">
+<div class="qlabel">Q3. Diagnosis?</div>
+<textarea id="c15q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c15q2_rev" onclick="revealAnswer('c15q2')">Check Answer</button>
+<div class="model-ans" id="c15q2_ma"><div class="ma-label">Model Answer:</div>Megaloblastic anemia.</div>
+<div class="grade-btns" id="c15q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c15q2',1,15,5)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c15q2',0.5,15,5)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c15q2',0,15,5)">Incorrect</button>
+</div>
+<div class="grade-result" id="c15q2_gr"></div>
+</div>
+<div class="qblock" id="c15q3">
+<div class="qlabel">Q4. Mention 4 causes.</div>
+<textarea id="c15q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c15q3_rev" onclick="revealAnswer('c15q3')">Check Answer</button>
+<div class="model-ans" id="c15q3_ma"><div class="ma-label">Model Answer:</div>B12 deficiency, folate deficiency, alcoholism, hypothyroidism.</div>
+<div class="grade-btns" id="c15q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c15q3',1,15,5)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c15q3',0.5,15,5)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c15q3',0,15,5)">Incorrect</button>
+</div>
+<div class="grade-result" id="c15q3_gr"></div>
+</div>
+<div class="qblock" id="c15q4">
+<div class="qlabel">Q5. Mention 2 causative drugs.</div>
+<textarea id="c15q4_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c15q4_rev" onclick="revealAnswer('c15q4')">Check Answer</button>
+<div class="model-ans" id="c15q4_ma"><div class="ma-label">Model Answer:</div>Methotrexate and metformin.</div>
+<div class="grade-btns" id="c15q4_gb">
+<button class="grade-btn correct" onclick="gradeQ('c15q4',1,15,5)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c15q4',0.5,15,5)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c15q4',0,15,5)">Incorrect</button>
+</div>
+<div class="grade-result" id="c15q4_gr"></div>
+</div>
+
+<div class="score-bar" id="c15_sb">
+<div class="score-text" id="c15_st">Score: 0 / 5</div>
+<div class="score-fill"><div class="score-fill-inner" id="c15_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(15,5)">Reset Case 15</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Macrocytic normochromic anemia (high MCV 108, normal MCH).</li><li>Macrocytosis + hypersegmented neutrophils (&ge;5-6 lobes).</li><li>Megaloblastic anemia.</li><li>B12 deficiency, folate deficiency, alcoholism, hypothyroidism.</li><li>Methotrexate and metformin.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Hypersegmented neutrophils = megaloblastic = B12/folate. Macrocytic anemias are normochromic, not hypochromic.</div></div>
+</div>
+</div></div>
+<div class="cc" id="c16">
+<div class="ch" onclick="this.parentElement.classList.toggle('open')">
+<h2>Case 16 &mdash; Obstructive Jaundice <span class="score-badge" id="c16_badge"></span></h2>
+<div><span class="tg">Chemistry</span> <span class="ar">&#9654;</span></div>
+</div>
+<div class="cb">
+<div class="st">62-year-old male, no chronic diseases. Epigastric pain, nausea, dark urine and weight loss for >3 months. Labs: RBS 150, ALT 48, AST 45, total bilirubin 15, direct 12, indirect 3, ESR 120.</div>
+<div class="ic"><img src="img/case16.png" alt="Case 16" loading="lazy"></div>
+<div class="qblock" id="c16q0">
+<div class="qlabel">Q1. What abnormality in the face?</div>
+<textarea id="c16q0_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c16q0_rev" onclick="revealAnswer('c16q0')">Check Answer</button>
+<div class="model-ans" id="c16q0_ma"><div class="ma-label">Model Answer:</div>Yellowish discoloration of skin and sclera = jaundice.</div>
+<div class="grade-btns" id="c16q0_gb">
+<button class="grade-btn correct" onclick="gradeQ('c16q0',1,16,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c16q0',0.5,16,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c16q0',0,16,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c16q0_gr"></div>
+</div>
+<div class="qblock" id="c16q1">
+<div class="qlabel">Q2. Chemistry abnormalities?</div>
+<textarea id="c16q1_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c16q1_rev" onclick="revealAnswer('c16q1')">Check Answer</button>
+<div class="model-ans" id="c16q1_ma"><div class="ma-label">Model Answer:</div>Direct hyperbilirubinemia (total 15, direct 12). High ESR (120). Raised RBS (150). Normal ALT/AST.</div>
+<div class="grade-btns" id="c16q1_gb">
+<button class="grade-btn correct" onclick="gradeQ('c16q1',1,16,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c16q1',0.5,16,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c16q1',0,16,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c16q1_gr"></div>
+</div>
+<div class="qblock" id="c16q2">
+<div class="qlabel">Q3. Differential diagnosis?</div>
+<textarea id="c16q2_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c16q2_rev" onclick="revealAnswer('c16q2')">Check Answer</button>
+<div class="model-ans" id="c16q2_ma"><div class="ma-label">Model Answer:</div>Pancreatic head carcinoma, cholangiocarcinoma, choledocholithiasis, chronic pancreatitis, drug-induced cholestasis, primary biliary cholangitis.</div>
+<div class="grade-btns" id="c16q2_gb">
+<button class="grade-btn correct" onclick="gradeQ('c16q2',1,16,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c16q2',0.5,16,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c16q2',0,16,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c16q2_gr"></div>
+</div>
+<div class="qblock" id="c16q3">
+<div class="qlabel">Q4. Further investigations?</div>
+<textarea id="c16q3_ta" placeholder="Type your answer..." rows="3"></textarea>
+<button class="reveal-btn" id="c16q3_rev" onclick="revealAnswer('c16q3')">Check Answer</button>
+<div class="model-ans" id="c16q3_ma"><div class="ma-label">Model Answer:</div>ALP + GGT, CBC, PT/INR, abdominal ultrasound, MRCP, CT abdomen, CA 19-9.</div>
+<div class="grade-btns" id="c16q3_gb">
+<button class="grade-btn correct" onclick="gradeQ('c16q3',1,16,4)">Correct</button>
+<button class="grade-btn partial-btn" onclick="gradeQ('c16q3',0.5,16,4)">Partial</button>
+<button class="grade-btn wrong" onclick="gradeQ('c16q3',0,16,4)">Incorrect</button>
+</div>
+<div class="grade-result" id="c16q3_gr"></div>
+</div>
+
+<div class="score-bar" id="c16_sb">
+<div class="score-text" id="c16_st">Score: 0 / 4</div>
+<div class="score-fill"><div class="score-fill-inner" id="c16_sf" style="width:0%;background:#334155"></div></div>
+<button class="reset-btn" onclick="resetCase(16,4)">Reset Case 16</button>
+</div>
+<div style="text-align:center;margin:14px 0">
+<button class="at" onclick="this.nextElementSibling.classList.toggle('v')">Show / Hide Answer Key</button>
+<div class="ak"><h3>Model Answers</h3><ol><li>Yellowish discoloration of skin and sclera = jaundice.</li><li>Direct hyperbilirubinemia (total 15, direct 12). High ESR (120). Raised RBS (150). Normal ALT/AST.</li><li>Pancreatic head carcinoma, cholangiocarcinoma, choledocholithiasis, chronic pancreatitis, drug-induced cholestasis, primary biliary cholangitis.</li><li>ALP + GGT, CBC, PT/INR, abdominal ultrasound, MRCP, CT abdomen, CA 19-9.</li></ol>
+<div class="pl"><strong>Pearl:</strong> Direct bilirubin high + dark urine + high ALP = obstructive. Painless jaundice + weight loss + old age = pancreatic head cancer. Check PT before procedures.</div></div>
+</div>
+</div></div>
+<div id="refs"></div>
+<h2 style="color:#f59e0b;margin:24px 0 12px;text-align:center;">Reference Sheets</h2>
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>Normal Lab Values</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><div class="ic"><img src="img/ref.png" alt="Normal Lab Values" loading="lazy"></div></div></div>
+
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>Investigation Leads</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><table>
+<tr><th>Clinical Picture</th><th>Lead Investigation</th></tr>
+<tr><td>Fever + infection / cavity</td><td>Sputum + blood cultures + AFB/GeneXpert (+HIV)</td></tr>
+<tr><td>Mass + smoker</td><td>CT + biopsy (tissue)</td></tr>
+<tr><td>Effusion</td><td>Pleural tap + cytology</td></tr>
+<tr><td>Suspected TB</td><td>AFB/GeneXpert + HIV</td></tr>
+</table></div></div>
+
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>Coagulation Patterns</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><table>
+<tr><th>Abnormal</th><th>Pathway</th><th>Think</th></tr>
+<tr><td>PT only &uarr;</td><td>Extrinsic (VII)</td><td>Warfarin, liver disease, vit K def</td></tr>
+<tr><td>PTT only &uarr;</td><td>Intrinsic</td><td>Heparin, hemophilia A/B, vWD</td></tr>
+<tr><td>Both &uarr;</td><td>Common</td><td>DIC, severe liver disease</td></tr>
+<tr><td>PLT &darr; / BT &uarr;</td><td>Primary</td><td>Thrombocytopenia, vWD</td></tr>
+</table>
+<p style="margin-top:10px;font-size:.9em"><b>Antidotes:</b> Warfarin &rarr; Vit K | Heparin &rarr; Protamine</p></div></div>
+
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>Anemia Framework (MCV)</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><table>
+<tr><th>MCV</th><th>Type</th><th>Causes</th></tr>
+<tr><td>&lt;80</td><td>Microcytic</td><td>Iron def, thalassemia, chronic disease</td></tr>
+<tr><td>80-96</td><td>Normocytic</td><td>Blood loss, hemolysis, chronic disease</td></tr>
+<tr><td>&gt;96</td><td>Macrocytic</td><td>B12/folate def, alcohol, liver disease</td></tr>
+</table></div></div>
+
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>Jaundice Framework</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><table>
+<tr><th>Type</th><th>Bilirubin</th><th>LFTs</th><th>Urine/Stool</th></tr>
+<tr><td>Pre-hepatic</td><td>Indirect &uarr;</td><td>Normal</td><td>Normal</td></tr>
+<tr><td>Hepatic</td><td>Mixed</td><td>ALT/AST high</td><td>Dark urine</td></tr>
+<tr><td>Post-hepatic</td><td>Direct &uarr;</td><td>ALP/GGT high</td><td>Dark urine + pale stool</td></tr>
+</table></div></div>
+
+<div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
+<h2>ABG Interpretation</h2><span class="ar" style="color:#64748b">&#9654;</span></div>
+<div class="rb"><ol style="padding-left:20px;line-height:2;font-size:.9em">
+<li><b>pH</b> &rarr; acidemia (&lt;7.35) or alkalemia (&gt;7.45)?</li>
+<li><b>Metabolic or respiratory?</b> pH &amp; PCO2 same = metabolic. Opposite = respiratory.</li>
+<li><b>Anion gap</b> = Na &minus; (Cl + HCO3). Normal 8-12. MUDPILES.</li>
+<li><b>Compensation:</b> Winter's: expected PCO2 = (1.5 &times; HCO3) + 8 &plusmn; 2.</li>
+</ol></div></div>
+<script>
+const scores={};
+function toggleAll(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.classList.add('open');else c.classList.remove('open')})}
+function revealAnswer(qid){
+  document.getElementById(qid+'_ma').classList.add('show');
+  document.getElementById(qid+'_gb').classList.add('show');
+  const btn=document.getElementById(qid+'_rev');btn.disabled=true;btn.textContent='Revealed';
+  document.getElementById(qid+'_ta').disabled=true;
+}
+function gradeQ(qid,pts,cn,tot){
+  if(!scores[cn])scores[cn]={};scores[cn][qid]=pts;
+  const gr=document.getElementById(qid+'_gr');gr.classList.add('show');
+  if(pts===1){gr.className='grade-result show g-correct';gr.textContent='Correct';}
+  else if(pts===0.5){gr.className='grade-result show g-partial';gr.textContent='Partial';}
+  else{gr.className='grade-result show g-wrong';gr.textContent='Incorrect';}
+  document.getElementById(qid+'_gb').querySelectorAll('button').forEach(b=>b.disabled=true);
+  const ta=document.getElementById(qid+'_ta');
+  if(pts===1)ta.style.borderColor='#22c55e';else if(pts===0.5)ta.style.borderColor='#f59e0b';else ta.style.borderColor='#ef4444';
+  updateScore(cn,tot);
+}
+function updateScore(cn,tot){
+  const s=scores[cn]||{};const n=Object.keys(s).length;const sum=Object.values(s).reduce((a,b)=>a+b,0);const pct=(sum/tot)*100;
+  document.getElementById('c'+cn+'_st').textContent='Score: '+sum+' / '+tot+(n===tot?' ('+Math.round(pct)+'%)':' ('+n+'/'+tot+' done)');
+  const sf=document.getElementById('c'+cn+'_sf');sf.style.width=pct+'%';
+  sf.style.background=pct>=80?'#22c55e':pct>=50?'#f59e0b':'#ef4444';
+  const b=document.getElementById('c'+cn+'_badge');
+  if(n===tot){b.textContent=sum+'/'+tot;b.className=pct>=80?'score-badge done':'score-badge partial';}
+  else{b.textContent=n+'/'+tot+' done';b.className='score-badge';}
+}
+function resetCase(cn,tot){
+  delete scores[cn];
+  for(let i=0;i<tot;i++){const q='c'+cn+'q'+i;
+    const ta=document.getElementById(q+'_ta');if(ta){ta.value='';ta.disabled=false;ta.style.borderColor='#334155';}
+    const ma=document.getElementById(q+'_ma');if(ma)ma.classList.remove('show');
+    const gb=document.getElementById(q+'_gb');if(gb){gb.classList.remove('show');gb.querySelectorAll('button').forEach(b=>b.disabled=false);}
+    const gr=document.getElementById(q+'_gr');if(gr){gr.classList.remove('show');gr.textContent='';}
+    const btn=document.getElementById(q+'_rev');if(btn){btn.disabled=false;btn.textContent='Check Answer';}
+  }
+  document.getElementById('c'+cn+'_st').textContent='Score: 0 / '+tot;
+  const sf=document.getElementById('c'+cn+'_sf');sf.style.width='0%';sf.style.background='#334155';
+  const b=document.getElementById('c'+cn+'_badge');b.textContent='';b.className='score-badge';
+}
+function resetAll(){if(!confirm('Reset all scores?'))return;for(let i=1;i<=16;i++){const st=document.getElementById('c'+i+'_st');if(!st)continue;const m=st.textContent.match(/\/ (\d+)/);if(m)resetCase(i,parseInt(m[1]));}}
+</script></body></html>
