@@ -1096,6 +1096,19 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="pl"><strong>Pearl:</strong> Direct bilirubin high + dark urine + high ALP = obstructive. Painless jaundice + weight loss + old age = pancreatic head cancer. Check PT before procedures.</div></div>
 </div>
 </div></div>
+
+<div style="text-align:center;margin:24px 0">
+<button class="at" style="background:#22c55e;font-size:1em;padding:14px 24px" onclick="exportAllAnswers()">Export All My Answers</button>
+</div>
+<div id="export-box" style="display:none;margin:0 0 24px;padding:16px;background:#0f172a;border:1px solid #334155;border-radius:8px">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+<span style="color:#22c55e;font-weight:700">All Your Answers</span>
+<button class="reveal-btn" onclick="copyExport()" style="width:auto;padding:8px 16px">Copy to Clipboard</button>
+</div>
+<textarea id="export-ta" readonly style="width:100%;min-height:300px;background:#1e293b;border:1px solid #334155;color:#e2e8f0;border-radius:6px;padding:12px;font-family:monospace;font-size:14px;resize:vertical;-webkit-appearance:none"></textarea>
+<div id="copy-msg" style="display:none;margin-top:8px;color:#22c55e;font-size:.85em;font-weight:600">Copied!</div>
+</div>
+
 <div id="refs"></div>
 <h2 style="color:#f59e0b;margin:24px 0 12px;text-align:center;">Reference Sheets</h2>
 <div class="rc"><div class="rh" onclick="this.parentElement.classList.toggle('open')">
@@ -1149,8 +1162,7 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <li><b>Anion gap</b> = Na &minus; (Cl + HCO3). Normal 8-12. MUDPILES.</li>
 <li><b>Compensation:</b> Winter's: expected PCO2 = (1.5 &times; HCO3) + 8 &plusmn; 2.</li>
 </ol></div></div>
-<script>
-const scores={};
+<script>const scores={};const caseMeta=[{"num": 1, "title": "Miliary TB", "questions": ["Describe the abnormality in the X-ray.", "Give the differential diagnosis.", "List further investigations to reach the final diagnosis.", "What medications would you start the patient on?"]}, {"num": 2, "title": "Lung Mass (Bronchogenic Ca)", "questions": ["Describe the abnormality in the X-ray.", "Give the differential diagnosis.", "List investigations needed to reach the final diagnosis."]}, {"num": 3, "title": "Pleural Effusion", "questions": ["What is the abnormality in the chest X-ray?", "What is the cause?", "Name 4 other causes that can lead to the same X-ray abnormality."]}, {"num": 4, "title": "Cavitary Lesion (CAVITY mnemonic)", "questions": ["Describe the abnormality in the X-ray.", "Give the causes / differential diagnosis (use the CAVITY mnemonic).", "List the investigations needed to reach the final diagnosis."]}, {"num": 5, "title": "Post-ARDS Pulmonary Fibrosis (PFT)", "questions": ["What does the lung function test show?", "What could be causing this patient's persisting dyspnea?", "What investigations are needed?"]}, {"num": 6, "title": "Warfarin Over-anticoagulation", "questions": ["Interpret the bleeding profile.", "What drug is responsible?", "Mention two other causes of the same abnormality.", "What is the antidote?"]}, {"num": 7, "title": "Heparin Over-anticoagulation + Thrombophilia", "questions": ["Interpret the bleeding profile.", "What is the cause? Mention another cause.", "What is the antidote?", "Mention three causes of recurrent thrombosis in a young patient."]}, {"num": 8, "title": "Hemophilia A", "questions": ["Interpret the bleeding profile.", "What is the diagnosis?", "What is the plan of management?", "What are the complications?"]}, {"num": 9, "title": "Rheumatoid Arthritis (Swan-neck)", "questions": ["Describe the findings on inspecting the hand.", "What is your diagnosis?", "List investigations to confirm.", "What is the plan of management?"]}, {"num": 10, "title": "Osteoarthritis (Heberden's nodes)", "questions": ["Describe findings + differential + provisional diagnosis.", "List investigations to confirm.", "What is the plan of management?"]}, {"num": 11, "title": "DKA (Diabetic Ketoacidosis)", "questions": ["Interpret the ABG and calculate the anion gap.", "What is the diagnosis?", "What is the plan of management?"]}, {"num": 12, "title": "Metabolic Alkalosis (Furosemide)", "questions": ["Interpret the ABG.", "What are the chemistry abnormalities?", "Mention two causes responsible.", "Plan of management?"]}, {"num": 13, "title": "Spherocytic Hemolytic Anemia", "questions": ["Comment on the labs.", "Comment on the blood film.", "Differential diagnosis?", "Further investigations?"]}, {"num": 14, "title": "Sickle Cell Crisis", "questions": ["Comment on the CBC.", "List two blood film abnormalities.", "Diagnosis?", "Management?"]}, {"num": 15, "title": "Megaloblastic Anemia", "questions": ["Comment on the CBC.", "Comment on the blood film.", "Diagnosis?", "Mention 4 causes.", "Mention 2 causative drugs."]}, {"num": 16, "title": "Obstructive Jaundice", "questions": ["What abnormality in the face?", "Chemistry abnormalities?", "Differential diagnosis?", "Further investigations?"]}];
 function toggleAll(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.classList.add('open');else c.classList.remove('open')})}
 function checkAllAnswers(cn,tot){
   const btn=document.getElementById('c'+cn+'_checkall');
@@ -1196,4 +1208,30 @@ function resetCase(cn,tot){
   const b=document.getElementById('c'+cn+'_badge');b.textContent='';b.className='score-badge';
 }
 function resetAll(){if(!confirm('Reset all scores?'))return;for(let i=1;i<=16;i++){const st=document.getElementById('c'+i+'_st');if(!st)continue;const m=st.textContent.match(/\/ (\d+)/);if(m)resetCase(i,parseInt(m[1]));}}
+function exportAllAnswers(){
+  let out='';
+  for(const c of caseMeta){
+    let hasAnswer=false;
+    let caseBlock='CASE '+c.num+' — '+c.title+'\n';
+    for(let qi=0;qi<c.questions.length;qi++){
+      const ta=document.getElementById('c'+c.num+'q'+qi+'_ta');
+      const val=ta?ta.value.trim():'';
+      if(val)hasAnswer=true;
+      caseBlock+='Q'+(qi+1)+'. '+c.questions[qi]+'\n';
+      caseBlock+='My answer: '+(val||'(empty)')+'\n\n';
+    }
+    if(hasAnswer)out+=caseBlock+'---\n\n';
+  }
+  if(!out){out='No answers typed yet. Fill in the text boxes first, then export.';}
+  document.getElementById('export-ta').value=out;
+  document.getElementById('export-box').style.display='block';
+  document.getElementById('export-box').scrollIntoView({behavior:'smooth'});
+}
+function copyExport(){
+  const ta=document.getElementById('export-ta');
+  ta.select();ta.setSelectionRange(0,99999);
+  navigator.clipboard.writeText(ta.value).then(()=>{
+    const m=document.getElementById('copy-msg');m.style.display='block';setTimeout(()=>m.style.display='none',2000);
+  }).catch(()=>{document.execCommand('copy');});
+}
 </script></body></html>
