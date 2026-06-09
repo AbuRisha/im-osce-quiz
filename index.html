@@ -90,7 +90,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c1q0">
 <div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
 <textarea id="c1q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c1q0_rev" onclick="revealAnswer('c1q0')">Check Answer</button>
 <div class="model-ans" id="c1q0_ma"><div class="ma-label">Model Answer:</div>Diffuse bilateral fine nodular (miliary) opacities in a uniform millet-seed pattern.</div>
 <div class="grade-btns" id="c1q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c1q0',1,1,4)">Correct</button>
@@ -102,7 +101,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c1q1">
 <div class="qlabel">Q2. Give the differential diagnosis.</div>
 <textarea id="c1q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c1q1_rev" onclick="revealAnswer('c1q1')">Check Answer</button>
 <div class="model-ans" id="c1q1_ma"><div class="ma-label">Model Answer:</div>Miliary TB, sarcoidosis, metastatic malignancy, fungal infection (histoplasmosis).</div>
 <div class="grade-btns" id="c1q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c1q1',1,1,4)">Correct</button>
@@ -114,7 +112,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c1q2">
 <div class="qlabel">Q3. List further investigations to reach the final diagnosis.</div>
 <textarea id="c1q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c1q2_rev" onclick="revealAnswer('c1q2')">Check Answer</button>
 <div class="model-ans" id="c1q2_ma"><div class="ma-label">Model Answer:</div>Sputum AFB smear + culture + GeneXpert (TB-PCR) &mdash; the most important. Plus: tuberculin skin test / IGRA, HRCT chest, CBC, ESR/CRP, HIV test, baseline LFTs.</div>
 <div class="grade-btns" id="c1q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c1q2',1,1,4)">Correct</button>
@@ -126,7 +123,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c1q3">
 <div class="qlabel">Q4. What medications would you start the patient on?</div>
 <textarea id="c1q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c1q3_rev" onclick="revealAnswer('c1q3')">Check Answer</button>
 <div class="model-ans" id="c1q3_ma"><div class="ma-label">Model Answer:</div>Full RIPE regimen: Rifampicin + Isoniazid + Pyrazinamide + Ethambutol (2 months intensive, then R+I for 4 months). Add Pyridoxine (B6) with isoniazid to prevent neuropathy.</div>
 <div class="grade-btns" id="c1q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c1q3',1,1,4)">Correct</button>
@@ -136,6 +132,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c1q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c1_checkall" onclick="checkAllAnswers(1,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c1_sb">
 <div class="score-text" id="c1_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c1_sf" style="width:0%;background:#334155"></div></div>
@@ -158,7 +157,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c2q0">
 <div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
 <textarea id="c2q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c2q0_rev" onclick="revealAnswer('c2q0')">Check Answer</button>
 <div class="model-ans" id="c2q0_ma"><div class="ma-label">Model Answer:</div>Large, well-defined, rounded, homogenous opacity (mass) in the left upper lobe. Soft-tissue density, no air bronchogram.</div>
 <div class="grade-btns" id="c2q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c2q0',1,2,3)">Correct</button>
@@ -170,7 +168,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c2q1">
 <div class="qlabel">Q2. Give the differential diagnosis.</div>
 <textarea id="c2q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c2q1_rev" onclick="revealAnswer('c2q1')">Check Answer</button>
 <div class="model-ans" id="c2q1_ma"><div class="ma-label">Model Answer:</div>Bronchogenic carcinoma (top), solitary metastasis, tuberculoma, sarcoidosis, lung abscess, hydatid cyst, pulmonary infarction.</div>
 <div class="grade-btns" id="c2q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c2q1',1,2,3)">Correct</button>
@@ -182,7 +179,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c2q2">
 <div class="qlabel">Q3. List investigations needed to reach the final diagnosis.</div>
 <textarea id="c2q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c2q2_rev" onclick="revealAnswer('c2q2')">Check Answer</button>
 <div class="model-ans" id="c2q2_ma"><div class="ma-label">Model Answer:</div>ESR, CRP, CBC, tuberculin skin test, sputum AFB. CT chest (characterize + stage). Biopsy of the mass (CT-guided or bronchoscopy) for histology &mdash; the definitive diagnostic step. PET-CT for staging.</div>
 <div class="grade-btns" id="c2q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c2q2',1,2,3)">Correct</button>
@@ -192,6 +188,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c2q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c2_checkall" onclick="checkAllAnswers(2,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c2_sb">
 <div class="score-text" id="c2_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c2_sf" style="width:0%;background:#334155"></div></div>
@@ -214,7 +213,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c3q0">
 <div class="qlabel">Q1. What is the abnormality in the chest X-ray?</div>
 <textarea id="c3q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c3q0_rev" onclick="revealAnswer('c3q0')">Check Answer</button>
 <div class="model-ans" id="c3q0_ma"><div class="ma-label">Model Answer:</div>Right-sided pleural effusion: homogenous opacity in the right lower zone with obliterated (blunted) right costophrenic angle and meniscus sign.</div>
 <div class="grade-btns" id="c3q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c3q0',1,3,3)">Correct</button>
@@ -226,7 +224,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c3q1">
 <div class="qlabel">Q2. What is the cause?</div>
 <textarea id="c3q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c3q1_rev" onclick="revealAnswer('c3q1')">Check Answer</button>
 <div class="model-ans" id="c3q1_ma"><div class="ma-label">Model Answer:</div>Malignant pleural effusion secondary to metastatic ovarian cancer.</div>
 <div class="grade-btns" id="c3q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c3q1',1,3,3)">Correct</button>
@@ -238,7 +235,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c3q2">
 <div class="qlabel">Q3. Name 4 other causes that can lead to the same X-ray abnormality.</div>
 <textarea id="c3q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c3q2_rev" onclick="revealAnswer('c3q2')">Check Answer</button>
 <div class="model-ans" id="c3q2_ma"><div class="ma-label">Model Answer:</div>Trauma (hemothorax), pulmonary embolism with infarction, pneumonia (parapneumonic effusion), tuberculosis. Also: heart failure (transudate), cirrhosis, nephrotic syndrome.</div>
 <div class="grade-btns" id="c3q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c3q2',1,3,3)">Correct</button>
@@ -248,6 +244,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c3q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c3_checkall" onclick="checkAllAnswers(3,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c3_sb">
 <div class="score-text" id="c3_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c3_sf" style="width:0%;background:#334155"></div></div>
@@ -270,7 +269,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c4q0">
 <div class="qlabel">Q1. Describe the abnormality in the X-ray.</div>
 <textarea id="c4q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c4q0_rev" onclick="revealAnswer('c4q0')">Check Answer</button>
 <div class="model-ans" id="c4q0_ma"><div class="ma-label">Model Answer:</div>Well-circumscribed, thick-walled cavitary lesion with air-fluid level in the right upper zone.</div>
 <div class="grade-btns" id="c4q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c4q0',1,4,3)">Correct</button>
@@ -282,7 +280,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c4q1">
 <div class="qlabel">Q2. Give the causes / differential diagnosis (use the CAVITY mnemonic).</div>
 <textarea id="c4q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c4q1_rev" onclick="revealAnswer('c4q1')">Check Answer</button>
 <div class="model-ans" id="c4q1_ma"><div class="ma-label">Model Answer:</div><b>C</b>ancer (SCC, cavitating mets), <b>A</b>utoimmune (GPA/Wegener's, RA nodules), <b>V</b>ascular (septic/bland emboli), <b>I</b>nfection (lung abscess, TB, fungal), <b>T</b>rauma (pneumatoceles), <b>Y</b>(C)PAM/congenital (bronchogenic cyst, sequestration).</div>
 <div class="grade-btns" id="c4q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c4q1',1,4,3)">Correct</button>
@@ -294,7 +291,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c4q2">
 <div class="qlabel">Q3. List the investigations needed to reach the final diagnosis.</div>
 <textarea id="c4q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c4q2_rev" onclick="revealAnswer('c4q2')">Check Answer</button>
 <div class="model-ans" id="c4q2_ma"><div class="ma-label">Model Answer:</div>Sputum Gram stain + culture, AFB smear + culture + GeneXpert, blood cultures, HIV test. CBC, ESR, CRP, anti-CCP. CT chest. Bronchoscopy + biopsy if cultures unrevealing.</div>
 <div class="grade-btns" id="c4q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c4q2',1,4,3)">Correct</button>
@@ -304,6 +300,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c4q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c4_checkall" onclick="checkAllAnswers(4,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c4_sb">
 <div class="score-text" id="c4_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c4_sf" style="width:0%;background:#334155"></div></div>
@@ -326,7 +325,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c5q0">
 <div class="qlabel">Q1. What does the lung function test show?</div>
 <textarea id="c5q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c5q0_rev" onclick="revealAnswer('c5q0')">Check Answer</button>
 <div class="model-ans" id="c5q0_ma"><div class="ma-label">Model Answer:</div>Restrictive pattern (both FEV1 and FVC reduced with preserved/high ratio of 82%) with significantly reduced gas transfer (low DLco 38% and Kco 64%).</div>
 <div class="grade-btns" id="c5q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c5q0',1,5,3)">Correct</button>
@@ -338,7 +336,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c5q1">
 <div class="qlabel">Q2. What could be causing this patient's persisting dyspnea?</div>
 <textarea id="c5q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c5q1_rev" onclick="revealAnswer('c5q1')">Check Answer</button>
 <div class="model-ans" id="c5q1_ma"><div class="ma-label">Model Answer:</div>Pulmonary fibrosis &mdash; post-ARDS / post-ventilation fibrotic lung damage.</div>
 <div class="grade-btns" id="c5q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c5q1',1,5,3)">Correct</button>
@@ -350,7 +347,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c5q2">
 <div class="qlabel">Q3. What investigations are needed?</div>
 <textarea id="c5q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c5q2_rev" onclick="revealAnswer('c5q2')">Check Answer</button>
 <div class="model-ans" id="c5q2_ma"><div class="ma-label">Model Answer:</div>ABG (confirm hypoxia), chest X-ray, HRCT chest (gold standard for fibrosis), CBC, ESR, CRP, blood &amp; sputum culture.</div>
 <div class="grade-btns" id="c5q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c5q2',1,5,3)">Correct</button>
@@ -360,6 +356,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c5q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c5_checkall" onclick="checkAllAnswers(5,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c5_sb">
 <div class="score-text" id="c5_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c5_sf" style="width:0%;background:#334155"></div></div>
@@ -382,7 +381,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c6q0">
 <div class="qlabel">Q1. Interpret the bleeding profile.</div>
 <textarea id="c6q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c6q0_rev" onclick="revealAnswer('c6q0')">Check Answer</button>
 <div class="model-ans" id="c6q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PT/INR (extrinsic pathway) with normal PTT, normal platelet count, and normal bleeding time.</div>
 <div class="grade-btns" id="c6q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c6q0',1,6,4)">Correct</button>
@@ -394,7 +392,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c6q1">
 <div class="qlabel">Q2. What drug is responsible?</div>
 <textarea id="c6q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c6q1_rev" onclick="revealAnswer('c6q1')">Check Answer</button>
 <div class="model-ans" id="c6q1_ma"><div class="ma-label">Model Answer:</div>Warfarin (vitamin K antagonist).</div>
 <div class="grade-btns" id="c6q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c6q1',1,6,4)">Correct</button>
@@ -406,7 +403,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c6q2">
 <div class="qlabel">Q3. Mention two other causes of the same abnormality.</div>
 <textarea id="c6q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c6q2_rev" onclick="revealAnswer('c6q2')">Check Answer</button>
 <div class="model-ans" id="c6q2_ma"><div class="ma-label">Model Answer:</div>Liver disease/dysfunction, vitamin K deficiency, factor VII deficiency.</div>
 <div class="grade-btns" id="c6q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c6q2',1,6,4)">Correct</button>
@@ -418,7 +414,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c6q3">
 <div class="qlabel">Q4. What is the antidote?</div>
 <textarea id="c6q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c6q3_rev" onclick="revealAnswer('c6q3')">Check Answer</button>
 <div class="model-ans" id="c6q3_ma"><div class="ma-label">Model Answer:</div>Vitamin K. For active/severe bleeding: add PCC or FFP for immediate factor replacement.</div>
 <div class="grade-btns" id="c6q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c6q3',1,6,4)">Correct</button>
@@ -428,6 +423,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c6q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c6_checkall" onclick="checkAllAnswers(6,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c6_sb">
 <div class="score-text" id="c6_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c6_sf" style="width:0%;background:#334155"></div></div>
@@ -450,7 +448,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c7q0">
 <div class="qlabel">Q1. Interpret the bleeding profile.</div>
 <textarea id="c7q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c7q0_rev" onclick="revealAnswer('c7q0')">Check Answer</button>
 <div class="model-ans" id="c7q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PTT (intrinsic pathway) with normal PT, INR, platelet count, and bleeding time.</div>
 <div class="grade-btns" id="c7q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c7q0',1,7,4)">Correct</button>
@@ -462,7 +459,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c7q1">
 <div class="qlabel">Q2. What is the cause? Mention another cause.</div>
 <textarea id="c7q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c7q1_rev" onclick="revealAnswer('c7q1')">Check Answer</button>
 <div class="model-ans" id="c7q1_ma"><div class="ma-label">Model Answer:</div>Heparin (over-anticoagulation). Other causes: Hemophilia A (VIII) / B (IX), von Willebrand disease.</div>
 <div class="grade-btns" id="c7q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c7q1',1,7,4)">Correct</button>
@@ -474,7 +470,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c7q2">
 <div class="qlabel">Q3. What is the antidote?</div>
 <textarea id="c7q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c7q2_rev" onclick="revealAnswer('c7q2')">Check Answer</button>
 <div class="model-ans" id="c7q2_ma"><div class="ma-label">Model Answer:</div>Protamine sulfate.</div>
 <div class="grade-btns" id="c7q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c7q2',1,7,4)">Correct</button>
@@ -486,7 +481,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c7q3">
 <div class="qlabel">Q4. Mention three causes of recurrent thrombosis in a young patient.</div>
 <textarea id="c7q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c7q3_rev" onclick="revealAnswer('c7q3')">Check Answer</button>
 <div class="model-ans" id="c7q3_ma"><div class="ma-label">Model Answer:</div>Inherited: Protein C deficiency, Protein S deficiency, Antithrombin III deficiency, Factor V Leiden. Acquired: Antiphospholipid syndrome.</div>
 <div class="grade-btns" id="c7q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c7q3',1,7,4)">Correct</button>
@@ -496,6 +490,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c7q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c7_checkall" onclick="checkAllAnswers(7,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c7_sb">
 <div class="score-text" id="c7_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c7_sf" style="width:0%;background:#334155"></div></div>
@@ -518,7 +515,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c8q0">
 <div class="qlabel">Q1. Interpret the bleeding profile.</div>
 <textarea id="c8q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c8q0_rev" onclick="revealAnswer('c8q0')">Check Answer</button>
 <div class="model-ans" id="c8q0_ma"><div class="ma-label">Model Answer:</div>Isolated prolonged PTT with low factor VIII level. Normal PT, INR, platelet count, and bleeding time.</div>
 <div class="grade-btns" id="c8q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c8q0',1,8,4)">Correct</button>
@@ -530,7 +526,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c8q1">
 <div class="qlabel">Q2. What is the diagnosis?</div>
 <textarea id="c8q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c8q1_rev" onclick="revealAnswer('c8q1')">Check Answer</button>
 <div class="model-ans" id="c8q1_ma"><div class="ma-label">Model Answer:</div>Hemophilia A (factor VIII deficiency). X-linked recessive.</div>
 <div class="grade-btns" id="c8q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c8q1',1,8,4)">Correct</button>
@@ -542,7 +537,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c8q2">
 <div class="qlabel">Q3. What is the plan of management?</div>
 <textarea id="c8q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c8q2_rev" onclick="revealAnswer('c8q2')">Check Answer</button>
 <div class="model-ans" id="c8q2_ma"><div class="ma-label">Model Answer:</div>Factor VIII replacement (plasma-derived or recombinant). Desmopressin (DDAVP) for mild cases. Emicizumab for prophylaxis. Cryoprecipitate (backup). Avoid NSAIDs/aspirin/IM injections. Genetic counseling.</div>
 <div class="grade-btns" id="c8q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c8q2',1,8,4)">Correct</button>
@@ -554,7 +548,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c8q3">
 <div class="qlabel">Q4. What are the complications?</div>
 <textarea id="c8q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c8q3_rev" onclick="revealAnswer('c8q3')">Check Answer</button>
 <div class="model-ans" id="c8q3_ma"><div class="ma-label">Model Answer:</div>Hemarthrosis (classic). Deep/intracranial bleeding. Transfusion-transmitted infection. Factor VIII inhibitor development.</div>
 <div class="grade-btns" id="c8q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c8q3',1,8,4)">Correct</button>
@@ -564,6 +557,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c8q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c8_checkall" onclick="checkAllAnswers(8,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c8_sb">
 <div class="score-text" id="c8_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c8_sf" style="width:0%;background:#334155"></div></div>
@@ -586,7 +582,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c9q0">
 <div class="qlabel">Q1. Describe the findings on inspecting the hand.</div>
 <textarea id="c9q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c9q0_rev" onclick="revealAnswer('c9q0')">Check Answer</button>
 <div class="model-ans" id="c9q0_ma"><div class="ma-label">Model Answer:</div>Swan-neck deformity: hyperextension of the PIP joint with flexion of the DIP joint. May also see ulnar deviation, boutonniere deformity, Z-thumb, wasting of small hand muscles. Spares DIP joints.</div>
 <div class="grade-btns" id="c9q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c9q0',1,9,4)">Correct</button>
@@ -598,7 +593,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c9q1">
 <div class="qlabel">Q2. What is your diagnosis?</div>
 <textarea id="c9q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c9q1_rev" onclick="revealAnswer('c9q1')">Check Answer</button>
 <div class="model-ans" id="c9q1_ma"><div class="ma-label">Model Answer:</div>Rheumatoid arthritis.</div>
 <div class="grade-btns" id="c9q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c9q1',1,9,4)">Correct</button>
@@ -610,7 +604,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c9q2">
 <div class="qlabel">Q3. List investigations to confirm.</div>
 <textarea id="c9q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c9q2_rev" onclick="revealAnswer('c9q2')">Check Answer</button>
 <div class="model-ans" id="c9q2_ma"><div class="ma-label">Model Answer:</div>RF, Anti-CCP (most specific), ESR &amp; CRP, CBC, X-ray of hands.</div>
 <div class="grade-btns" id="c9q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c9q2',1,9,4)">Correct</button>
@@ -622,7 +615,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c9q3">
 <div class="qlabel">Q4. What is the plan of management?</div>
 <textarea id="c9q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c9q3_rev" onclick="revealAnswer('c9q3')">Check Answer</button>
 <div class="model-ans" id="c9q3_ma"><div class="ma-label">Model Answer:</div>NSAIDs + corticosteroids. Conventional DMARDs: methotrexate (first-line), leflunomide, hydroxychloroquine, sulfasalazine. Biologic DMARDs: adalimumab, etanercept, infliximab, rituximab, tocilizumab. Physio/OT, surgery.</div>
 <div class="grade-btns" id="c9q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c9q3',1,9,4)">Correct</button>
@@ -632,6 +624,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c9q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c9_checkall" onclick="checkAllAnswers(9,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c9_sb">
 <div class="score-text" id="c9_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c9_sf" style="width:0%;background:#334155"></div></div>
@@ -654,7 +649,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c10q0">
 <div class="qlabel">Q1. Describe findings + differential + provisional diagnosis.</div>
 <textarea id="c10q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c10q0_rev" onclick="revealAnswer('c10q0')">Check Answer</button>
 <div class="model-ans" id="c10q0_ma"><div class="ma-label">Model Answer:</div>Heberden's nodes: hard, bony, non-tender prominences at DIP joints. (PIP = Bouchard's.) DDx: RA, gouty tophus, Osler/Janeway, ganglion cyst, neurofibroma. Provisional: Osteoarthritis.</div>
 <div class="grade-btns" id="c10q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c10q0',1,10,3)">Correct</button>
@@ -666,7 +660,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c10q1">
 <div class="qlabel">Q2. List investigations to confirm.</div>
 <textarea id="c10q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c10q1_rev" onclick="revealAnswer('c10q1')">Check Answer</button>
 <div class="model-ans" id="c10q1_ma"><div class="ma-label">Model Answer:</div>RF and anti-CCP (negative in OA). ESR, CRP (normal in OA). CBC. X-ray: LOSS (Loss of joint space, Osteophytes, Subchondral sclerosis, Subchondral cysts).</div>
 <div class="grade-btns" id="c10q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c10q1',1,10,3)">Correct</button>
@@ -678,7 +671,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c10q2">
 <div class="qlabel">Q3. What is the plan of management?</div>
 <textarea id="c10q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c10q2_rev" onclick="revealAnswer('c10q2')">Check Answer</button>
 <div class="model-ans" id="c10q2_ma"><div class="ma-label">Model Answer:</div>Conservative: rest, splints, ice, physio, weight loss. Analgesia: paracetamol/topical NSAIDs, then oral NSAIDs; intra-articular steroids. Surgery for severe disease. NO DMARDs.</div>
 <div class="grade-btns" id="c10q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c10q2',1,10,3)">Correct</button>
@@ -688,6 +680,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c10q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c10_checkall" onclick="checkAllAnswers(10,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c10_sb">
 <div class="score-text" id="c10_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c10_sf" style="width:0%;background:#334155"></div></div>
@@ -710,7 +705,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c11q0">
 <div class="qlabel">Q1. Interpret the ABG and calculate the anion gap.</div>
 <textarea id="c11q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c11q0_rev" onclick="revealAnswer('c11q0')">Check Answer</button>
 <div class="model-ans" id="c11q0_ma"><div class="ma-label">Model Answer:</div>Low pH (7.15) = acidosis. HCO3 (10) and PCO2 (22) both low = metabolic acidosis with respiratory compensation. AG = 145 &minus; (98+10) = <b>37</b> &rarr; HAGMA.</div>
 <div class="grade-btns" id="c11q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c11q0',1,11,3)">Correct</button>
@@ -722,7 +716,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c11q1">
 <div class="qlabel">Q2. What is the diagnosis?</div>
 <textarea id="c11q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c11q1_rev" onclick="revealAnswer('c11q1')">Check Answer</button>
 <div class="model-ans" id="c11q1_ma"><div class="ma-label">Model Answer:</div>Diabetic Ketoacidosis (DKA) &mdash; high glucose + HAGMA + ketosis.</div>
 <div class="grade-btns" id="c11q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c11q1',1,11,3)">Correct</button>
@@ -734,7 +727,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c11q2">
 <div class="qlabel">Q3. What is the plan of management?</div>
 <textarea id="c11q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c11q2_rev" onclick="revealAnswer('c11q2')">Check Answer</button>
 <div class="model-ans" id="c11q2_ma"><div class="ma-label">Model Answer:</div><b>Three pillars:</b> (1) IV NS 0.9% 1L first hour. (2) Insulin 0.1 u/kg/hr; add dextrose when glucose &lt;14 mmol/L. (3) Potassium replacement. Plus: treat precipitant.</div>
 <div class="grade-btns" id="c11q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c11q2',1,11,3)">Correct</button>
@@ -744,6 +736,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c11q2_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c11_checkall" onclick="checkAllAnswers(11,3)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c11_sb">
 <div class="score-text" id="c11_st">Score: 0 / 3</div>
 <div class="score-fill"><div class="score-fill-inner" id="c11_sf" style="width:0%;background:#334155"></div></div>
@@ -766,7 +761,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c12q0">
 <div class="qlabel">Q1. Interpret the ABG.</div>
 <textarea id="c12q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c12q0_rev" onclick="revealAnswer('c12q0')">Check Answer</button>
 <div class="model-ans" id="c12q0_ma"><div class="ma-label">Model Answer:</div>High pH (7.58), high HCO3 (38), PCO2 high-normal (45) &rarr; metabolic alkalosis with respiratory compensation.</div>
 <div class="grade-btns" id="c12q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c12q0',1,12,4)">Correct</button>
@@ -778,7 +772,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c12q1">
 <div class="qlabel">Q2. What are the chemistry abnormalities?</div>
 <textarea id="c12q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c12q1_rev" onclick="revealAnswer('c12q1')">Check Answer</button>
 <div class="model-ans" id="c12q1_ma"><div class="ma-label">Model Answer:</div>Hyponatremia (128), hypokalemia (2.8), hypochloremia (88).</div>
 <div class="grade-btns" id="c12q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c12q1',1,12,4)">Correct</button>
@@ -790,7 +783,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c12q2">
 <div class="qlabel">Q3. Mention two causes responsible.</div>
 <textarea id="c12q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c12q2_rev" onclick="revealAnswer('c12q2')">Check Answer</button>
 <div class="model-ans" id="c12q2_ma"><div class="ma-label">Model Answer:</div>Furosemide (loop diuretic). Vomiting &amp; diarrhea. Secondary hyperaldosteronism.</div>
 <div class="grade-btns" id="c12q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c12q2',1,12,4)">Correct</button>
@@ -802,7 +794,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c12q3">
 <div class="qlabel">Q4. Plan of management?</div>
 <textarea id="c12q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c12q3_rev" onclick="revealAnswer('c12q3')">Check Answer</button>
 <div class="model-ans" id="c12q3_ma"><div class="ma-label">Model Answer:</div>Saline infusion, potassium replacement, magnesium replacement, chloride replacement, stop furosemide.</div>
 <div class="grade-btns" id="c12q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c12q3',1,12,4)">Correct</button>
@@ -812,6 +803,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c12q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c12_checkall" onclick="checkAllAnswers(12,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c12_sb">
 <div class="score-text" id="c12_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c12_sf" style="width:0%;background:#334155"></div></div>
@@ -834,7 +828,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c13q0">
 <div class="qlabel">Q1. Comment on the labs.</div>
 <textarea id="c13q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c13q0_rev" onclick="revealAnswer('c13q0')">Check Answer</button>
 <div class="model-ans" id="c13q0_ma"><div class="ma-label">Model Answer:</div>Normocytic normochromic anemia + raised indirect bilirubin &rarr; hemolysis.</div>
 <div class="grade-btns" id="c13q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c13q0',1,13,4)">Correct</button>
@@ -846,7 +839,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c13q1">
 <div class="qlabel">Q2. Comment on the blood film.</div>
 <textarea id="c13q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c13q1_rev" onclick="revealAnswer('c13q1')">Check Answer</button>
 <div class="model-ans" id="c13q1_ma"><div class="ma-label">Model Answer:</div>Spherocytes &mdash; small spherical cells with decreased diameter, dense staining, and <b>loss of central pallor</b>.</div>
 <div class="grade-btns" id="c13q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c13q1',1,13,4)">Correct</button>
@@ -858,7 +850,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c13q2">
 <div class="qlabel">Q3. Differential diagnosis?</div>
 <textarea id="c13q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c13q2_rev" onclick="revealAnswer('c13q2')">Check Answer</button>
 <div class="model-ans" id="c13q2_ma"><div class="ma-label">Model Answer:</div>Hereditary spherocytosis (HS) vs Autoimmune hemolytic anemia (AIHA).</div>
 <div class="grade-btns" id="c13q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c13q2',1,13,4)">Correct</button>
@@ -870,7 +861,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c13q3">
 <div class="qlabel">Q4. Further investigations?</div>
 <textarea id="c13q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c13q3_rev" onclick="revealAnswer('c13q3')">Check Answer</button>
 <div class="model-ans" id="c13q3_ma"><div class="ma-label">Model Answer:</div>Direct antiglobulin (Coombs) test: + in AIHA, &minus; in HS. Osmotic fragility test: + in both. Reticulocyte count, LDH, haptoglobin.</div>
 <div class="grade-btns" id="c13q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c13q3',1,13,4)">Correct</button>
@@ -880,6 +870,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c13q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c13_checkall" onclick="checkAllAnswers(13,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c13_sb">
 <div class="score-text" id="c13_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c13_sf" style="width:0%;background:#334155"></div></div>
@@ -902,7 +895,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c14q0">
 <div class="qlabel">Q1. Comment on the CBC.</div>
 <textarea id="c14q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c14q0_rev" onclick="revealAnswer('c14q0')">Check Answer</button>
 <div class="model-ans" id="c14q0_ma"><div class="ma-label">Model Answer:</div>Normocytic normochromic anemia (Hb 6).</div>
 <div class="grade-btns" id="c14q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c14q0',1,14,4)">Correct</button>
@@ -914,7 +906,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c14q1">
 <div class="qlabel">Q2. List two blood film abnormalities.</div>
 <textarea id="c14q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c14q1_rev" onclick="revealAnswer('c14q1')">Check Answer</button>
 <div class="model-ans" id="c14q1_ma"><div class="ma-label">Model Answer:</div><b>Sickle cells</b> + <b>target cells</b> (bullseye).</div>
 <div class="grade-btns" id="c14q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c14q1',1,14,4)">Correct</button>
@@ -926,7 +917,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c14q2">
 <div class="qlabel">Q3. Diagnosis?</div>
 <textarea id="c14q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c14q2_rev" onclick="revealAnswer('c14q2')">Check Answer</button>
 <div class="model-ans" id="c14q2_ma"><div class="ma-label">Model Answer:</div>Sickle cell anemia &mdash; vaso-occlusive crisis.</div>
 <div class="grade-btns" id="c14q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c14q2',1,14,4)">Correct</button>
@@ -938,7 +928,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c14q3">
 <div class="qlabel">Q4. Management?</div>
 <textarea id="c14q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c14q3_rev" onclick="revealAnswer('c14q3')">Check Answer</button>
 <div class="model-ans" id="c14q3_ma"><div class="ma-label">Model Answer:</div>Hydration, analgesia (opioids), oxygen, antibiotics, transfusion, LMWH. Long-term: hydroxyurea, folic acid. Confirm: Hb electrophoresis.</div>
 <div class="grade-btns" id="c14q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c14q3',1,14,4)">Correct</button>
@@ -948,6 +937,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c14q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c14_checkall" onclick="checkAllAnswers(14,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c14_sb">
 <div class="score-text" id="c14_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c14_sf" style="width:0%;background:#334155"></div></div>
@@ -970,7 +962,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c15q0">
 <div class="qlabel">Q1. Comment on the CBC.</div>
 <textarea id="c15q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c15q0_rev" onclick="revealAnswer('c15q0')">Check Answer</button>
 <div class="model-ans" id="c15q0_ma"><div class="ma-label">Model Answer:</div>Macrocytic normochromic anemia (high MCV 108, normal MCH).</div>
 <div class="grade-btns" id="c15q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c15q0',1,15,5)">Correct</button>
@@ -982,7 +973,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c15q1">
 <div class="qlabel">Q2. Comment on the blood film.</div>
 <textarea id="c15q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c15q1_rev" onclick="revealAnswer('c15q1')">Check Answer</button>
 <div class="model-ans" id="c15q1_ma"><div class="ma-label">Model Answer:</div>Macrocytosis + hypersegmented neutrophils (&ge;5-6 lobes).</div>
 <div class="grade-btns" id="c15q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c15q1',1,15,5)">Correct</button>
@@ -994,7 +984,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c15q2">
 <div class="qlabel">Q3. Diagnosis?</div>
 <textarea id="c15q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c15q2_rev" onclick="revealAnswer('c15q2')">Check Answer</button>
 <div class="model-ans" id="c15q2_ma"><div class="ma-label">Model Answer:</div>Megaloblastic anemia.</div>
 <div class="grade-btns" id="c15q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c15q2',1,15,5)">Correct</button>
@@ -1006,7 +995,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c15q3">
 <div class="qlabel">Q4. Mention 4 causes.</div>
 <textarea id="c15q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c15q3_rev" onclick="revealAnswer('c15q3')">Check Answer</button>
 <div class="model-ans" id="c15q3_ma"><div class="ma-label">Model Answer:</div>B12 deficiency, folate deficiency, alcoholism, hypothyroidism.</div>
 <div class="grade-btns" id="c15q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c15q3',1,15,5)">Correct</button>
@@ -1018,7 +1006,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c15q4">
 <div class="qlabel">Q5. Mention 2 causative drugs.</div>
 <textarea id="c15q4_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c15q4_rev" onclick="revealAnswer('c15q4')">Check Answer</button>
 <div class="model-ans" id="c15q4_ma"><div class="ma-label">Model Answer:</div>Methotrexate and metformin.</div>
 <div class="grade-btns" id="c15q4_gb">
 <button class="grade-btn correct" onclick="gradeQ('c15q4',1,15,5)">Correct</button>
@@ -1028,6 +1015,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c15q4_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c15_checkall" onclick="checkAllAnswers(15,5)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c15_sb">
 <div class="score-text" id="c15_st">Score: 0 / 5</div>
 <div class="score-fill"><div class="score-fill-inner" id="c15_sf" style="width:0%;background:#334155"></div></div>
@@ -1050,7 +1040,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c16q0">
 <div class="qlabel">Q1. What abnormality in the face?</div>
 <textarea id="c16q0_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c16q0_rev" onclick="revealAnswer('c16q0')">Check Answer</button>
 <div class="model-ans" id="c16q0_ma"><div class="ma-label">Model Answer:</div>Yellowish discoloration of skin and sclera = jaundice.</div>
 <div class="grade-btns" id="c16q0_gb">
 <button class="grade-btn correct" onclick="gradeQ('c16q0',1,16,4)">Correct</button>
@@ -1062,7 +1051,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c16q1">
 <div class="qlabel">Q2. Chemistry abnormalities?</div>
 <textarea id="c16q1_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c16q1_rev" onclick="revealAnswer('c16q1')">Check Answer</button>
 <div class="model-ans" id="c16q1_ma"><div class="ma-label">Model Answer:</div>Direct hyperbilirubinemia (total 15, direct 12). High ESR (120). Raised RBS (150). Normal ALT/AST.</div>
 <div class="grade-btns" id="c16q1_gb">
 <button class="grade-btn correct" onclick="gradeQ('c16q1',1,16,4)">Correct</button>
@@ -1074,7 +1062,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c16q2">
 <div class="qlabel">Q3. Differential diagnosis?</div>
 <textarea id="c16q2_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c16q2_rev" onclick="revealAnswer('c16q2')">Check Answer</button>
 <div class="model-ans" id="c16q2_ma"><div class="ma-label">Model Answer:</div>Pancreatic head carcinoma, cholangiocarcinoma, choledocholithiasis, chronic pancreatitis, drug-induced cholestasis, primary biliary cholangitis.</div>
 <div class="grade-btns" id="c16q2_gb">
 <button class="grade-btn correct" onclick="gradeQ('c16q2',1,16,4)">Correct</button>
@@ -1086,7 +1073,6 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="qblock" id="c16q3">
 <div class="qlabel">Q4. Further investigations?</div>
 <textarea id="c16q3_ta" placeholder="Type your answer..." rows="3"></textarea>
-<button class="reveal-btn" id="c16q3_rev" onclick="revealAnswer('c16q3')">Check Answer</button>
 <div class="model-ans" id="c16q3_ma"><div class="ma-label">Model Answer:</div>ALP + GGT, CBC, PT/INR, abdominal ultrasound, MRCP, CT abdomen, CA 19-9.</div>
 <div class="grade-btns" id="c16q3_gb">
 <button class="grade-btn correct" onclick="gradeQ('c16q3',1,16,4)">Correct</button>
@@ -1096,6 +1082,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <div class="grade-result" id="c16q3_gr"></div>
 </div>
 
+<div style="text-align:center;margin:14px 0">
+<button class="reveal-btn" id="c16_checkall" onclick="checkAllAnswers(16,4)">Check All Answers</button>
+</div>
 <div class="score-bar" id="c16_sb">
 <div class="score-text" id="c16_st">Score: 0 / 4</div>
 <div class="score-fill"><div class="score-fill-inner" id="c16_sf" style="width:0%;background:#334155"></div></div>
@@ -1163,11 +1152,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <script>
 const scores={};
 function toggleAll(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.classList.add('open');else c.classList.remove('open')})}
-function revealAnswer(qid){
-  document.getElementById(qid+'_ma').classList.add('show');
-  document.getElementById(qid+'_gb').classList.add('show');
-  const btn=document.getElementById(qid+'_rev');btn.disabled=true;btn.textContent='Revealed';
-  document.getElementById(qid+'_ta').disabled=true;
+function checkAllAnswers(cn,tot){
+  const btn=document.getElementById('c'+cn+'_checkall');
+  btn.disabled=true;btn.textContent='Answers Revealed';
+  for(let i=0;i<tot;i++){
+    const qid='c'+cn+'q'+i;
+    document.getElementById(qid+'_ma').classList.add('show');
+    document.getElementById(qid+'_gb').classList.add('show');
+    document.getElementById(qid+'_ta').disabled=true;
+  }
 }
 function gradeQ(qid,pts,cn,tot){
   if(!scores[cn])scores[cn]={};scores[cn][qid]=pts;
@@ -1196,8 +1189,8 @@ function resetCase(cn,tot){
     const ma=document.getElementById(q+'_ma');if(ma)ma.classList.remove('show');
     const gb=document.getElementById(q+'_gb');if(gb){gb.classList.remove('show');gb.querySelectorAll('button').forEach(b=>b.disabled=false);}
     const gr=document.getElementById(q+'_gr');if(gr){gr.classList.remove('show');gr.textContent='';}
-    const btn=document.getElementById(q+'_rev');if(btn){btn.disabled=false;btn.textContent='Check Answer';}
   }
+  const btn=document.getElementById('c'+cn+'_checkall');if(btn){btn.disabled=false;btn.textContent='Check All Answers';}
   document.getElementById('c'+cn+'_st').textContent='Score: 0 / '+tot;
   const sf=document.getElementById('c'+cn+'_sf');sf.style.width='0%';sf.style.background='#334155';
   const b=document.getElementById('c'+cn+'_badge');b.textContent='';b.className='score-badge';
