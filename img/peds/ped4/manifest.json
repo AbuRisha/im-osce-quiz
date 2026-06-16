@@ -25,7 +25,8 @@
       "bytes": 198513,
       "w": 916,
       "h": 999,
-      "primary": false
+      "primary": false,
+      "pdf_primary": true
     },
     {
       "type": "IMAGING",

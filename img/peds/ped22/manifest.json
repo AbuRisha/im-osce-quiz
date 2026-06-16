@@ -47,7 +47,8 @@
       "bytes": 174218,
       "w": 1429,
       "h": 1000,
-      "primary": false
+      "primary": false,
+      "pdf_primary": true
     },
     {
       "type": "PHOTO",

@@ -58,7 +58,8 @@
       "bytes": 85747,
       "w": 1600,
       "h": 538,
-      "primary": false
+      "primary": false,
+      "pdf_primary": true
     }
   ]
 }

@@ -25,6 +25,16 @@
       "w": 1292,
       "h": 1000,
       "primary": true
+    },
+    {
+      "filename": "ped26_wm_02_photo.jpg",
+      "type": "PHOTO",
+      "label": "Jaundice in a newborn (clinical photo)",
+      "source": "Wikimedia Commons",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Jaundice_in_newborn.jpg",
+      "license": "Public domain",
+      "attribution": "Wikimedia Commons",
+      "pdf_primary": true
     }
   ]
 }

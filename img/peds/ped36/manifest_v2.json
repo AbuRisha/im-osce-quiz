@@ -1,0 +1,24 @@
+{
+  "case": 36,
+  "images": [
+    {
+      "filename": "ped36_wm_01_photo.jpg",
+      "type": "PHOTO",
+      "label": "Turner syndrome \u2014 preoperative webbed neck",
+      "source": "Wikimedia Commons",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Preoperative_webbed_neck_in_Turner_syndrome.jpg",
+      "license": "CC BY 4.0",
+      "attribution": "Wikimedia Commons contributors",
+      "pdf_primary": true
+    },
+    {
+      "filename": "ped36_wm_02_photo.png",
+      "type": "PHOTO",
+      "label": "Turner syndrome \u2014 webbed neck (alternative view)",
+      "source": "Wikimedia Commons",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Turner_syndrome_webbed_neck.png",
+      "license": "CC BY 2.0",
+      "attribution": "Wikimedia Commons contributors"
+    }
+  ]
+}

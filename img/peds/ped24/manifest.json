@@ -36,7 +36,8 @@
       "bytes": 51126,
       "w": 841,
       "h": 999,
-      "primary": false
+      "primary": false,
+      "pdf_primary": true
     },
     {
       "type": "IMAGING",

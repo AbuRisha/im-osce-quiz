@@ -1,0 +1,15 @@
+{
+  "case": 9,
+  "images": [
+    {
+      "filename": "ped9_wm_01_microscopy.jpg",
+      "type": "MICROSCOPY",
+      "label": "Iron-deficiency anemia \u2014 peripheral blood smear (microcytic, hypochromic)",
+      "source": "Wikimedia Commons",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Iron-deficiency_Anemia%2C_Peripheral_Blood_Smear_%284422704616%29.jpg",
+      "license": "CC BY 2.0",
+      "attribution": "Ed Uthman, MD",
+      "pdf_primary": true
+    }
+  ]
+}
