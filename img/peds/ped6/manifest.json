@@ -59,7 +59,14 @@
       "w": 1454,
       "h": 1000,
       "primary": false,
-      "pdf_primary": true
+      "pdf_primary": true,
+      "findings": [
+        "**Sickle cells** (drepanocytes) \u2014 crescent/banana-shaped RBCs",
+        "**Target cells** (codocytes)",
+        "**Howell-Jolly bodies** (autosplenectomy)",
+        "Nucleated RBCs + polychromasia (\u2191 reticulocytes)",
+        "Anisocytosis + poikilocytosis"
+      ]
     }
   ]
 }

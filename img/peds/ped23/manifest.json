@@ -36,7 +36,15 @@
       "bytes": 217744,
       "w": 1289,
       "h": 1000,
-      "primary": false
+      "primary": false,
+      "findings": [
+        "CSF Gram stain in bacterial meningitis:",
+        "**Gram-negative diplococci** \u2192 *N. meningitidis*",
+        "**Gram-positive diplococci** \u2192 *S. pneumoniae*",
+        "**Gram-negative coccobacilli** \u2192 *H. influenzae*",
+        "**Gram-positive rods** \u2192 *L. monocytogenes* (neonates/elderly)",
+        "Abundant **PMNs** (neutrophil-predominant pleocytosis)"
+      ]
     },
     {
       "type": "IMAGING",

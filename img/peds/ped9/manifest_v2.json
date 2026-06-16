@@ -9,7 +9,15 @@
       "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Iron-deficiency_Anemia%2C_Peripheral_Blood_Smear_%284422704616%29.jpg",
       "license": "CC BY 2.0",
       "attribution": "Ed Uthman, MD",
-      "pdf_primary": true
+      "pdf_primary": true,
+      "findings": [
+        "**Microcytic** (small RBCs, MCV <80 fL)",
+        "**Hypochromic** \u2014 \u2191 central pallor (>1/3 cell diameter)",
+        "**Anisopoikilocytosis** (variable size/shape)",
+        "**Pencil/cigar cells** (elongated elliptocytes)",
+        "**Target cells** may be present",
+        "Reactive **thrombocytosis** commonly accompanies"
+      ]
     }
   ]
 }

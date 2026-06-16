@@ -25,7 +25,13 @@
       "bytes": 255390,
       "w": 1513,
       "h": 1000,
-      "primary": false
+      "primary": false,
+      "findings": [
+        "Muscle biopsy in BMD:",
+        "Same dystrophinopathy pattern as DMD but **less severe**",
+        "**Reduced or truncated dystrophin** (vs absent in DMD) on Western blot / IHC",
+        "Variable fiber size, necrosis, regeneration, fibrosis \u2014 milder"
+      ]
     }
   ]
 }

@@ -106,6 +106,12 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 .peds-thumb.tag-IMAGING{outline:2px solid rgba(245,158,11,.55);outline-offset:-2px}
 .peds-thumb.tag-ILLUSTRATION{outline:2px solid rgba(59,130,246,.45);outline-offset:-2px}
 .peds-thumb.tag-OTHER{outline:2px solid rgba(148,163,184,.35);outline-offset:-2px}
+.peds-thumb.tag-MICROSCOPY{outline:2px solid rgba(124,58,237,.55);outline-offset:-2px}
+.peds-thumb.tag-HISTOLOGY{outline:2px solid rgba(124,58,237,.55);outline-offset:-2px}
+/* findings badge: small purple dot on thumbs with annotations */
+.peds-thumb.has-findings{position:relative}
+.peds-gallery .peds-thumb.has-findings::after{content:""}
+.peds-thumb.has-findings{box-shadow:inset 0 -22px 0 rgba(124,58,237,.85);}
 /* lightbox */
 #peds-lb{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;cursor:zoom-out;padding:24px}
 #peds-lb.show{display:flex}
@@ -116,6 +122,14 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 #peds-lb .lb-prev{left:18px}
 #peds-lb .lb-next{right:18px}
 #peds-lb .lb-nav:hover{background:rgba(56,189,248,.3)}
+/* findings panel inside lightbox */
+#peds-lb .lb-findings{margin-top:12px;max-width:560px;background:#1e1b4b;border:1px solid #4c1d95;border-radius:6px;padding:10px 14px;color:#ede9fe;font:13px/1.5 system-ui,sans-serif;text-align:left;display:none}
+#peds-lb .lb-findings.show{display:block}
+#peds-lb .lb-findings h4{margin:0 0 6px;font-size:12px;color:#c4b5fd;letter-spacing:.04em;text-transform:uppercase}
+#peds-lb .lb-findings ul{margin:0;padding-left:18px}
+#peds-lb .lb-findings li{margin:2px 0}
+#peds-lb .lb-findings li b{color:#ddd6fe}
+#peds-lb .lb-findings li i{color:#a78bfa}
 
 
 /* ---- comparison table (case 39) ---- */
@@ -2365,9 +2379,9 @@ Alveolar collapse in surfactant deficiency" onclick="pedsLightbox(this)"><img cl
 
 Neonatal respiratory distress syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped4/ped4_03_imaging.jpg" alt="Pediatrics Case 4 - IMAGING" loading="lazy" data-label="X-RAY
 
-Bronchopulmonary dysplasia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped4/ped4_04_other.jpg" alt="Pediatrics Case 4 - OTHER" loading="lazy" data-label="MICROSCOPY
+Bronchopulmonary dysplasia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped4/ped4_04_other.jpg" alt="Pediatrics Case 4 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-Hyaline membranes in ARDS" onclick="pedsLightbox(this)"></div></div>
+Hyaline membranes in ARDS" data-findings="[&quot;Pink amorphous **hyaline membranes** lining alveolar walls&quot;, &quot;Collapsed alveoli (atelectasis)&quot;, &quot;Type II pneumocyte hyperplasia&quot;, &quot;Interstitial edema + neutrophilic infiltrate&quot;]" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc4q0">
 <div class="qlabel">Q1. Mention 2 X-ray findings.</div>
 <textarea id="pc4q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2470,9 +2484,9 @@ Structure of ball and socket synovial joints" onclick="pedsLightbox(this)"><img 
 
 Aspergilloma (fungus ball) within right upper lobe cavity" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped5/ped5_04_photo.jpg" alt="Pediatrics Case 5 - PHOTO" loading="lazy" data-label="PHOTO
 
-Infected ulcer on the ball of the foot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped5/ped5_05_other.jpg" alt="Pediatrics Case 5 - OTHER" loading="lazy" data-label="MICROSCOPY
+Infected ulcer on the ball of the foot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped5/ped5_05_other.jpg" alt="Pediatrics Case 5 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-B-cell acute lymphoblastic leukemia" onclick="pedsLightbox(this)"></div></div>
+B-cell acute lymphoblastic leukemia" data-findings="[&quot;Hypercellular marrow replaced by **monomorphic blasts**&quot;, &quot;High N:C ratio; scant basophilic cytoplasm&quot;, &quot;Fine open chromatin; inconspicuous nucleoli&quot;, &quot;**TdT+** on flow (immature lymphoblasts)&quot;, &quot;CD19/CD10/CD22 positive (B-ALL panel)&quot;]" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc5q0">
 <div class="qlabel">Q1. What is the abnormality in CBC and smear?</div>
 <textarea id="pc5q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2562,9 +2576,9 @@ Sickle cell fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-
 
 Bilateral femoral head avascular necrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped6/ped6_04_photo.jpg" alt="Pediatrics Case 6 - PHOTO" loading="lazy" data-label="PHOTO
 
-Dactylitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped6/ped6_05_other.jpg" alt="Pediatrics Case 6 - OTHER" loading="lazy" data-label="MICROSCOPY
+Dactylitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped6/ped6_05_other.jpg" alt="Pediatrics Case 6 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-Erythrocyte morphologies in sickle-cell disease" onclick="pedsLightbox(this)"></div></div>
+Erythrocyte morphologies in sickle-cell disease" data-findings="[&quot;**Sickle cells** (drepanocytes) — crescent/banana-shaped RBCs&quot;, &quot;**Target cells** (codocytes)&quot;, &quot;**Howell-Jolly bodies** (autosplenectomy)&quot;, &quot;Nucleated RBCs + polychromasia (↑ reticulocytes)&quot;, &quot;Anisocytosis + poikilocytosis&quot;]" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc6q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc6q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2865,7 +2879,7 @@ Rib-within-a-rib sign in thalassemia" onclick="pedsLightbox(this)"></div></div>
 <div class="st">2-year-old picky eater drinking ~800 mL cow's milk/day; pale; eating paper (pica).</div>
 <div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped9/ped9_01_imaging.jpg" alt="Pediatrics Case 9 - IMAGING" loading="lazy" data-label="FACT SHEET
 
-Iron deficiency anemia fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-MICROSCOPY" src="img/peds/ped9/ped9_wm_01_microscopy.jpg" alt="Pediatrics Case 9 - MICROSCOPY" loading="lazy" data-label="Iron-deficiency anemia — peripheral blood smear (microcytic, hypochromic)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped9/ped9_02_imaging.jpg" alt="Pediatrics Case 9 - IMAGING" loading="lazy" data-label="FLOWCHART
+Iron deficiency anemia fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-MICROSCOPY has-findings" src="img/peds/ped9/ped9_wm_01_microscopy.jpg" alt="Pediatrics Case 9 - MICROSCOPY" loading="lazy" data-label="Iron-deficiency anemia — peripheral blood smear (microcytic, hypochromic)" data-findings="[&quot;**Microcytic** (small RBCs, MCV &lt;80 fL)&quot;, &quot;**Hypochromic** — ↑ central pallor (>1/3 cell diameter)&quot;, &quot;**Anisopoikilocytosis** (variable size/shape)&quot;, &quot;**Pencil/cigar cells** (elongated elliptocytes)&quot;, &quot;**Target cells** may be present&quot;, &quot;Reactive **thrombocytosis** commonly accompanies&quot;]" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped9/ped9_02_imaging.jpg" alt="Pediatrics Case 9 - IMAGING" loading="lazy" data-label="FLOWCHART
 
 Evaluation of suspected iron deficiency anemia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped9/ped9_03_photo.jpg" alt="Pediatrics Case 9 - PHOTO" loading="lazy" data-label="PHOTO
 
@@ -4421,9 +4435,9 @@ Rectal prolapse in cystic fibrosis" onclick="pedsLightbox(this)"></div></div>
 
 Kernig sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped23/ped23_02_illustration.jpg" alt="Pediatrics Case 23 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
 
-Brudzinski sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped23/ped23_03_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MICROSCOPY
+Brudzinski sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING has-findings" src="img/peds/ped23/ped23_03_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MICROSCOPY
 
-Bacterial meningitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped23/ped23_04_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MRI
+Bacterial meningitis" data-findings="[&quot;CSF Gram stain in bacterial meningitis:&quot;, &quot;**Gram-negative diplococci** → *N. meningitidis*&quot;, &quot;**Gram-positive diplococci** → *S. pneumoniae*&quot;, &quot;**Gram-negative coccobacilli** → *H. influenzae*&quot;, &quot;**Gram-positive rods** → *L. monocytogenes* (neonates/elderly)&quot;, &quot;Abundant **PMNs** (neutrophil-predominant pleocytosis)&quot;]" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped23/ped23_04_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MRI
 
 Cryptococcal meningitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped23/ped23_05_photo.jpg" alt="Pediatrics Case 23 - PHOTO" loading="lazy" data-label="PHOTO
 
@@ -5076,11 +5090,11 @@ Management of bilious vomiting in the newborn" onclick="pedsLightbox(this)"></di
 
 Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped29/ped29_02_photo.jpg" alt="Pediatrics Case 29 - PHOTO" loading="lazy" data-label="PHOTO
 
-Gower sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped29/ped29_03_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
+Gower sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped29/ped29_03_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-Progressive muscular dystrophy (Duchenne and Becker subtypes)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped29/ped29_04_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
+Progressive muscular dystrophy (Duchenne and Becker subtypes)" data-findings="[&quot;Muscle biopsy in DMD:&quot;, &quot;**Variable fiber size** (rounded atrophic + hypertrophic fibers)&quot;, &quot;**Necrotic fibers** + active **regeneration** (basophilic fibers)&quot;, &quot;**Endomysial fibrosis** + **fatty infiltration**&quot;, &quot;**Absent dystrophin** on immunostain (DMD) / reduced or truncated (BMD)&quot;, &quot;Internal nuclei, opaque/hyaline fibers&quot;]" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped29/ped29_04_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-Duchenne muscular dystrophy" onclick="pedsLightbox(this)"></div></div>
+Duchenne muscular dystrophy" data-findings="[&quot;Same DMD biopsy pattern — see above&quot;]" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc29q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc29q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5177,9 +5191,9 @@ Duchenne muscular dystrophy" onclick="pedsLightbox(this)"></div></div>
 <div class="st">12-year-old previously healthy boy; muscle weakness over the past 4 weeks. Maternal uncle affected with similar condition.</div>
 <div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped30/ped30_wm_01_photo.png" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Pseudoathletic calf pseudohypertrophy (classic dystrophinopathy sign)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped30/ped30_wm_02_photo.jpg" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Boy with Duchenne muscular dystrophy (clinical photo)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped30/ped30_wm_03_photo.png" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Classic clinical drawing of 7-y/o boy with DMD: calf pseudohypertrophy, lordosis, thin arms" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped30/ped30_01_imaging.jpg" alt="Pediatrics Case 30 - IMAGING" loading="lazy" data-label="FACT SHEET
 
-Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped30/ped30_02_other.jpg" alt="Pediatrics Case 30 - OTHER" loading="lazy" data-label="MICROSCOPY
+Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER has-findings" src="img/peds/ped30/ped30_02_other.jpg" alt="Pediatrics Case 30 - OTHER" loading="lazy" data-label="MICROSCOPY
 
-Progressive muscular dystrophy (Duchenne and Becker subtypes)" onclick="pedsLightbox(this)"></div></div>
+Progressive muscular dystrophy (Duchenne and Becker subtypes)" data-findings="[&quot;Muscle biopsy in BMD:&quot;, &quot;Same dystrophinopathy pattern as DMD but **less severe**&quot;, &quot;**Reduced or truncated dystrophin** (vs absent in DMD) on Western blot / IHC&quot;, &quot;Variable fiber size, necrosis, regeneration, fibrosis — milder&quot;]" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc30q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc30q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -6270,7 +6284,8 @@ toggleAll = function(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.
     lb.innerHTML='<button class="lb-close" type="button" aria-label="Close">&times;</button>'+
       '<button class="lb-nav lb-prev" type="button" aria-label="Previous">&#8249;</button>'+
       '<button class="lb-nav lb-next" type="button" aria-label="Next">&#8250;</button>'+
-      '<img alt=""><div class="lb-cap"></div>';
+      '<img alt=""><div class="lb-cap"></div>'+
+      '<div class="lb-findings"><h4>Findings on this slide</h4><ul></ul></div>';
     lb.onclick=function(e){if(e.target===lb) close();};
     lb.querySelector('.lb-close').onclick=function(e){e.stopPropagation();close();};
     lb.querySelector('.lb-prev').onclick=function(e){e.stopPropagation();step(-1);};
@@ -6285,10 +6300,28 @@ toggleAll = function(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.
     return lb;
   }
   function close(){var lb=document.getElementById('peds-lb');if(lb) lb.classList.remove('show'); current=null;}
+  function mdInline(s){
+    s=String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    s=s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
+    s=s.replace(/(^|[^\w*])\*([^*]+)\*(?![\w*])/g,'$1<i>$2</i>');
+    return s;
+  }
+  function renderFindings(lb,el){
+    var panel=lb.querySelector('.lb-findings');
+    var ul=panel.querySelector('ul');
+    var raw=el.getAttribute('data-findings');
+    ul.innerHTML='';
+    if(!raw){panel.classList.remove('show');return;}
+    var arr;try{arr=JSON.parse(raw);}catch(e){panel.classList.remove('show');return;}
+    if(!arr||!arr.length){panel.classList.remove('show');return;}
+    arr.forEach(function(f){var li=document.createElement('li');li.innerHTML=mdInline(f);ul.appendChild(li);});
+    panel.classList.add('show');
+  }
   function show(el){
     var lb=ensureLB();
     lb.querySelector('img').src=el.src;
     lb.querySelector('.lb-cap').textContent=el.getAttribute('data-label')||'';
+    renderFindings(lb,el);
     lb.classList.add('show');
     var gallery=el.closest('.peds-gallery');
     var thumbs=gallery? Array.from(gallery.querySelectorAll('.peds-thumb')) : [el];
@@ -6305,6 +6338,7 @@ toggleAll = function(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.
     var lb=document.getElementById('peds-lb');
     lb.querySelector('img').src=el.src;
     lb.querySelector('.lb-cap').textContent=el.getAttribute('data-label')||'';
+    renderFindings(lb,el);
   }
   window.pedsLightbox=show;
 })();

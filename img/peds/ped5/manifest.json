@@ -59,7 +59,14 @@
       "w": 1600,
       "h": 538,
       "primary": false,
-      "pdf_primary": true
+      "pdf_primary": true,
+      "findings": [
+        "Hypercellular marrow replaced by **monomorphic blasts**",
+        "High N:C ratio; scant basophilic cytoplasm",
+        "Fine open chromatin; inconspicuous nucleoli",
+        "**TdT+** on flow (immature lymphoblasts)",
+        "CD19/CD10/CD22 positive (B-ALL panel)"
+      ]
     }
   ]
 }

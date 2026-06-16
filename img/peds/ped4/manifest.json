@@ -48,7 +48,13 @@
       "bytes": 564174,
       "w": 1500,
       "h": 1000,
-      "primary": false
+      "primary": false,
+      "findings": [
+        "Pink amorphous **hyaline membranes** lining alveolar walls",
+        "Collapsed alveoli (atelectasis)",
+        "Type II pneumocyte hyperplasia",
+        "Interstitial edema + neutrophilic infiltrate"
+      ]
     }
   ]
 }

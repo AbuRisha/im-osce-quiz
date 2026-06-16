@@ -36,7 +36,15 @@
       "bytes": 255390,
       "w": 1513,
       "h": 1000,
-      "primary": false
+      "primary": false,
+      "findings": [
+        "Muscle biopsy in DMD:",
+        "**Variable fiber size** (rounded atrophic + hypertrophic fibers)",
+        "**Necrotic fibers** + active **regeneration** (basophilic fibers)",
+        "**Endomysial fibrosis** + **fatty infiltration**",
+        "**Absent dystrophin** on immunostain (DMD) / reduced or truncated (BMD)",
+        "Internal nuclei, opaque/hyaline fibers"
+      ]
     },
     {
       "type": "OTHER",
@@ -47,7 +55,10 @@
       "bytes": 301543,
       "w": 993,
       "h": 999,
-      "primary": false
+      "primary": false,
+      "findings": [
+        "Same DMD biopsy pattern \u2014 see above"
+      ]
     }
   ]
 }
