@@ -1,0 +1,31 @@
+# Backups + intermediate snapshots — not source of truth
+index.html.pre_*_backup
+*.bak
+
+# Auth state / secrets — never commit
+amboss_state.json
+*.session.json
+commons_urls.json
+
+# Legacy / superseded build helpers (kept local for ref)
+build_peds.py
+patch_index.py
+patch_peds_v2.py
+peds_section.html
+peds_meta.js
+peds_styles.css
+peds_tabs.html
+
+# Placeholder root image (replaced by per-case folders)
+img/ped1.jpg
+
+# Python cruft
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor + OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
