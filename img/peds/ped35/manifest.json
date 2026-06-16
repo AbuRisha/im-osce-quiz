@@ -1,0 +1,64 @@
+{
+  "case": 35,
+  "topic": "Rickets",
+  "search_term": "rickets",
+  "fallback_term": "vitamin D deficiency child",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped35_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nAffected regions of a nephron in renal tubular defects",
+      "alt": "Affected regions of a nephron in renal tubular defects",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5d4043214f28d.jpg",
+      "bytes": 64869,
+      "w": 720,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped35_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nGenu varum and genu valgum",
+      "alt": "Genu varum and genu valgum",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5ea179484f8ec.jpg",
+      "bytes": 116160,
+      "w": 1336,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped35_03_imaging.jpg",
+      "label": "FACT SHEET\n\nRickets secondary to vitamin D deficiency fact sheet",
+      "alt": "Rickets secondary to vitamin D deficiency fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee579.jpg",
+      "bytes": 134406,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped35_04_imaging.jpg",
+      "label": "X-RAY\n\nRickets",
+      "alt": "Rickets",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5e7c8958d4cb4.jpg",
+      "bytes": 111317,
+      "w": 1350,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped35_05_photo.jpg",
+      "label": "PHOTO\n\nTibial bowing in rickets",
+      "alt": "Tibial bowing in rickets",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64a2ee06c585f2.47515729.jpg",
+      "bytes": 142451,
+      "w": 691,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

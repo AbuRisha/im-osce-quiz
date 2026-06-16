@@ -1,0 +1,20 @@
+{
+  "case": 26,
+  "topic": "Biliary atresia",
+  "search_term": "biliary atresia",
+  "fallback_term": "kasai procedure",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped26_01_imaging.jpg",
+      "label": "FACT SHEET\n\nBiliary atresia fact sheet",
+      "alt": "Biliary atresia fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee4e8.jpg",
+      "bytes": 101595,
+      "w": 1428,
+      "h": 1000,
+      "primary": true
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "case": 27,
+  "topic": "Congenital diaphragmatic hernia",
+  "search_term": "congenital diaphragmatic hernia",
+  "fallback_term": "CDH bochdalek",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped27_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nCongenital diaphragmatic hernias",
+      "alt": "Congenital diaphragmatic hernias",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6194f264bcdca.jpg",
+      "bytes": 160041,
+      "w": 1600,
+      "h": 990,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped27_02_imaging.jpg",
+      "label": "X-RAY\n\nLeft-sided congenital diaphragmatic hernia",
+      "alt": "Left-sided congenital diaphragmatic hernia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_58fded88d256a.jpg",
+      "bytes": 103612,
+      "w": 837,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped27_03_imaging.jpg",
+      "label": "X-RAY\n\nRight diaphragmatic hernia with enterothorax",
+      "alt": "Right diaphragmatic hernia with enterothorax",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d9088fff5.jpg",
+      "bytes": 142148,
+      "w": 666,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped27_04_other.jpg",
+      "label": "MICROSCOPY\n\nBronchogenic cyst",
+      "alt": "Bronchogenic cyst",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5fe19abfd7304.jpg",
+      "bytes": 263424,
+      "w": 1500,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

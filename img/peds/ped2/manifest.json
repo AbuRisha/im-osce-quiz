@@ -1,0 +1,64 @@
+{
+  "case": 2,
+  "topic": "Down syndrome",
+  "search_term": "Down syndrome",
+  "fallback_term": "trisomy 21",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped2_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nCommon facial and cranial features of Down Syndrome",
+      "alt": "Common facial and cranial features of Down Syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6762a91f759270.04271032.jpg",
+      "bytes": 96076,
+      "w": 1600,
+      "h": 869,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped2_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nRobertsonian Translocation 2",
+      "alt": "Robertsonian Translocation 2",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_60f005615c9dc.jpg",
+      "bytes": 46491,
+      "w": 758,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped2_03_imaging.jpg",
+      "label": "FACT SHEET\n\nDown syndrome (trisomy 21) fact sheet",
+      "alt": "Down syndrome (trisomy 21) fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_695e430411bd4ee2126db0cc.jpg",
+      "bytes": 160315,
+      "w": 1537,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped2_04_imaging.jpg",
+      "label": "ULTRASOUND\n\nIncreased nuchal translucency in Down syndrome",
+      "alt": "Increased nuchal translucency in Down syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5f310ac765ead.jpg",
+      "bytes": 127241,
+      "w": 1167,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped2_05_photo.jpg",
+      "label": "PHOTO\n\nFacial features of Down syndrome",
+      "alt": "Facial features of Down syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5880ad0f5a21e.jpg",
+      "bytes": 87741,
+      "w": 838,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

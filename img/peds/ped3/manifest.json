@@ -1,0 +1,64 @@
+{
+  "case": 3,
+  "topic": "Preseptal cellulitis",
+  "search_term": "preseptal cellulitis",
+  "fallback_term": "periorbital cellulitis",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped3_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nPreseptal cellulitis versus orbital cellulitis",
+      "alt": "Preseptal cellulitis versus orbital cellulitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6488498a8db1e5.61452200.jpg",
+      "bytes": 168180,
+      "w": 1600,
+      "h": 967,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped3_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nAnatomy of the eye and surrounding structures",
+      "alt": "Anatomy of the eye and surrounding structures",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_667d645753ebe0.80677664.jpg",
+      "bytes": 142060,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped3_03_imaging.jpg",
+      "label": "CT\n\nDacryoadenitis",
+      "alt": "Dacryoadenitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_672767ace2fb85.27381217.jpg",
+      "bytes": 99805,
+      "w": 1600,
+      "h": 925,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped3_04_imaging.jpg",
+      "label": "CT\n\nEthmoid sinusitis with orbital involvement",
+      "alt": "Ethmoid sinusitis with orbital involvement",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6152c6fc152bb.jpg",
+      "bytes": 191216,
+      "w": 1195,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped3_05_photo.jpg",
+      "label": "PHOTO\n\nPreseptal cellulitis",
+      "alt": "Preseptal cellulitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_63c58411eda3d4.80245157.jpg",
+      "bytes": 189144,
+      "w": 1504,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

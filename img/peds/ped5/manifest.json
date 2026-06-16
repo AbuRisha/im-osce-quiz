@@ -1,0 +1,64 @@
+{
+  "case": 5,
+  "topic": "Acute lymphoblastic leukemia",
+  "search_term": "acute lymphoblastic leukemia",
+  "fallback_term": "ALL childhood",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped5_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nAcute leukemia factsheet",
+      "alt": "Acute leukemia factsheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69284490cc87dc0a359f04d9.jpg",
+      "bytes": 180077,
+      "w": 1600,
+      "h": 980,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped5_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nStructure of ball and socket synovial joints",
+      "alt": "Structure of ball and socket synovial joints",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5e58e2e010c2f.jpg",
+      "bytes": 93189,
+      "w": 1600,
+      "h": 898,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped5_03_imaging.jpg",
+      "label": "X-RAY\n\nAspergilloma (fungus ball) within right upper lobe cavity",
+      "alt": "Aspergilloma (fungus ball) within right upper lobe cavity",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6298a202987f38.12599766.jpg",
+      "bytes": 83261,
+      "w": 776,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped5_04_photo.jpg",
+      "label": "PHOTO\n\nInfected ulcer on the ball of the foot",
+      "alt": "Infected ulcer on the ball of the foot",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5cc8b9e0a78.88125068.jpg",
+      "bytes": 148802,
+      "w": 723,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped5_05_other.jpg",
+      "label": "MICROSCOPY\n\nB-cell acute lymphoblastic leukemia",
+      "alt": "B-cell acute lymphoblastic leukemia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5911bde68e8a9.jpg",
+      "bytes": 85747,
+      "w": 1600,
+      "h": 538,
+      "primary": false
+    }
+  ]
+}

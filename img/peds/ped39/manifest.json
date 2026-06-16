@@ -1,0 +1,10 @@
+{
+  "case": 39,
+  "topic": "Meningococcal vs viral rash",
+  "search_term": "petechial rash child",
+  "fallback_term": "non-blanching rash differential",
+  "source": "AMBOSS",
+  "images": [],
+  "render_mode": "table",
+  "table_topic": "Meningococcal vs viral exanthem"
+}

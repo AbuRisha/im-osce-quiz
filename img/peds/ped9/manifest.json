@@ -1,0 +1,64 @@
+{
+  "case": 9,
+  "topic": "Iron deficiency anemia",
+  "search_term": "iron deficiency anemia",
+  "fallback_term": "microcytic anemia child",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped9_01_imaging.jpg",
+      "label": "FACT SHEET\n\nIron deficiency anemia fact sheet",
+      "alt": "Iron deficiency anemia fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69c1476faf4bf4941d4af659.jpg",
+      "bytes": 193450,
+      "w": 1600,
+      "h": 980,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped9_02_imaging.jpg",
+      "label": "FLOWCHART\n\nEvaluation of suspected iron deficiency anemia",
+      "alt": "Evaluation of suspected iron deficiency anemia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_60f5470133f0e.jpg",
+      "bytes": 236583,
+      "w": 1785,
+      "h": 1999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped9_03_photo.jpg",
+      "label": "PHOTO\n\nKoilonychia (spoon nails)",
+      "alt": "Koilonychia (spoon nails)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64634cc58e8b25.86354467.jpg",
+      "bytes": 89126,
+      "w": 662,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped9_04_photo.jpg",
+      "label": "PHOTO\n\nAngular cheilitis",
+      "alt": "Angular cheilitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_595cd739a3528.jpg",
+      "bytes": 81605,
+      "w": 750,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped9_05_photo.jpg",
+      "label": "PHOTO\n\nPallor",
+      "alt": "Pallor",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_622b109609a039.10430467.jpg",
+      "bytes": 62715,
+      "w": 660,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

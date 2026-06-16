@@ -1,0 +1,64 @@
+{
+  "case": 18,
+  "topic": "Kawasaki disease",
+  "search_term": "kawasaki disease",
+  "fallback_term": "mucocutaneous lymph node",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped18_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nClinical features of Kawasaki disease",
+      "alt": "Clinical features of Kawasaki disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_636a57941cb3c3.05945563.jpg",
+      "bytes": 116235,
+      "w": 1190,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped18_02_imaging.jpg",
+      "label": "CT\n\nCoronary artery aneurysm in Kawasaki disease",
+      "alt": "Coronary artery aneurysm in Kawasaki disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62742002cdad31.41708123.jpg",
+      "bytes": 46592,
+      "w": 906,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped18_03_photo.jpg",
+      "label": "PHOTO\n\nTypical findings in Kawasaki disease",
+      "alt": "Typical findings in Kawasaki disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_60aba00e7d68b.jpg",
+      "bytes": 207294,
+      "w": 1600,
+      "h": 614,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped18_04_photo.jpg",
+      "label": "PHOTO\n\nKawasaki disease",
+      "alt": "Kawasaki disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e886ae9242a9.47786561.jpg",
+      "bytes": 150884,
+      "w": 700,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped18_05_photo.jpg",
+      "label": "PHOTO\n\nKawasaki disease",
+      "alt": "Kawasaki disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65cf2e7807e1d9.35042933.jpg",
+      "bytes": 88796,
+      "w": 1600,
+      "h": 787,
+      "primary": false
+    }
+  ]
+}

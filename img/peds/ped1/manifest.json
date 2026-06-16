@@ -1,0 +1,56 @@
+{
+  "case": 1,
+  "topic": "Cephalohematoma",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "title": "Cephalohematoma (1/2) - lateral view",
+      "filename": "ped1_02_photo_cephalohematoma_lateral.jpg",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5971c06d0f65c.jpg",
+      "bytes": 118436,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "title": "Cephalohematoma (2/2) - frontal view",
+      "filename": "ped1_03_photo_cephalohematoma_frontal.jpg",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5971c0b3c051b.jpg",
+      "bytes": 99715,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "title": "Cephalohematoma CT (Radiopaedia rID 80938)",
+      "label": "Cephalohematoma CT scan, infant",
+      "filename": "ped1_radiopaedia_ct.png",
+      "source_url": "https://radiopaedia.org/cases/cephalohaematoma-10",
+      "attribution": "Fakhry Mahmoud Ebouda, CC BY-NC-SA 3.0",
+      "bytes": 25828,
+      "primary": false
+    }
+  ],
+  "radiopaedia": {
+    "case_url": "https://radiopaedia.org/cases/cephalohaematoma-10",
+    "case_title": "Cephalohaematoma (rID 80938)",
+    "author": "Fakhry Mahmoud Ebouda",
+    "license": "CC BY-NC-SA 3.0",
+    "downloads": [
+      {
+        "filename": "ped1_radiopaedia_ct_01.jpg",
+        "url": "https://prod-images-static.radiopaedia.org/promotional_banner_images/2757/3.jpg",
+        "bytes": 43611
+      },
+      {
+        "filename": "ped1_radiopaedia_ct_02.png",
+        "url": "https://prod-images-static.radiopaedia.org/images/54007388/8370fe4d173406f2f309de7113f117696a1f3fb8500eb77b495ac4be542ca707.png",
+        "bytes": 25828
+      },
+      {
+        "filename": "ped1_radiopaedia_ct_03.png",
+        "url": "https://prod-assets-static.radiopaedia.org/assets/loadingAnimation-1da817fd12a97dcdd18f98984dd1fc44dc490890e146bbda2a34c3c51d1da58a.gif",
+        "bytes": 5867
+      }
+    ]
+  }
+}

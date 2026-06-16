@@ -1,0 +1,64 @@
+{
+  "case": 21,
+  "topic": "Foreign body aspiration",
+  "search_term": "foreign body aspiration",
+  "fallback_term": "airway foreign body",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped21_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nDistribution of affected bronchi in foreign body aspiration",
+      "alt": "Distribution of affected bronchi in foreign body aspiration",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5ec3e231a373f.jpg",
+      "bytes": 72290,
+      "w": 1093,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped21_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nHyperinflation due to foreign body aspiration",
+      "alt": "Hyperinflation due to foreign body aspiration",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5de1258be87c5.jpg",
+      "bytes": 80913,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped21_03_imaging.jpg",
+      "label": "X-RAY\n\nForeign body aspiration",
+      "alt": "Foreign body aspiration",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5f90157963b6a.jpg",
+      "bytes": 108652,
+      "w": 810,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped21_04_imaging.jpg",
+      "label": "X-RAY\n\nForeign-body aspiration",
+      "alt": "Foreign-body aspiration",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e88743d32fd2.01421702.jpg",
+      "bytes": 73335,
+      "w": 1296,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped21_05_photo.jpg",
+      "label": "PHOTO\n\nHeimlich maneuver",
+      "alt": "Heimlich maneuver",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_55c8cec2c1948.jpg",
+      "bytes": 263474,
+      "w": 1600,
+      "h": 949,
+      "primary": false
+    }
+  ]
+}

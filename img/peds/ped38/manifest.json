@@ -1,0 +1,20 @@
+{
+  "case": 38,
+  "topic": "Pyelonephritis",
+  "search_term": "pyelonephritis child",
+  "fallback_term": "acute pyelonephritis pediatric",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped38_01_imaging.jpg",
+      "label": "X-RAY\n\nObstructing ureteral calculus",
+      "alt": "Obstructing ureteral calculus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62f5283a27c7e1.89960360.jpg",
+      "bytes": 204882,
+      "w": 1266,
+      "h": 999,
+      "primary": true
+    }
+  ]
+}

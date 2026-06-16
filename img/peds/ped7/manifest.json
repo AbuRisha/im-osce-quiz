@@ -1,0 +1,64 @@
+{
+  "case": 7,
+  "topic": "Acute chest syndrome",
+  "search_term": "acute chest syndrome",
+  "fallback_term": "sickle cell chest",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped7_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nPathomechanism of flail chest",
+      "alt": "Pathomechanism of flail chest",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_63a1bf29555ca7.25387593.jpg",
+      "bytes": 91926,
+      "w": 967,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped7_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nSurface anatomy of the lungs",
+      "alt": "Surface anatomy of the lungs",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6279233593fbc6.21659526.jpg",
+      "bytes": 109805,
+      "w": 1600,
+      "h": 525,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped7_03_imaging.jpg",
+      "label": "X-RAY\n\nConsolidation in the left lower lobe",
+      "alt": "Consolidation in the left lower lobe",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5d43abbea98.74374420.jpg",
+      "bytes": 85846,
+      "w": 1148,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped7_04_imaging.jpg",
+      "label": "X-RAY\n\nPulmonary nodule",
+      "alt": "Pulmonary nodule",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6350e94101e582.70803494.jpg",
+      "bytes": 81375,
+      "w": 1055,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped7_05_other.jpg",
+      "label": "FLOWCHART\n\nManagement of penetrating thoracic trauma",
+      "alt": "Management of penetrating thoracic trauma",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6151ac16289c8.jpg",
+      "bytes": 247869,
+      "w": 1290,
+      "h": 2000,
+      "primary": false
+    }
+  ]
+}

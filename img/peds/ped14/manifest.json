@@ -1,0 +1,64 @@
+{
+  "case": 14,
+  "topic": "Measles",
+  "search_term": "measles",
+  "fallback_term": "rubeola",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped14_01_imaging.jpg",
+      "label": "FACT SHEET\n\nMeasles fact sheet",
+      "alt": "Measles fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bbcc87dc0a359ee5c7.jpg",
+      "bytes": 155356,
+      "w": 1513,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped14_02_photo.jpg",
+      "label": "PHOTO\n\nMeasles rash",
+      "alt": "Measles rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_57c9774f131be.jpg",
+      "bytes": 190592,
+      "w": 1333,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped14_03_photo.jpg",
+      "label": "PHOTO\n\nMeasles rash",
+      "alt": "Measles rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e8877d1d4fa5.98047117.jpg",
+      "bytes": 94186,
+      "w": 559,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped14_04_photo.jpg",
+      "label": "PHOTO\n\nMeasles rash",
+      "alt": "Measles rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_54575982416bd.jpg",
+      "bytes": 149569,
+      "w": 1443,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped14_05_other.jpg",
+      "label": "WEB CONTENT\n\nACIP routine immunization schedule: children and adolescents \u2264 18 years of age",
+      "alt": "ACIP routine immunization schedule: children and adolescents \u2264 18 years of age",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_635fad7c295d90.22998499.jpg",
+      "bytes": 159467,
+      "w": 1537,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

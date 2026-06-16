@@ -1,0 +1,31 @@
+{
+  "case": 30,
+  "topic": "Becker muscular dystrophy",
+  "search_term": "becker muscular dystrophy",
+  "fallback_term": "BMD dystrophinopathy",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped30_01_imaging.jpg",
+      "label": "FACT SHEET\n\nDuchenne muscular dystrophy and Becker muscular dystrophy fact sheet",
+      "alt": "Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bbcc87dc0a359ee625.jpg",
+      "bytes": 140573,
+      "w": 1600,
+      "h": 906,
+      "primary": true
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped30_02_other.jpg",
+      "label": "MICROSCOPY\n\nProgressive muscular dystrophy (Duchenne and Becker subtypes)",
+      "alt": "Progressive muscular dystrophy (Duchenne and Becker subtypes)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d909befce.jpg",
+      "bytes": 255390,
+      "w": 1513,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

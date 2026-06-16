@@ -1,0 +1,42 @@
+{
+  "case": 16,
+  "topic": "Hand foot mouth disease",
+  "search_term": "hand foot and mouth disease",
+  "fallback_term": "coxsackievirus rash",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped16_01_photo.jpg",
+      "label": "PHOTO\n\nHand foot and mouth disease",
+      "alt": "Hand foot and mouth disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5d128288760.40131531.jpg",
+      "bytes": 136459,
+      "w": 1333,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped16_02_photo.jpg",
+      "label": "PHOTO\n\nHand foot and mouth disease",
+      "alt": "Hand foot and mouth disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65d487eeef77f7.59411223.jpg",
+      "bytes": 191772,
+      "w": 1184,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped16_03_photo.jpg",
+      "label": "PHOTO\n\nHerpangina",
+      "alt": "Herpangina",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d9272a639.jpg",
+      "bytes": 132037,
+      "w": 655,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

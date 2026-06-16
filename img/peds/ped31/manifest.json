@@ -1,0 +1,31 @@
+{
+  "case": 31,
+  "topic": "Myelomeningocele",
+  "search_term": "myelomeningocele",
+  "fallback_term": "spina bifida cystica",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped31_01_imaging.jpg",
+      "label": "ULTRASOUND\n\nMyelomeningocele on fetal ultrasound",
+      "alt": "Myelomeningocele on fetal ultrasound",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5f93bba654427.jpg",
+      "bytes": 172424,
+      "w": 1327,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped31_02_photo.jpg",
+      "label": "PHOTO\n\nOpen spina bifida",
+      "alt": "Open spina bifida",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d91338753.jpg",
+      "bytes": 429390,
+      "w": 1500,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

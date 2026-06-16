@@ -1,0 +1,53 @@
+{
+  "case": 34,
+  "topic": "Sturge-Weber syndrome",
+  "search_term": "sturge-weber syndrome",
+  "fallback_term": "port wine stain",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped34_01_imaging.jpg",
+      "label": "FACT SHEET\n\nSturge-Weber syndrome fact sheet",
+      "alt": "Sturge-Weber syndrome fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee52d.jpg",
+      "bytes": 126863,
+      "w": 1600,
+      "h": 941,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped34_02_imaging.jpg",
+      "label": "MRI\n\nSturge-Weber syndrome",
+      "alt": "Sturge-Weber syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_61aa5aeb7d234.jpg",
+      "bytes": 63009,
+      "w": 890,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped34_03_photo.jpg",
+      "label": "PHOTO\n\nPort-wine stain",
+      "alt": "Port-wine stain",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5d42065d8d4.63369958.jpg",
+      "bytes": 68100,
+      "w": 1209,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped34_04_photo.jpg",
+      "label": "PHOTO\n\nPort-wine stain (nevus flammeus)",
+      "alt": "Port-wine stain (nevus flammeus)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_624c402be2f350.00410148.jpg",
+      "bytes": 72901,
+      "w": 1162,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

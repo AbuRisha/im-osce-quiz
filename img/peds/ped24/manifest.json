@@ -1,0 +1,53 @@
+{
+  "case": 24,
+  "topic": "Tetralogy of Fallot",
+  "search_term": "tetralogy of fallot",
+  "fallback_term": "tet spell",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped24_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nTetralogy of Fallot",
+      "alt": "Tetralogy of Fallot",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_56586be29b995.jpg",
+      "bytes": 133778,
+      "w": 1551,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped24_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nHemodynamics of tetralogy of Fallot",
+      "alt": "Hemodynamics of tetralogy of Fallot",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6971fa3c2f20ec938c500dd0.jpg",
+      "bytes": 87195,
+      "w": 756,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped24_03_imaging.jpg",
+      "label": "X-RAY\n\nBoot-shaped heart in tetralogy of Fallot",
+      "alt": "Boot-shaped heart in tetralogy of Fallot",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_61f116555ab91.jpg",
+      "bytes": 51126,
+      "w": 841,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped24_04_imaging.jpg",
+      "label": "ULTRASOUND\n\nTetralogy of Fallot",
+      "alt": "Tetralogy of Fallot",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62b205172b9f17.73691897.jpg",
+      "bytes": 90630,
+      "w": 1004,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

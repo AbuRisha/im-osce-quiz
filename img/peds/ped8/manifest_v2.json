@@ -1,0 +1,62 @@
+{
+  "case": 8,
+  "topic": "Beta thalassemia",
+  "search_terms": [
+    "beta thalassemia facies",
+    "thalassemia frontal bossing",
+    "thalassemia child",
+    "thalassemia major"
+  ],
+  "skip_filter": [
+    "pathophysiology",
+    "molecular",
+    "globin chain",
+    "synthesis",
+    "mechanism",
+    "diagram"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped8_v2_01_imaging.jpg",
+      "label": "X-RAY\n\nRib-within-a-rib sign in thalassemia",
+      "alt": "Rib-within-a-rib sign in thalassemia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62c1bb6a0d10e0.08289627.jpg",
+      "bytes": 97607,
+      "w": 980,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped8_wm_01_photo.gif",
+      "label": "10-y/o boy with beta-thalassemia major, frontal bossing + maxillary protrusion + chipmunk facies",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DOMR-6-350-g001.gif",
+      "attribution": "Open Access (oatext.com) via Wikimedia Commons CC BY 4.0",
+      "bytes": 43078,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped8_wm_02_photo.gif",
+      "label": "Same patient, profile view showing characteristic facial bone deformities",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DOMR-6-350-g004.gif",
+      "attribution": "Open Access (oatext.com) via Wikimedia Commons CC BY 4.0",
+      "bytes": 30336,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped8_wm_03_photo.jpg",
+      "label": "Pallor / facial appearance of beta-thal major (Cooley anemia)",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:MicrocitemiaRetro.jpg",
+      "attribution": "Wikimedia Commons CC BY-SA",
+      "bytes": 65235,
+      "primary": false
+    }
+  ]
+}

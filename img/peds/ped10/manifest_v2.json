@@ -1,0 +1,87 @@
+{
+  "case": 10,
+  "topic": "Nephrotic syndrome",
+  "search_terms": [
+    "nephrotic syndrome child",
+    "periorbital edema child",
+    "nephrotic edema",
+    "facial edema pediatric"
+  ],
+  "skip_filter": [
+    "podocyte",
+    "molecular",
+    "filtration barrier",
+    "schematic",
+    "mechanism",
+    "pathophysiology"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped10_v2_01_photo.jpg",
+      "label": "PHOTO\n\nFacial edema in drug reaction with eosinophilia and systemic symptoms (DRESS)",
+      "alt": "Facial edema in drug reaction with eosinophilia and systemic symptoms (DRESS)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_627fef260bdaf3.28549434.jpg",
+      "bytes": 176662,
+      "w": 913,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped10_v2_02_photo.jpg",
+      "label": "PHOTO\n\nPitting edema of lower leg",
+      "alt": "Pitting edema of lower leg",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5357a6c9f3e95.jpg",
+      "bytes": 115179,
+      "w": 1043,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped10_v2_03_photo.jpg",
+      "label": "PHOTO\n\nEdema",
+      "alt": "Edema",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_572203ec9e2d5.jpg",
+      "bytes": 154166,
+      "w": 1333,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped10_v2_04_photo.jpg",
+      "label": "PHOTO\n\nCystoid macular edema",
+      "alt": "Cystoid macular edema",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_644bb5265414f1.23073731.jpg",
+      "bytes": 180406,
+      "w": 1582,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped10_v2_05_imaging.jpg",
+      "label": "X-RAY\n\nHydrostatic pulmonary edema",
+      "alt": "Hydrostatic pulmonary edema",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64708f2cc9ca82.50702502.jpg",
+      "bytes": 116350,
+      "w": 1219,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped10_v2_06_imaging.jpg",
+      "label": "CT\n\nSubdural hematoma and cerebral edema",
+      "alt": "Subdural hematoma and cerebral edema",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6376253c2da397.78707936.jpg",
+      "bytes": 134236,
+      "w": 1004,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

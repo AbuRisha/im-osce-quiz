@@ -1,0 +1,31 @@
+{
+  "case": 33,
+  "topic": "Cerebral palsy",
+  "search_terms": [
+    "cerebral palsy child posture",
+    "spastic diplegia gait",
+    "scissor gait child",
+    "cerebral palsy hemiplegia"
+  ],
+  "skip_filter": [
+    "walker",
+    "wheelchair",
+    "orthosis",
+    "device",
+    "equipment",
+    "pathophysiology"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped33_wm_01_photo.jpg",
+      "label": "Young child with cerebral palsy held by mother \u2014 typical posture in family/clinical setting",
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_mother_holds_her_little_boy_with_cerebral_palsy.jpg",
+      "attribution": "Wikimedia Commons CC BY 4.0 (Eastern Cape, South Africa)",
+      "bytes": 201881,
+      "primary": true
+    }
+  ]
+}

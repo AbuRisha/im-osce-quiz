@@ -1,0 +1,64 @@
+{
+  "case": 10,
+  "topic": "Nephrotic syndrome",
+  "search_term": "nephrotic syndrome",
+  "fallback_term": "minimal change disease",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped10_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nNephritic and nephrotic syndromes",
+      "alt": "Nephritic and nephrotic syndromes",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_60182bab4059f.jpg",
+      "bytes": 151865,
+      "w": 1330,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped10_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nCross section of renal corpuscle",
+      "alt": "Cross section of renal corpuscle",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_586a67d48336f.jpg",
+      "bytes": 146536,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped10_03_imaging.jpg",
+      "label": "ELECTROPHORESIS\n\nSerum protein electrophoresis in nephrotic syndrome",
+      "alt": "Serum protein electrophoresis in nephrotic syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_58ab07fc6c545.jpg",
+      "bytes": 30392,
+      "w": 644,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped10_04_other.jpg",
+      "label": "MICROSCOPY\n\nDiabetic nephropathy",
+      "alt": "Diabetic nephropathy",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_637caf0cc58051.60155744.jpg",
+      "bytes": 292990,
+      "w": 1333,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped10_05_other.jpg",
+      "label": "MICROSCOPY\n\nMembranous nephropathy",
+      "alt": "Membranous nephropathy",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_637632e4673e04.42022040.jpg",
+      "bytes": 319473,
+      "w": 1500,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case": 38,
+  "topic": "Pyelonephritis",
+  "search_terms": [
+    "pyelonephritis ultrasound",
+    "DMSA scan pyelonephritis",
+    "renal scarring child",
+    "acute pyelonephritis CT",
+    "vesicoureteral reflux"
+  ],
+  "skip_filter": [
+    "pathophysiology",
+    "molecular",
+    "schematic"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_01_imaging.jpg",
+      "label": "ULTRASOUND\n\nHydronephrosis",
+      "alt": "Hydronephrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64d23e15e672e1.68766481.jpg",
+      "bytes": 124007,
+      "w": 1219,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_02_imaging.jpg",
+      "label": "ULTRASOUND\n\nPyelonephritis",
+      "alt": "Pyelonephritis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5fec30d001148.jpg",
+      "bytes": 88677,
+      "w": 1600,
+      "h": 983,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_03_imaging.jpg",
+      "label": "ULTRASOUND\n\nAtrophic kidney",
+      "alt": "Atrophic kidney",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_592590b238bcd.jpg",
+      "bytes": 107486,
+      "w": 1432,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_04_imaging.jpg",
+      "label": "CT\n\nAcute pyelonephritis and renal calculi",
+      "alt": "Acute pyelonephritis and renal calculi",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62e021f165e3a6.31513401.jpg",
+      "bytes": 230473,
+      "w": 1497,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_05_imaging.jpg",
+      "label": "CT\n\nChronic ureteral obstruction",
+      "alt": "Chronic ureteral obstruction",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6456532f9994c7.76676549.jpg",
+      "bytes": 139213,
+      "w": 1077,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped38_v2_06_imaging.jpg",
+      "label": "CT\n\nUreter calculus with hydronephrosis",
+      "alt": "Ureter calculus with hydronephrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_615b2909b4805.jpg",
+      "bytes": 123740,
+      "w": 1539,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

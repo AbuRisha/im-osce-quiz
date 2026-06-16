@@ -1,0 +1,53 @@
+{
+  "case": 12,
+  "topic": "Henoch-Schonlein purpura",
+  "search_term": "henoch-schonlein purpura",
+  "fallback_term": "IgA vasculitis",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped12_01_imaging.jpg",
+      "label": "FACT SHEET\n\nIgA vasculitis fact sheet",
+      "alt": "IgA vasculitis fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69284323cc87dc0a359ef3d4.jpg",
+      "bytes": 119898,
+      "w": 1414,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped12_02_photo.jpg",
+      "label": "PHOTO\n\nHenoch-Schonlein purpura",
+      "alt": "Henoch-Schonlein purpura",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5769bf9d65f35.jpg",
+      "bytes": 162639,
+      "w": 1600,
+      "h": 997,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped12_03_photo.jpg",
+      "label": "PHOTO\n\nPalpable purpura",
+      "alt": "Palpable purpura",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69fcbebeb07d68db7554d70b.jpg",
+      "bytes": 39146,
+      "w": 732,
+      "h": 548,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped12_04_photo.jpg",
+      "label": "PHOTO\n\nIgA vasculitis",
+      "alt": "IgA vasculitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5ca51753e16.82319147.jpg",
+      "bytes": 306440,
+      "w": 1050,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "case": 19,
+  "topic": "Mongolian spot",
+  "search_term": "mongolian spot",
+  "fallback_term": "congenital dermal melanocytosis",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped19_01_photo.jpg",
+      "label": "PHOTO\n\nCongenital dermal melanocytosis (Mongolian spot)",
+      "alt": "Congenital dermal melanocytosis (Mongolian spot)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_53395181a454f.jpg",
+      "bytes": 52405,
+      "w": 889,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped19_02_photo.jpg",
+      "label": "PHOTO\n\nCongenital dermal melanocytosis",
+      "alt": "Congenital dermal melanocytosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65f2df9a6de288.67618769.jpg",
+      "bytes": 226223,
+      "w": 1324,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

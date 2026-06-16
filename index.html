@@ -95,6 +95,44 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 .img-ph{padding:14px;background:#0f172a;border:1px dashed #334155;border-radius:8px;color:#64748b;font-size:.85em;text-align:center}
 .img-ph code{background:#1e293b;color:#0ea5e9;padding:2px 6px;border-radius:4px;font-family:'Consolas','Monaco',monospace;font-size:.9em}
 
+
+/* ---- peds image gallery (thumbnail-only) ---- */
+.peds-gallery{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.peds-thumbs{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.peds-thumb{width:130px;height:130px;object-fit:cover;border-radius:6px;cursor:zoom-in;border:2px solid #1e293b;background:#000;transition:transform .12s,border-color .12s,box-shadow .12s}
+.peds-thumb:hover{transform:scale(1.08);border-color:#38bdf8;box-shadow:0 6px 20px rgba(56,189,248,.35)}
+.peds-thumb.is-primary{border-color:#38bdf8}
+.peds-thumb.tag-PHOTO{outline:2px solid rgba(34,197,94,.45);outline-offset:-2px}
+.peds-thumb.tag-IMAGING{outline:2px solid rgba(245,158,11,.55);outline-offset:-2px}
+.peds-thumb.tag-ILLUSTRATION{outline:2px solid rgba(59,130,246,.45);outline-offset:-2px}
+.peds-thumb.tag-OTHER{outline:2px solid rgba(148,163,184,.35);outline-offset:-2px}
+/* lightbox */
+#peds-lb{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;align-items:center;justify-content:center;flex-direction:column;cursor:zoom-out;padding:24px}
+#peds-lb.show{display:flex}
+#peds-lb img{max-width:96vw;max-height:86vh;border-radius:8px;box-shadow:0 12px 60px rgba(0,0,0,.7)}
+#peds-lb .lb-cap{color:#e2e8f0;font:14px/1.5 system-ui,sans-serif;margin-top:14px;max-width:80vw;text-align:center}
+#peds-lb .lb-close{position:absolute;top:14px;right:18px;color:#fff;font:600 22px/1 system-ui;background:rgba(255,255,255,.08);border:0;width:40px;height:40px;border-radius:50%;cursor:pointer;z-index:2}
+#peds-lb .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:0;color:#fff;font:600 28px/1 system-ui;width:48px;height:64px;border-radius:8px;cursor:pointer;z-index:2}
+#peds-lb .lb-prev{left:18px}
+#peds-lb .lb-next{right:18px}
+#peds-lb .lb-nav:hover{background:rgba(56,189,248,.3)}
+
+
+/* ---- comparison table (case 39) ---- */
+.cmp-wrap{margin:14px 0 18px;border:1px solid #1e293b;border-radius:8px;overflow:hidden;background:#0b1220}
+.cmp-wrap h3{margin:0;padding:10px 14px;background:#1e293b;color:#e2e8f0;font-size:15px;border-bottom:1px solid #334155}
+.cmp-table{width:100%;border-collapse:collapse;color:#e2e8f0;font-size:13px;line-height:1.55}
+.cmp-table th,.cmp-table td{padding:9px 12px;border-bottom:1px solid #1e293b;vertical-align:top;text-align:left}
+.cmp-table thead th{background:#0f172a;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#94a3b8}
+.cmp-table tbody th{background:#0f172a;font-weight:600;color:#cbd5e1;width:130px}
+.cmp-table td.col-meningo{background:rgba(127,29,29,.18)}
+.cmp-table td.col-viral{background:rgba(7,89,133,.18)}
+.cmp-table strong.red{color:#fca5a5}
+.cmp-table strong.green{color:#86efac}
+.cmp-table strong.orange{color:#fdba74}
+.cmp-table strong.blue{color:#7dd3fc}
+.cmp-pearl{padding:10px 14px;background:rgba(245,158,11,.12);border-top:1px solid #334155;color:#fde68a;font-size:13px}
+
 </style>
 </head>
 <body>
@@ -109,6 +147,7 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 <button onclick="toggleAll(false)">Collapse All</button>
 <button onclick="document.getElementById('refs').scrollIntoView({behavior:'smooth'})">Reference Sheets</button>
 <button onclick="resetAll()" style="background:#7f1d1d;color:#fca5a5">Reset All</button>
+<button data-export-answers="1" onclick="exportAllAnswers()" style="background:#0e7490;color:#cffafe">Export My Answers</button>
 </div>
 <section class="subject-section active" id="sec-im">
 <div class="cc" id="c1">
@@ -2028,7 +2067,7 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">Newborn after assisted vaginal delivery. Firm blood-filled swelling over the parietal scalp that does NOT cross suture lines. [Visual: scalp swelling on parietal region.]</div>
-<div class="ic"><img src="img/ped1.png" alt="Pediatrics Case 1" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped1.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped1/ped1_02_photo_cephalohematoma_lateral.jpg" alt="Pediatrics Case 1 - PHOTO" loading="lazy" data-label="" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped1/ped1_03_photo_cephalohematoma_frontal.jpg" alt="Pediatrics Case 1 - PHOTO" loading="lazy" data-label="" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped1/ped1_radiopaedia_ct.png" alt="Pediatrics Case 1 - IMAGING" loading="lazy" data-label="Cephalohematoma CT scan, infant" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc1q0">
 <div class="qlabel">Q1. What is the finding / diagnosis?</div>
 <textarea id="pc1q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2123,7 +2162,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">38-week spontaneous delivery, dysmorphic facial features. [Visual: newborn facial features.]</div>
-<div class="ic"><img src="img/ped2.png" alt="Pediatrics Case 2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped2.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped2/ped2_01_illustration.jpg" alt="Pediatrics Case 2 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Common facial and cranial features of Down Syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped2/ped2_02_illustration.jpg" alt="Pediatrics Case 2 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Robertsonian Translocation 2" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped2/ped2_03_imaging.jpg" alt="Pediatrics Case 2 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Down syndrome (trisomy 21) fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped2/ped2_04_imaging.jpg" alt="Pediatrics Case 2 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Increased nuchal translucency in Down syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped2/ped2_05_photo.jpg" alt="Pediatrics Case 2 - PHOTO" loading="lazy" data-label="PHOTO
+
+Facial features of Down syndrome" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc2q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc2q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2218,7 +2267,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">9-month-old infant brought by parents 2 days after onset: fever, nasal congestion, left eye swollen / unable to open. [Visual: red, swollen left eyelid.]</div>
-<div class="ic"><img src="img/ped3.png" alt="Pediatrics Case 3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped3.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped3/ped3_01_illustration.jpg" alt="Pediatrics Case 3 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Preseptal cellulitis versus orbital cellulitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped3/ped3_02_illustration.jpg" alt="Pediatrics Case 3 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Anatomy of the eye and surrounding structures" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped3/ped3_03_imaging.jpg" alt="Pediatrics Case 3 - IMAGING" loading="lazy" data-label="CT
+
+Dacryoadenitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped3/ped3_04_imaging.jpg" alt="Pediatrics Case 3 - IMAGING" loading="lazy" data-label="CT
+
+Ethmoid sinusitis with orbital involvement" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped3/ped3_05_photo.jpg" alt="Pediatrics Case 3 - PHOTO" loading="lazy" data-label="PHOTO
+
+Preseptal cellulitis" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc3q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc3q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2300,7 +2359,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">Preterm neonate; grunting, cyanosis, increased work of breathing. CXR at 30 min of life; required ventilation. [Visual: CXR — ground-glass lungs with air bronchograms, NG tube of unclear placement.]</div>
-<div class="ic"><img src="img/ped4.png" alt="Pediatrics Case 4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped4.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped4/ped4_01_illustration.jpg" alt="Pediatrics Case 4 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Alveolar collapse in surfactant deficiency" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped4/ped4_02_imaging.jpg" alt="Pediatrics Case 4 - IMAGING" loading="lazy" data-label="X-RAY
+
+Neonatal respiratory distress syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped4/ped4_03_imaging.jpg" alt="Pediatrics Case 4 - IMAGING" loading="lazy" data-label="X-RAY
+
+Bronchopulmonary dysplasia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped4/ped4_04_other.jpg" alt="Pediatrics Case 4 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Hyaline membranes in ARDS" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc4q0">
 <div class="qlabel">Q1. Mention 2 X-ray findings.</div>
 <textarea id="pc4q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2395,7 +2462,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old with pallor, weakness, fever, generally unwell.</div>
-<div class="ic"><img src="img/ped5.png" alt="Pediatrics Case 5" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped5.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped5/ped5_01_illustration.jpg" alt="Pediatrics Case 5 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Acute leukemia factsheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped5/ped5_02_illustration.jpg" alt="Pediatrics Case 5 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Structure of ball and socket synovial joints" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped5/ped5_03_imaging.jpg" alt="Pediatrics Case 5 - IMAGING" loading="lazy" data-label="X-RAY
+
+Aspergilloma (fungus ball) within right upper lobe cavity" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped5/ped5_04_photo.jpg" alt="Pediatrics Case 5 - PHOTO" loading="lazy" data-label="PHOTO
+
+Infected ulcer on the ball of the foot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped5/ped5_05_other.jpg" alt="Pediatrics Case 5 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+B-cell acute lymphoblastic leukemia" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc5q0">
 <div class="qlabel">Q1. What is the abnormality in CBC and smear?</div>
 <textarea id="pc5q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2477,7 +2554,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old with pallor, limb pain, jaundice; has had 2 packed-RBC transfusions to date. Labs: Hb 7.7, ↓RBC.</div>
-<div class="ic"><img src="img/ped6.png" alt="Pediatrics Case 6" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped6.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped6/ped6_01_illustration.jpg" alt="Pediatrics Case 6 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Hemoglobin electrophoresis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped6/ped6_02_imaging.jpg" alt="Pediatrics Case 6 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Sickle cell fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped6/ped6_03_imaging.jpg" alt="Pediatrics Case 6 - IMAGING" loading="lazy" data-label="X-RAY
+
+Bilateral femoral head avascular necrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped6/ped6_04_photo.jpg" alt="Pediatrics Case 6 - PHOTO" loading="lazy" data-label="PHOTO
+
+Dactylitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped6/ped6_05_other.jpg" alt="Pediatrics Case 6 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Erythrocyte morphologies in sickle-cell disease" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc6q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc6q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2572,7 +2659,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">14-year-old African-Caribbean girl with known sickle cell disease. Chest and back pain unrelieved by codeine; dyspnea; bronchial breath sounds. Labs: Hb 7.7, ↑bilirubin, ↑CRP.</div>
-<div class="ic"><img src="img/ped7.png" alt="Pediatrics Case 7" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped7.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped7/ped7_01_illustration.jpg" alt="Pediatrics Case 7 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Pathomechanism of flail chest" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped7/ped7_02_illustration.jpg" alt="Pediatrics Case 7 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Surface anatomy of the lungs" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped7/ped7_03_imaging.jpg" alt="Pediatrics Case 7 - IMAGING" loading="lazy" data-label="X-RAY
+
+Consolidation in the left lower lobe" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped7/ped7_04_imaging.jpg" alt="Pediatrics Case 7 - IMAGING" loading="lazy" data-label="X-RAY
+
+Pulmonary nodule" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped7/ped7_05_other.jpg" alt="Pediatrics Case 7 - OTHER" loading="lazy" data-label="FLOWCHART
+
+Management of penetrating thoracic trauma" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc7q0">
 <div class="qlabel">Q1. What is the most likely cause?</div>
 <textarea id="pc7q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2654,7 +2751,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">7-year-old child receiving blood transfusions since birth. Microcytic hypochromic anemia. [Visual: facial features showing frontal bossing &amp; maxillary prominence.]</div>
-<div class="ic"><img src="img/ped8.png" alt="Pediatrics Case 8" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped8.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped8/ped8_wm_01_photo.gif" alt="Pediatrics Case 8 - PHOTO" loading="lazy" data-label="10-y/o boy with beta-thalassemia major, frontal bossing + maxillary protrusion + chipmunk facies" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped8/ped8_v2_01_imaging.jpg" alt="Pediatrics Case 8 - IMAGING" loading="lazy" data-label="X-RAY
+
+Rib-within-a-rib sign in thalassemia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped8/ped8_wm_02_photo.gif" alt="Pediatrics Case 8 - PHOTO" loading="lazy" data-label="Same patient, profile view showing characteristic facial bone deformities" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped8/ped8_wm_03_photo.jpg" alt="Pediatrics Case 8 - PHOTO" loading="lazy" data-label="Pallor / facial appearance of beta-thal major (Cooley anemia)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped8/ped8_01_imaging.jpg" alt="Pediatrics Case 8 - IMAGING" loading="lazy" data-label="X-RAY
+
+Rib-within-a-rib sign in thalassemia" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc8q0">
 <div class="qlabel">Q1. Identify the specific facies in this child.</div>
 <textarea id="pc8q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2762,7 +2863,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">2-year-old picky eater drinking ~800 mL cow's milk/day; pale; eating paper (pica).</div>
-<div class="ic"><img src="img/ped9.png" alt="Pediatrics Case 9" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped9.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped9/ped9_01_imaging.jpg" alt="Pediatrics Case 9 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Iron deficiency anemia fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped9/ped9_02_imaging.jpg" alt="Pediatrics Case 9 - IMAGING" loading="lazy" data-label="FLOWCHART
+
+Evaluation of suspected iron deficiency anemia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped9/ped9_03_photo.jpg" alt="Pediatrics Case 9 - PHOTO" loading="lazy" data-label="PHOTO
+
+Koilonychia (spoon nails)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped9/ped9_04_photo.jpg" alt="Pediatrics Case 9 - PHOTO" loading="lazy" data-label="PHOTO
+
+Angular cheilitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped9/ped9_05_photo.jpg" alt="Pediatrics Case 9 - PHOTO" loading="lazy" data-label="PHOTO
+
+Pallor" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc9q0">
 <div class="qlabel">Q1. Describe the findings in the CBC.</div>
 <textarea id="pc9q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2857,7 +2968,29 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">3-year-old male; facial swelling, abdominal distension, bilateral scrotal swelling, pitting edema. Urine: 4+ protein, 2+ blood. [Visual: child with periorbital and scrotal edema.]</div>
-<div class="ic"><img src="img/ped10.png" alt="Pediatrics Case 10" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped10.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped10/ped10_v2_01_photo.jpg" alt="Pediatrics Case 10 - PHOTO" loading="lazy" data-label="PHOTO
+
+Facial edema in drug reaction with eosinophilia and systemic symptoms (DRESS)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped10/ped10_v2_02_photo.jpg" alt="Pediatrics Case 10 - PHOTO" loading="lazy" data-label="PHOTO
+
+Pitting edema of lower leg" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped10/ped10_v2_03_photo.jpg" alt="Pediatrics Case 10 - PHOTO" loading="lazy" data-label="PHOTO
+
+Edema" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped10/ped10_v2_04_photo.jpg" alt="Pediatrics Case 10 - PHOTO" loading="lazy" data-label="PHOTO
+
+Cystoid macular edema" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped10/ped10_v2_05_imaging.jpg" alt="Pediatrics Case 10 - IMAGING" loading="lazy" data-label="X-RAY
+
+Hydrostatic pulmonary edema" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped10/ped10_v2_06_imaging.jpg" alt="Pediatrics Case 10 - IMAGING" loading="lazy" data-label="CT
+
+Subdural hematoma and cerebral edema" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped10/ped10_01_illustration.jpg" alt="Pediatrics Case 10 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Nephritic and nephrotic syndromes" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped10/ped10_02_illustration.jpg" alt="Pediatrics Case 10 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Cross section of renal corpuscle" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped10/ped10_03_imaging.jpg" alt="Pediatrics Case 10 - IMAGING" loading="lazy" data-label="ELECTROPHORESIS
+
+Serum protein electrophoresis in nephrotic syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped10/ped10_04_other.jpg" alt="Pediatrics Case 10 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Diabetic nephropathy" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped10/ped10_05_other.jpg" alt="Pediatrics Case 10 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Membranous nephropathy" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc10q0">
 <div class="qlabel">Q1. What is the primary diagnosis?</div>
 <textarea id="pc10q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -2952,7 +3085,25 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">2-year-old boy; 6-hour history of fever, vomiting, rapidly spreading rash over limbs; tachycardia; non-blanching purpuric rash; capillary refill 4 seconds on legs and trunk.</div>
-<div class="ic"><img src="img/ped11.png" alt="Pediatrics Case 11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped11.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped11/ped11_v2_01_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Purpura fulminans" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped11/ped11_v2_02_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Purpura fulminans" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped11/ped11_v2_03_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Heliotrope rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped11/ped11_v2_04_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Malar rash in systemic lupus erythematosus" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped11/ped11_v2_05_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Measles rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped11/ped11_v2_06_photo.jpg" alt="Pediatrics Case 11 - PHOTO" loading="lazy" data-label="PHOTO
+
+Rocky Mountain spotted fever rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped11/ped11_01_imaging.jpg" alt="Pediatrics Case 11 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Sepsis fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped11/ped11_02_other.jpg" alt="Pediatrics Case 11 - OTHER" loading="lazy" data-label="VIDEO
+
+Shock & sepsis management USMLE style question walkthrough" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped11/ped11_03_other.jpg" alt="Pediatrics Case 11 - OTHER" loading="lazy" data-label="VIDEO
+
+Sepsis 101: Diagnosis and Treatment" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc11q0">
 <div class="qlabel">Q1. Describe the rash shown and state its clinical significance.</div>
 <textarea id="pc11q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3060,7 +3211,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">5-year-old boy; non-blanching rash on buttocks and legs; abdominal pain; platelet count and clotting/bleeding times normal. [Visual: palpable purpura on extensor surfaces and buttocks.]</div>
-<div class="ic"><img src="img/ped12.png" alt="Pediatrics Case 12" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped12.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped12/ped12_01_imaging.jpg" alt="Pediatrics Case 12 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+IgA vasculitis fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped12/ped12_02_photo.jpg" alt="Pediatrics Case 12 - PHOTO" loading="lazy" data-label="PHOTO
+
+Henoch-Schonlein purpura" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped12/ped12_03_photo.jpg" alt="Pediatrics Case 12 - PHOTO" loading="lazy" data-label="PHOTO
+
+Palpable purpura" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped12/ped12_04_photo.jpg" alt="Pediatrics Case 12 - PHOTO" loading="lazy" data-label="PHOTO
+
+IgA vasculitis" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc12q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc12q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3142,7 +3301,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old unvaccinated child; fever, widespread itchy rash. [Visual: vesicles on back at different stages.]</div>
-<div class="ic"><img src="img/ped13.png" alt="Pediatrics Case 13" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped13.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped13/ped13_01_imaging.jpg" alt="Pediatrics Case 13 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Chickenpox fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped13/ped13_02_imaging.jpg" alt="Pediatrics Case 13 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Congenital varicella syndrome TORCH fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped13/ped13_03_photo.jpg" alt="Pediatrics Case 13 - PHOTO" loading="lazy" data-label="PHOTO
+
+Chickenpox" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped13/ped13_04_photo.jpg" alt="Pediatrics Case 13 - PHOTO" loading="lazy" data-label="PHOTO
+
+Varicella" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped13/ped13_05_photo.jpg" alt="Pediatrics Case 13 - PHOTO" loading="lazy" data-label="PHOTO
+
+Disseminated varicella-zoster virus (VZV) infection" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc13q0">
 <div class="qlabel">Q1. What is the most likely diagnosis?</div>
 <textarea id="pc13q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3263,7 +3432,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old; high-grade fever, cough, coryza, conjunctivitis.</div>
-<div class="ic"><img src="img/ped14.png" alt="Pediatrics Case 14" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped14.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped14/ped14_01_imaging.jpg" alt="Pediatrics Case 14 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Measles fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped14/ped14_02_photo.jpg" alt="Pediatrics Case 14 - PHOTO" loading="lazy" data-label="PHOTO
+
+Measles rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped14/ped14_03_photo.jpg" alt="Pediatrics Case 14 - PHOTO" loading="lazy" data-label="PHOTO
+
+Measles rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped14/ped14_04_photo.jpg" alt="Pediatrics Case 14 - PHOTO" loading="lazy" data-label="PHOTO
+
+Measles rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped14/ped14_05_other.jpg" alt="Pediatrics Case 14 - OTHER" loading="lazy" data-label="WEB CONTENT
+
+ACIP routine immunization schedule: children and adolescents ≤ 18 years of age" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc14q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc14q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3358,7 +3537,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">10-month-old; fever, diarrhea, pink rash, inflamed pharynx, mild conjunctival redness. [Visual: pink maculopapular rash over trunk.]</div>
-<div class="ic"><img src="img/ped15.png" alt="Pediatrics Case 15" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped15.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped15/ped15_01_illustration.jpg" alt="Pediatrics Case 15 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Infectious rashes in children" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped15/ped15_02_imaging.jpg" alt="Pediatrics Case 15 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Roseola infantum (sixth disease) fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped15/ped15_03_photo.jpg" alt="Pediatrics Case 15 - PHOTO" loading="lazy" data-label="PHOTO
+
+Roseola infantum (exanthem subitum)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped15/ped15_04_photo.jpg" alt="Pediatrics Case 15 - PHOTO" loading="lazy" data-label="PHOTO
+
+Roseola infantum (exanthem subitum)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped15/ped15_05_other.jpg" alt="Pediatrics Case 15 - OTHER" loading="lazy" data-label="VIDEO
+
+Chalk Talk: Pediatric rashes - Part 1" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc15q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc15q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3453,7 +3642,13 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old; low-grade fever, vomited once, maculopapular / papulovesicular skin rash + mouth sores. [Visual: vesicles on palms, soles, and oral ulcers.]</div>
-<div class="ic"><img src="img/ped16.png" alt="Pediatrics Case 16" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped16.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped16/ped16_01_photo.jpg" alt="Pediatrics Case 16 - PHOTO" loading="lazy" data-label="PHOTO
+
+Hand foot and mouth disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped16/ped16_02_photo.jpg" alt="Pediatrics Case 16 - PHOTO" loading="lazy" data-label="PHOTO
+
+Hand foot and mouth disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped16/ped16_03_photo.jpg" alt="Pediatrics Case 16 - PHOTO" loading="lazy" data-label="PHOTO
+
+Herpangina" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc16q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc16q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3561,7 +3756,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">5-year-old girl; fever, sore throat, sandpaper rash. [Visual: strawberry tongue + diffuse sandpaper rash on chest with circumoral pallor.]</div>
-<div class="ic"><img src="img/ped17.png" alt="Pediatrics Case 17" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped17.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped17/ped17_01_illustration.jpg" alt="Pediatrics Case 17 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Infectious rashes in children" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped17/ped17_02_imaging.jpg" alt="Pediatrics Case 17 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Scarlet fever fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped17/ped17_03_photo.jpg" alt="Pediatrics Case 17 - PHOTO" loading="lazy" data-label="PHOTO
+
+Skin manifestations in scarlet fever" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped17/ped17_04_photo.jpg" alt="Pediatrics Case 17 - PHOTO" loading="lazy" data-label="PHOTO
+
+Scarlet fever rash" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped17/ped17_05_photo.jpg" alt="Pediatrics Case 17 - PHOTO" loading="lazy" data-label="PHOTO
+
+Scarlet fever rash" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc17q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc17q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3682,7 +3887,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">3-year-old; high fever × 6 days not responding to antibiotics; non-purulent conjunctivitis, red cracked lips, strawberry tongue, polymorphous rash, swelling of hands and feet. [Visual: cracked red lips, conjunctivitis, rash on back.]</div>
-<div class="ic"><img src="img/ped18.png" alt="Pediatrics Case 18" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped18.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped18/ped18_01_illustration.jpg" alt="Pediatrics Case 18 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Clinical features of Kawasaki disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped18/ped18_02_imaging.jpg" alt="Pediatrics Case 18 - IMAGING" loading="lazy" data-label="CT
+
+Coronary artery aneurysm in Kawasaki disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped18/ped18_03_photo.jpg" alt="Pediatrics Case 18 - PHOTO" loading="lazy" data-label="PHOTO
+
+Typical findings in Kawasaki disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped18/ped18_04_photo.jpg" alt="Pediatrics Case 18 - PHOTO" loading="lazy" data-label="PHOTO
+
+Kawasaki disease" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped18/ped18_05_photo.jpg" alt="Pediatrics Case 18 - PHOTO" loading="lazy" data-label="PHOTO
+
+Kawasaki disease" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc18q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc18q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3777,7 +3992,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">3-day-old infant; feeding well. [Visual: blue-grey macules on back and buttocks.]</div>
-<div class="ic"><img src="img/ped19.png" alt="Pediatrics Case 19" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped19.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped19/ped19_01_photo.jpg" alt="Pediatrics Case 19 - PHOTO" loading="lazy" data-label="PHOTO
+
+Congenital dermal melanocytosis (Mongolian spot)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped19/ped19_02_photo.jpg" alt="Pediatrics Case 19 - PHOTO" loading="lazy" data-label="PHOTO
+
+Congenital dermal melanocytosis" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc19q0">
 <div class="qlabel">Q1. Describe the skin lesions.</div>
 <textarea id="pc19q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3872,7 +4091,13 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old girl; high-grade fever, productive cough. [Visual: CXR with right-sided lobar consolidation + air bronchograms.]</div>
-<div class="ic"><img src="img/ped20.png" alt="Pediatrics Case 20" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped20.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped20/ped20_01_imaging.jpg" alt="Pediatrics Case 20 - IMAGING" loading="lazy" data-label="X-RAY
+
+Lobar pneumonia with parapneumonic effusion" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped20/ped20_02_imaging.jpg" alt="Pediatrics Case 20 - IMAGING" loading="lazy" data-label="X-RAY
+
+Right middle lobe pneumonia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped20/ped20_03_other.jpg" alt="Pediatrics Case 20 - OTHER" loading="lazy" data-label="SMARTZOOM
+
+Lobar pneumonia" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc20q0">
 <div class="qlabel">Q1. What are the radiological findings?</div>
 <textarea id="pc20q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -3982,7 +4207,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">2-year-old boy; sudden cough and difficulty breathing while playing with toys. RR 33, SpO₂ 88%; ABSENT breath sounds on right side, high-pitched wheeze, nasal flaring. [Visual: CXR with right-sided hyperinflation / mediastinal shift.]</div>
-<div class="ic"><img src="img/ped21.png" alt="Pediatrics Case 21" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped21.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped21/ped21_01_illustration.jpg" alt="Pediatrics Case 21 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Distribution of affected bronchi in foreign body aspiration" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped21/ped21_02_illustration.jpg" alt="Pediatrics Case 21 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Hyperinflation due to foreign body aspiration" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped21/ped21_03_imaging.jpg" alt="Pediatrics Case 21 - IMAGING" loading="lazy" data-label="X-RAY
+
+Foreign body aspiration" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped21/ped21_04_imaging.jpg" alt="Pediatrics Case 21 - IMAGING" loading="lazy" data-label="X-RAY
+
+Foreign-body aspiration" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped21/ped21_05_photo.jpg" alt="Pediatrics Case 21 - PHOTO" loading="lazy" data-label="PHOTO
+
+Heimlich maneuver" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc21q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc21q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4064,7 +4299,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">6-year-old boy; recurrent chest infections, chronic cough, bulky foul-smelling stools (steatorrhea), failure to thrive.</div>
-<div class="ic"><img src="img/ped22.png" alt="Pediatrics Case 22" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped22.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped22/ped22_01_illustration.jpg" alt="Pediatrics Case 22 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Cystic fibrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped22/ped22_02_illustration.jpg" alt="Pediatrics Case 22 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Cystic fibrosis pathophysiology" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped22/ped22_03_imaging.jpg" alt="Pediatrics Case 22 - IMAGING" loading="lazy" data-label="X-RAY
+
+Bronchiectasis in Cystic Fibrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped22/ped22_04_imaging.jpg" alt="Pediatrics Case 22 - IMAGING" loading="lazy" data-label="CT
+
+Bronchiectasis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped22/ped22_05_photo.jpg" alt="Pediatrics Case 22 - PHOTO" loading="lazy" data-label="PHOTO
+
+Rectal prolapse in cystic fibrosis" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc22q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc22q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4172,7 +4417,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">5-year-old male; fever, tonic–clonic convulsions, increasingly lethargic.</div>
-<div class="ic"><img src="img/ped23.png" alt="Pediatrics Case 23" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped23.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped23/ped23_01_illustration.jpg" alt="Pediatrics Case 23 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Kernig sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped23/ped23_02_illustration.jpg" alt="Pediatrics Case 23 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Brudzinski sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped23/ped23_03_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MICROSCOPY
+
+Bacterial meningitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped23/ped23_04_imaging.jpg" alt="Pediatrics Case 23 - IMAGING" loading="lazy" data-label="MRI
+
+Cryptococcal meningitis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped23/ped23_05_photo.jpg" alt="Pediatrics Case 23 - PHOTO" loading="lazy" data-label="PHOTO
+
+Tuberculous meningitis" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc23q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc23q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4280,7 +4535,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">5-year-old girl; bluish discoloration of lips and nail beds. [Visual: clubbed fingers + 'boot-shaped' heart on CXR.]</div>
-<div class="ic"><img src="img/ped24.png" alt="Pediatrics Case 24" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped24.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped24/ped24_01_illustration.jpg" alt="Pediatrics Case 24 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Tetralogy of Fallot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped24/ped24_02_illustration.jpg" alt="Pediatrics Case 24 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Hemodynamics of tetralogy of Fallot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped24/ped24_03_imaging.jpg" alt="Pediatrics Case 24 - IMAGING" loading="lazy" data-label="X-RAY
+
+Boot-shaped heart in tetralogy of Fallot" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped24/ped24_04_imaging.jpg" alt="Pediatrics Case 24 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Tetralogy of Fallot" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc24q0">
 <div class="qlabel">Q1. What is abnormal in the fingers?</div>
 <textarea id="pc24q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4375,7 +4638,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">3-day-old; yellowish discoloration of skin starting 24 hours ago; sclera yellow.</div>
-<div class="ic"><img src="img/ped25.png" alt="Pediatrics Case 25" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped25.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped25/ped25_01_illustration.jpg" alt="Pediatrics Case 25 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Bhutani nomogram" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped25/ped25_02_photo.jpg" alt="Pediatrics Case 25 - PHOTO" loading="lazy" data-label="PHOTO
+
+Neonatal jaundice" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped25/ped25_03_photo.jpg" alt="Pediatrics Case 25 - PHOTO" loading="lazy" data-label="PHOTO
+
+Neonatal phototherapy" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped25/ped25_04_photo.jpg" alt="Pediatrics Case 25 - PHOTO" loading="lazy" data-label="PHOTO
+
+Kernicterus" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc25q0">
 <div class="qlabel">Q1. What is the name of the condition / clinical diagnosis?</div>
 <textarea id="pc25q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4498,7 +4769,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">6-week-old full-term male; persistent jaundice, dark urine, pale stools, palpable liver. Direct bilirubin 7.6 (elevated). Cholestatic jaundice.</div>
-<div class="ic"><img src="img/ped26.png" alt="Pediatrics Case 26" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped26.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped26/ped26_v2_01_photo.jpg" alt="Pediatrics Case 26 - PHOTO" loading="lazy" data-label="PHOTO
+
+Acholic stool" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped26/ped26_01_imaging.jpg" alt="Pediatrics Case 26 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Biliary atresia fact sheet" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc26q0">
 <div class="qlabel">Q1. What type of jaundice?</div>
 <textarea id="pc26q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4593,7 +4868,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">Newborn; antenatal polyhydramnios; reduced air entry on examination. [Visual: CXR showing bowel loops in the chest with mediastinal shift.]</div>
-<div class="ic"><img src="img/ped27.png" alt="Pediatrics Case 27" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped27.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped27/ped27_01_illustration.jpg" alt="Pediatrics Case 27 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Congenital diaphragmatic hernias" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped27/ped27_02_imaging.jpg" alt="Pediatrics Case 27 - IMAGING" loading="lazy" data-label="X-RAY
+
+Left-sided congenital diaphragmatic hernia" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped27/ped27_03_imaging.jpg" alt="Pediatrics Case 27 - IMAGING" loading="lazy" data-label="X-RAY
+
+Right diaphragmatic hernia with enterothorax" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped27/ped27_04_other.jpg" alt="Pediatrics Case 27 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Bronchogenic cyst" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc27q0">
 <div class="qlabel">Q1. Describe the X-ray.</div>
 <textarea id="pc27q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4688,7 +4971,13 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">12-hour-old female neonate with features of Down syndrome. [Visual: AXR — 'double bubble' sign.]</div>
-<div class="ic"><img src="img/ped28.png" alt="Pediatrics Case 28" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped28.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped28/ped28_01_imaging.jpg" alt="Pediatrics Case 28 - IMAGING" loading="lazy" data-label="X-RAY
+
+Double bubble sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped28/ped28_02_imaging.jpg" alt="Pediatrics Case 28 - IMAGING" loading="lazy" data-label="X-RAY
+
+Duodenal atresia in a newborn" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped28/ped28_03_other.jpg" alt="Pediatrics Case 28 - OTHER" loading="lazy" data-label="FLOWCHART
+
+Management of bilious vomiting in the newborn" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc28q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc28q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4783,7 +5072,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4-year-old boy; delayed walking, waddling gait.</div>
-<div class="ic"><img src="img/ped29.png" alt="Pediatrics Case 29" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped29.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped29/ped29_wm_01_photo.png" alt="Pediatrics Case 29 - PHOTO" loading="lazy" data-label="Pseudoathletic calf pseudohypertrophy (classic dystrophinopathy sign)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped29/ped29_wm_02_photo.jpg" alt="Pediatrics Case 29 - PHOTO" loading="lazy" data-label="Boy with Duchenne muscular dystrophy (clinical photo)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped29/ped29_wm_03_photo.png" alt="Pediatrics Case 29 - PHOTO" loading="lazy" data-label="Classic clinical drawing of 7-y/o boy with DMD: calf pseudohypertrophy, lordosis, thin arms" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped29/ped29_01_imaging.jpg" alt="Pediatrics Case 29 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped29/ped29_02_photo.jpg" alt="Pediatrics Case 29 - PHOTO" loading="lazy" data-label="PHOTO
+
+Gower sign" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped29/ped29_03_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Progressive muscular dystrophy (Duchenne and Becker subtypes)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped29/ped29_04_other.jpg" alt="Pediatrics Case 29 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Duchenne muscular dystrophy" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc29q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc29q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4878,7 +5175,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">12-year-old previously healthy boy; muscle weakness over the past 4 weeks. Maternal uncle affected with similar condition.</div>
-<div class="ic"><img src="img/ped30.png" alt="Pediatrics Case 30" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped30.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped30/ped30_wm_01_photo.png" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Pseudoathletic calf pseudohypertrophy (classic dystrophinopathy sign)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped30/ped30_wm_02_photo.jpg" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Boy with Duchenne muscular dystrophy (clinical photo)" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped30/ped30_wm_03_photo.png" alt="Pediatrics Case 30 - PHOTO" loading="lazy" data-label="Classic clinical drawing of 7-y/o boy with DMD: calf pseudohypertrophy, lordosis, thin arms" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped30/ped30_01_imaging.jpg" alt="Pediatrics Case 30 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-OTHER" src="img/peds/ped30/ped30_02_other.jpg" alt="Pediatrics Case 30 - OTHER" loading="lazy" data-label="MICROSCOPY
+
+Progressive muscular dystrophy (Duchenne and Becker subtypes)" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc30q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc30q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -4973,7 +5274,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">Newborn with soft cystic swelling on the back covered by a thin membrane. [Visual: lumbosacral cystic mass with skin defect.]</div>
-<div class="ic"><img src="img/ped31.png" alt="Pediatrics Case 31" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped31.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped31/ped31_01_imaging.jpg" alt="Pediatrics Case 31 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Myelomeningocele on fetal ultrasound" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped31/ped31_02_photo.jpg" alt="Pediatrics Case 31 - PHOTO" loading="lazy" data-label="PHOTO
+
+Open spina bifida" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc31q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc31q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5068,7 +5373,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">1-year-old; head growing larger, unable to move limbs well, vomits after feeding. [Visual: macrocephaly + CT showing dilated ventricles.]</div>
-<div class="ic"><img src="img/ped32.png" alt="Pediatrics Case 32" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped32.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped32/ped32_01_illustration.jpg" alt="Pediatrics Case 32 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Manifestations of increased intracranial pressure in infants" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped32/ped32_02_illustration.jpg" alt="Pediatrics Case 32 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Normal pressure hydrocephalus" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped32/ped32_03_imaging.jpg" alt="Pediatrics Case 32 - IMAGING" loading="lazy" data-label="CT
+
+Hydrocephalus" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped32/ped32_04_imaging.jpg" alt="Pediatrics Case 32 - IMAGING" loading="lazy" data-label="MRI
+
+Noncommunicating hydrocephalus" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped32/ped32_05_photo.jpg" alt="Pediatrics Case 32 - PHOTO" loading="lazy" data-label="PHOTO
+
+Hydrocephalus with sunset sign" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc32q0">
 <div class="qlabel">Q1. Describe the findings in the picture.</div>
 <textarea id="pc32q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5150,7 +5465,9 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">2-year-old girl; inability to use hands or walk; history of maternal fever in pregnancy.</div>
-<div class="ic"><img src="img/ped33.png" alt="Pediatrics Case 33" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped33.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-PHOTO is-primary" src="img/peds/ped33/ped33_wm_01_photo.jpg" alt="Pediatrics Case 33 - PHOTO" loading="lazy" data-label="Young child with cerebral palsy held by mother — typical posture in family/clinical setting" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped33/ped33_01_illustration.jpg" alt="Pediatrics Case 33 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Types of cerebral palsy" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc33q0">
 <div class="qlabel">Q1. Identify the clinical signs in the head and limbs.</div>
 <textarea id="pc33q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5232,7 +5549,15 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">4½-year-old girl; on antiepileptic drugs for intractable seizures; facial red rash. [Visual: facial port-wine stain + CT brain with intracranial calcifications.]</div>
-<div class="ic"><img src="img/ped34.png" alt="Pediatrics Case 34" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped34.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped34/ped34_01_imaging.jpg" alt="Pediatrics Case 34 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Sturge-Weber syndrome fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped34/ped34_02_imaging.jpg" alt="Pediatrics Case 34 - IMAGING" loading="lazy" data-label="MRI
+
+Sturge-Weber syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped34/ped34_03_photo.jpg" alt="Pediatrics Case 34 - PHOTO" loading="lazy" data-label="PHOTO
+
+Port-wine stain" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped34/ped34_04_photo.jpg" alt="Pediatrics Case 34 - PHOTO" loading="lazy" data-label="PHOTO
+
+Port-wine stain (nevus flammeus)" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc34q0">
 <div class="qlabel">Q1. What are the cutaneous findings?</div>
 <textarea id="pc34q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5314,7 +5639,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">3-year-old boy; delayed teething, delayed walking. [Visual: bowing of legs + XRAY wrist with cupping/fraying.]</div>
-<div class="ic"><img src="img/ped35.png" alt="Pediatrics Case 35" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped35.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped35/ped35_01_illustration.jpg" alt="Pediatrics Case 35 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Affected regions of a nephron in renal tubular defects" onclick="pedsLightbox(this)"><img class="peds-thumb tag-ILLUSTRATION" src="img/peds/ped35/ped35_02_illustration.jpg" alt="Pediatrics Case 35 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Genu varum and genu valgum" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped35/ped35_03_imaging.jpg" alt="Pediatrics Case 35 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Rickets secondary to vitamin D deficiency fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped35/ped35_04_imaging.jpg" alt="Pediatrics Case 35 - IMAGING" loading="lazy" data-label="X-RAY
+
+Rickets" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped35/ped35_05_photo.jpg" alt="Pediatrics Case 35 - PHOTO" loading="lazy" data-label="PHOTO
+
+Tibial bowing in rickets" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc35q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc35q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5396,7 +5731,11 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">14-year-old, shortest in class.</div>
-<div class="ic"><img src="img/ped36.png" alt="Pediatrics Case 36" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped36.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped36/ped36_01_imaging.jpg" alt="Pediatrics Case 36 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Turner syndrome fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped36/ped36_02_photo.jpg" alt="Pediatrics Case 36 - PHOTO" loading="lazy" data-label="PHOTO
+
+Grey Turner sign" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc36q0">
 <div class="qlabel">Q1. What is the diagnosis?</div>
 <textarea id="pc36q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5478,7 +5817,17 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">16-year-old tall girl. [Visual: hand demonstrating wrist sign + thumb sign.]</div>
-<div class="ic"><img src="img/ped37.png" alt="Pediatrics Case 37" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped37.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-ILLUSTRATION is-primary" src="img/peds/ped37/ped37_01_illustration.jpg" alt="Pediatrics Case 37 - ILLUSTRATION" loading="lazy" data-label="ILLUSTRATION
+
+Ehlers-Danlos Syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped37/ped37_02_imaging.jpg" alt="Pediatrics Case 37 - IMAGING" loading="lazy" data-label="FACT SHEET
+
+Marfan syndrome fact sheet" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped37/ped37_03_photo.jpg" alt="Pediatrics Case 37 - PHOTO" loading="lazy" data-label="PHOTO
+
+Thumb sign in Marfan syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped37/ped37_04_photo.jpg" alt="Pediatrics Case 37 - PHOTO" loading="lazy" data-label="PHOTO
+
+Facial features of Ehlers-Danlos syndrome" onclick="pedsLightbox(this)"><img class="peds-thumb tag-PHOTO" src="img/peds/ped37/ped37_05_photo.jpg" alt="Pediatrics Case 37 - PHOTO" loading="lazy" data-label="PHOTO
+
+Arachnodactyly in Marfan syndrome" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc37q0">
 <div class="qlabel">Q1. Name the signs.</div>
 <textarea id="pc37q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5560,7 +5909,21 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">6-year-old with fever 39.5 °C, loin pain, and vomiting. Urine dipstick: hazy color, pH 7, blood 1+, bacteria 3+, nitrite 1+, leukocyte esterase 3+.</div>
-<div class="ic"><img src="img/ped38.png" alt="Pediatrics Case 38" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="img-ph" style="display:none">[Add image as <code>img/ped38.png</code>]</div></div>
+<div class="ic peds-gallery" data-peds-gallery="1"><div class="peds-thumbs"><img class="peds-thumb tag-IMAGING is-primary" src="img/peds/ped38/ped38_v2_01_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Hydronephrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_v2_02_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Pyelonephritis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_v2_03_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="ULTRASOUND
+
+Atrophic kidney" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_v2_04_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="CT
+
+Acute pyelonephritis and renal calculi" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_v2_05_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="CT
+
+Chronic ureteral obstruction" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_v2_06_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="CT
+
+Ureter calculus with hydronephrosis" onclick="pedsLightbox(this)"><img class="peds-thumb tag-IMAGING" src="img/peds/ped38/ped38_01_imaging.jpg" alt="Pediatrics Case 38 - IMAGING" loading="lazy" data-label="X-RAY
+
+Obstructing ureteral calculus" onclick="pedsLightbox(this)"></div></div>
 <div class="qblock" id="pc38q0">
 <div class="qlabel">Q1. Mention 3 most striking urine profile abnormalities.</div>
 <textarea id="pc38q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5655,6 +6018,37 @@ td{padding:6px 8px;border:1px solid #334155;line-height:1.4}
 </div>
 <div class="cb">
 <div class="st">Not a clinical case — high-yield comparison topic for the OSCE.</div>
+<div class="cmp-wrap" data-cmp-table-39="1">
+<h3>Meningococcal vs Viral Exanthem &mdash; Side-by-Side</h3>
+<table class="cmp-table">
+<thead><tr><th></th><th>Meningococcal (sepsis)</th><th>Viral exanthem</th></tr></thead>
+<tbody>
+<tr><th>Appearance</th>
+  <td class="col-meningo"><strong class="red">Petechial &rarr; purpuric / hemorrhagic</strong>, dark purple-red, irregular; may coalesce into ecchymoses (<strong class="red">purpura fulminans</strong>); may start blanching maculopapular early.</td>
+  <td class="col-viral">Maculopapular, erythematous, pink/red; may be vesicular (varicella, HFMD); typically discrete.</td></tr>
+<tr><th>Blanching</th>
+  <td class="col-meningo"><strong class="red">NON-blanching</strong> (key feature &mdash; glass / tumbler test).</td>
+  <td class="col-viral">Blanches on pressure.</td></tr>
+<tr><th>Systemic</th>
+  <td class="col-meningo">Fever, lethargy, <strong class="red">SHOCK</strong> (tachycardia, prolonged CRT, hypotension), neck stiffness, photophobia, vomiting, <strong class="red">&darr; GCS</strong>, leg pain, cold peripheries &mdash; child looks <strong class="red">toxic</strong>.</td>
+  <td class="col-viral">Fever, malaise; child often well between febrile peaks; specific clues (cough/coryza/Koplik in measles; conjunctivitis; oral lesions in HFMD).</td></tr>
+<tr><th>Mechanism</th>
+  <td class="col-meningo"><em><strong class="blue">Neisseria meningitidis</strong></em> endotoxin &rarr; <strong class="red">DIC</strong> &rarr; microthrombi + intravascular hemorrhage (vasculitic).</td>
+  <td class="col-viral">Viral cytopathic / immune-complex / direct viral effect on skin.</td></tr>
+<tr><th>Investigations</th>
+  <td class="col-meningo"><strong class="orange">Do NOT delay antibiotics</strong>. Blood culture, PCR (meningococcal), CBC, coag/<strong class="orange">DIC screen</strong>, lactate, ABG, U&amp;E, CRP, LP (only if no contraindication and after Abx).</td>
+  <td class="col-viral">Usually clinical. Targeted serology / PCR if needed (measles IgM, VZV PCR, EBV/CMV).</td></tr>
+<tr><th>Management</th>
+  <td class="col-meningo"><strong class="green">IMMEDIATE IV/IM benzylpenicillin or ceftriaxone</strong>, IV fluids, ABCDE, PICU, notify public health, <strong class="green">chemoprophylaxis</strong> for close contacts.</td>
+  <td class="col-viral">Supportive &mdash; antipyretics, hydration; specific antivirals only in select cases (e.g., <strong class="green">acyclovir</strong> for severe varicella / immunocompromised).</td></tr>
+<tr><th>Prognosis</th>
+  <td class="col-meningo">Time-critical &mdash; mortality <strong class="orange">10&ndash;15%</strong>; higher with purpura fulminans / shock; survivors may need digit/limb amputation.</td>
+  <td class="col-viral">Self-limiting in most; complications uncommon in immunocompetent children.</td></tr>
+</tbody>
+</table>
+<div class="cmp-pearl"><strong>Pearl:</strong> Any <strong class="red">non-blanching rash + fever</strong> in a child = assume meningococcal sepsis until proven otherwise &rarr; <strong class="green">IV/IM antibiotics IMMEDIATELY</strong>, do not wait for investigations.</div>
+</div>
+
 <div class="qblock" id="pc39q0">
 <div class="qlabel">Q1. Differentiate the appearance.</div>
 <textarea id="pc39q0_ta" placeholder="Type your answer..." rows="3"></textarea>
@@ -5866,4 +6260,168 @@ resetAll = function(){
 const _oldToggleAll = toggleAll;
 toggleAll = function(o){document.querySelectorAll('.cc,.rc').forEach(c=>{if(o)c.classList.add('open');else c.classList.remove('open')})};
 
-</script></body></html>
+</script>
+<script>
+(function(){
+  var current=null; // {gallery:Element, idx:Number}
+  function ensureLB(){
+    var lb=document.getElementById('peds-lb');
+    if(lb) return lb;
+    lb=document.createElement('div');
+    lb.id='peds-lb';
+    lb.innerHTML='<button class="lb-close" type="button" aria-label="Close">&times;</button>'+
+      '<button class="lb-nav lb-prev" type="button" aria-label="Previous">&#8249;</button>'+
+      '<button class="lb-nav lb-next" type="button" aria-label="Next">&#8250;</button>'+
+      '<img alt=""><div class="lb-cap"></div>';
+    lb.onclick=function(e){if(e.target===lb) close();};
+    lb.querySelector('.lb-close').onclick=function(e){e.stopPropagation();close();};
+    lb.querySelector('.lb-prev').onclick=function(e){e.stopPropagation();step(-1);};
+    lb.querySelector('.lb-next').onclick=function(e){e.stopPropagation();step(1);};
+    document.body.appendChild(lb);
+    document.addEventListener('keydown',function(e){
+      if(!lb.classList.contains('show')) return;
+      if(e.key==='Escape') close();
+      else if(e.key==='ArrowLeft') step(-1);
+      else if(e.key==='ArrowRight') step(1);
+    });
+    return lb;
+  }
+  function close(){var lb=document.getElementById('peds-lb');if(lb) lb.classList.remove('show'); current=null;}
+  function show(el){
+    var lb=ensureLB();
+    lb.querySelector('img').src=el.src;
+    lb.querySelector('.lb-cap').textContent=el.getAttribute('data-label')||'';
+    lb.classList.add('show');
+    var gallery=el.closest('.peds-gallery');
+    var thumbs=gallery? Array.from(gallery.querySelectorAll('.peds-thumb')) : [el];
+    var hasMany=thumbs.length>1;
+    lb.querySelector('.lb-prev').style.display=hasMany?'block':'none';
+    lb.querySelector('.lb-next').style.display=hasMany?'block':'none';
+    current={gallery:gallery, thumbs:thumbs, idx:thumbs.indexOf(el)};
+  }
+  function step(d){
+    if(!current||!current.thumbs||current.thumbs.length<2) return;
+    var n=current.thumbs.length;
+    current.idx=(current.idx+d+n)%n;
+    var el=current.thumbs[current.idx];
+    var lb=document.getElementById('peds-lb');
+    lb.querySelector('img').src=el.src;
+    lb.querySelector('.lb-cap').textContent=el.getAttribute('data-label')||'';
+  }
+  window.pedsLightbox=show;
+})();
+</script>
+
+
+<script>
+(function(){
+  function collectAnswers(){
+    var out=[];
+    // Two subject sections: IM = #sec-im, Peds = #sec-ped (or scan all .cc)
+    document.querySelectorAll('section.subject-section').forEach(function(sec){
+      var subject = sec.id === 'sec-im' ? 'Internal Medicine' :
+                    sec.id === 'sec-ped' ? 'Pediatrics' :
+                    (sec.id||'Section');
+      var cases = sec.querySelectorAll('.cc');
+      if(!cases.length) return;
+      out.push('## '+subject);
+      cases.forEach(function(cc){
+        var h2 = cc.querySelector('h2');
+        var title = h2 ? (h2.textContent||'').replace(/\s+/g,' ').trim() : (cc.id||'Case');
+        // strip score badge text (look like '4/5' or '100%')
+        title = title.replace(/\s*\d+(\.\d+)?\s*\/\s*\d+\s*$/,'').replace(/\s*\d+%\s*$/,'').trim();
+        var rows=[];
+        cc.querySelectorAll('.qblock').forEach(function(qb){
+          var lbl = qb.querySelector('.qlabel');
+          var ta  = qb.querySelector('textarea');
+          if(!ta) return;
+          var qtext = lbl ? (lbl.textContent||'').replace(/\s+/g,' ').trim() : (ta.id||'Q');
+          var ans = (ta.value||'').trim();
+          rows.push({q:qtext, a:ans, id:ta.id});
+        });
+        // Only emit the case if it has at least one non-empty answer
+        var hasAny = rows.some(function(r){return r.a.length>0;});
+        if(!hasAny) return;
+        out.push('\n### '+title);
+        rows.forEach(function(r){
+          if(r.a.length===0){
+            out.push('- **'+r.q+'**\n  _(blank)_');
+          } else {
+            out.push('- **'+r.q+'**\n  '+r.a.replace(/\r?\n/g,'\n  '));
+          }
+        });
+      });
+    });
+    if(out.length===0) return '# OSCE Answers Export\n\n_(no answers typed yet)_';
+    var when=new Date().toISOString().replace('T',' ').slice(0,19)+' UTC';
+    return '# OSCE Answers Export\n_Captured: '+when+'_\n\n'+out.join('\n');
+  }
+
+  async function copyText(text){
+    if(navigator.clipboard && window.isSecureContext){
+      try{ await navigator.clipboard.writeText(text); return true; }catch(e){}
+    }
+    // Fallback: hidden textarea + execCommand
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    var ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function downloadTxt(text){
+    var blob=new Blob([text],{type:'text/markdown;charset=utf-8'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');
+    a.href=url;
+    a.download='osce_answers_'+new Date().toISOString().replace(/[:T]/g,'-').slice(0,19)+'.md';
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(url); a.remove();}, 100);
+  }
+
+  function showModal(text, copied){
+    var prior=document.getElementById('export-modal');
+    if(prior) prior.remove();
+    var m=document.createElement('div');
+    m.id='export-modal';
+    m.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px';
+    var lines=text.split('\n').length;
+    m.innerHTML=
+      '<div style="background:#0f172a;color:#e2e8f0;border-radius:10px;max-width:900px;width:100%;max-height:88vh;display:flex;flex-direction:column;border:1px solid #334155;box-shadow:0 20px 60px rgba(0,0,0,.6)">'+
+      '<div style="padding:14px 18px;border-bottom:1px solid #334155;display:flex;align-items:center;gap:12px">'+
+        '<strong style="font-size:16px">Exported '+lines+' lines</strong>'+
+        '<span style="color:'+(copied?'#22c55e':'#fca5a5')+';font-size:13px">'+(copied?'✓ Copied to clipboard':'⚠ Auto-copy blocked — manually select + copy below')+'</span>'+
+        '<span style="flex:1"></span>'+
+        '<button id="export-modal-dl" style="background:#0e7490;color:#cffafe;border:0;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:600">Download .md</button>'+
+        '<button id="export-modal-recopy" style="background:#334155;color:#e2e8f0;border:0;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:600">Copy again</button>'+
+        '<button id="export-modal-close" style="background:#7f1d1d;color:#fca5a5;border:0;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:600">Close</button>'+
+      '</div>'+
+      '<textarea id="export-modal-text" readonly style="flex:1;width:100%;background:#020617;color:#e2e8f0;border:0;padding:14px 18px;font:13px/1.55 ui-monospace,Menlo,Consolas,monospace;resize:none"></textarea>'+
+      '</div>';
+    document.body.appendChild(m);
+    var taEl=document.getElementById('export-modal-text');
+    taEl.value=text;
+    setTimeout(function(){taEl.focus(); taEl.select();},50);
+    document.getElementById('export-modal-dl').onclick=function(){downloadTxt(text);};
+    document.getElementById('export-modal-recopy').onclick=async function(){
+      var ok=await copyText(text);
+      this.textContent= ok ? '✓ Copied' : 'Copy failed';
+      var btn=this; setTimeout(function(){btn.textContent='Copy again';}, 1500);
+    };
+    document.getElementById('export-modal-close').onclick=function(){m.remove();};
+    m.addEventListener('click',function(e){if(e.target===m) m.remove();});
+    document.addEventListener('keydown',function escClose(e){
+      if(e.key==='Escape'){var x=document.getElementById('export-modal'); if(x){x.remove(); document.removeEventListener('keydown',escClose);}}
+    });
+  }
+
+  window.exportAllAnswers=async function(){
+    var text=collectAnswers();
+    var copied=await copyText(text);
+    showModal(text, copied);
+  };
+})();
+</script>
+
+</body></html>

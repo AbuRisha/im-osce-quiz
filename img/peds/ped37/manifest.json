@@ -1,0 +1,64 @@
+{
+  "case": 37,
+  "topic": "Marfan syndrome",
+  "search_term": "marfan syndrome",
+  "fallback_term": "fibrillin-1",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped37_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nEhlers-Danlos Syndrome",
+      "alt": "Ehlers-Danlos Syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_684011aed41628.09104241.jpg",
+      "bytes": 198291,
+      "w": 1476,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped37_02_imaging.jpg",
+      "label": "FACT SHEET\n\nMarfan syndrome fact sheet",
+      "alt": "Marfan syndrome fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee56d.jpg",
+      "bytes": 146464,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped37_03_photo.jpg",
+      "label": "PHOTO\n\nThumb sign in Marfan syndrome",
+      "alt": "Thumb sign in Marfan syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5d0f9b7a010.90686595.jpg",
+      "bytes": 202050,
+      "w": 1439,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped37_04_photo.jpg",
+      "label": "PHOTO\n\nFacial features of Ehlers-Danlos syndrome",
+      "alt": "Facial features of Ehlers-Danlos syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_617a472982e60.jpg",
+      "bytes": 140193,
+      "w": 1471,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped37_05_photo.jpg",
+      "label": "PHOTO\n\nArachnodactyly in Marfan syndrome",
+      "alt": "Arachnodactyly in Marfan syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_509eed85ca032.jpg",
+      "bytes": 139362,
+      "w": 1414,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "case": 29,
+  "topic": "Duchenne muscular dystrophy",
+  "search_term": "duchenne muscular dystrophy",
+  "fallback_term": "DMD gowers",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped29_01_imaging.jpg",
+      "label": "FACT SHEET\n\nDuchenne muscular dystrophy and Becker muscular dystrophy fact sheet",
+      "alt": "Duchenne muscular dystrophy and Becker muscular dystrophy fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bbcc87dc0a359ee625.jpg",
+      "bytes": 140573,
+      "w": 1600,
+      "h": 906,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped29_02_photo.jpg",
+      "label": "PHOTO\n\nGower sign",
+      "alt": "Gower sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d914f2834.jpg",
+      "bytes": 94068,
+      "w": 654,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped29_03_other.jpg",
+      "label": "MICROSCOPY\n\nProgressive muscular dystrophy (Duchenne and Becker subtypes)",
+      "alt": "Progressive muscular dystrophy (Duchenne and Becker subtypes)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d909befce.jpg",
+      "bytes": 255390,
+      "w": 1513,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped29_04_other.jpg",
+      "label": "MICROSCOPY\n\nDuchenne muscular dystrophy",
+      "alt": "Duchenne muscular dystrophy",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d92074326.jpg",
+      "bytes": 301543,
+      "w": 993,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

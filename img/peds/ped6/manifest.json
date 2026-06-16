@@ -1,0 +1,64 @@
+{
+  "case": 6,
+  "topic": "Sickle cell disease",
+  "search_term": "sickle cell disease",
+  "fallback_term": "sickle cell anemia",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped6_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nHemoglobin electrophoresis",
+      "alt": "Hemoglobin electrophoresis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5b869693ede77.jpg",
+      "bytes": 68688,
+      "w": 1288,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped6_02_imaging.jpg",
+      "label": "FACT SHEET\n\nSickle cell fact sheet",
+      "alt": "Sickle cell fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bbcc87dc0a359ee5d1.jpg",
+      "bytes": 178675,
+      "w": 1600,
+      "h": 960,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped6_03_imaging.jpg",
+      "label": "X-RAY\n\nBilateral femoral head avascular necrosis",
+      "alt": "Bilateral femoral head avascular necrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_604a0b517f068.jpg",
+      "bytes": 202886,
+      "w": 1173,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped6_04_photo.jpg",
+      "label": "PHOTO\n\nDactylitis",
+      "alt": "Dactylitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d93e08210.jpg",
+      "bytes": 213953,
+      "w": 753,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped6_05_other.jpg",
+      "label": "MICROSCOPY\n\nErythrocyte morphologies in sickle-cell disease",
+      "alt": "Erythrocyte morphologies in sickle-cell disease",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692ee6afdd870dadfdcce46f.jpg",
+      "bytes": 184015,
+      "w": 1454,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

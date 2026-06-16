@@ -1,0 +1,34 @@
+{
+  "case": 30,
+  "topic": "Becker muscular dystrophy",
+  "source": "Wikimedia Commons (clinical photos)",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped30_wm_01_photo.png",
+      "label": "Pseudoathletic calf pseudohypertrophy (classic dystrophinopathy sign)",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pseudoathletic_appearance_of_calf_muscle_hypertrophy.png",
+      "attribution": "Wikimedia Commons CC BY-SA 4.0",
+      "bytes": 1674205,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped30_wm_02_photo.jpg",
+      "label": "Boy with Duchenne muscular dystrophy (clinical photo)",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Duchenne_muscular_dystrophy_-_IMG_20190907_205624_434.jpg",
+      "attribution": "Wikimedia Commons CC BY-SA 4.0 (Duchenne Parent Project Espa\u00f1a)",
+      "bytes": 152843,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped30_wm_03_photo.png",
+      "label": "Classic clinical drawing of 7-y/o boy with DMD: calf pseudohypertrophy, lordosis, thin arms",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Drawing_of_boy_with_Duchenne_muscular_dystrophy.png",
+      "attribution": "Wikimedia Commons (Public Domain)",
+      "bytes": 1015172,
+      "primary": false
+    }
+  ]
+}

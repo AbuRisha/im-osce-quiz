@@ -1,0 +1,31 @@
+{
+  "case": 36,
+  "topic": "Turner syndrome",
+  "search_term": "turner syndrome",
+  "fallback_term": "monosomy X",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped36_01_imaging.jpg",
+      "label": "FACT SHEET\n\nTurner syndrome fact sheet",
+      "alt": "Turner syndrome fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69284323cc87dc0a359ef42f.jpg",
+      "bytes": 147619,
+      "w": 1443,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped36_02_photo.jpg",
+      "label": "PHOTO\n\nGrey Turner sign",
+      "alt": "Grey Turner sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_587f671546e54.jpg",
+      "bytes": 96323,
+      "w": 1600,
+      "h": 840,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "case": 32,
+  "topic": "Hydrocephalus",
+  "search_term": "hydrocephalus",
+  "fallback_term": "ventriculomegaly child",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped32_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nManifestations of increased intracranial pressure in infants",
+      "alt": "Manifestations of increased intracranial pressure in infants",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64d0ae53e87f72.91461338.jpg",
+      "bytes": 105889,
+      "w": 1347,
+      "h": 999,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped32_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nNormal pressure hydrocephalus",
+      "alt": "Normal pressure hydrocephalus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62ff53eb740990.65985228.jpg",
+      "bytes": 111008,
+      "w": 1436,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped32_03_imaging.jpg",
+      "label": "CT\n\nHydrocephalus",
+      "alt": "Hydrocephalus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_58f9dc550d293.jpg",
+      "bytes": 119591,
+      "w": 1059,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped32_04_imaging.jpg",
+      "label": "MRI\n\nNoncommunicating hydrocephalus",
+      "alt": "Noncommunicating hydrocephalus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62a9a179586be4.77001568.jpg",
+      "bytes": 133560,
+      "w": 1504,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped32_05_photo.jpg",
+      "label": "PHOTO\n\nHydrocephalus with sunset sign",
+      "alt": "Hydrocephalus with sunset sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_614f142c99cae.jpg",
+      "bytes": 70335,
+      "w": 880,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

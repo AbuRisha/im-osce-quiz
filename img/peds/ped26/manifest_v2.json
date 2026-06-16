@@ -1,0 +1,30 @@
+{
+  "case": 26,
+  "topic": "Biliary atresia",
+  "search_terms": [
+    "biliary atresia jaundice",
+    "acholic stool",
+    "neonatal cholestasis",
+    "jaundiced infant"
+  ],
+  "skip_filter": [
+    "pathophysiology",
+    "molecular",
+    "embryology",
+    "schematic"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped26_v2_01_photo.jpg",
+      "label": "PHOTO\n\nAcholic stool",
+      "alt": "Acholic stool",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d918a5b84.jpg",
+      "bytes": 224886,
+      "w": 1292,
+      "h": 1000,
+      "primary": true
+    }
+  ]
+}

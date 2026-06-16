@@ -1,0 +1,64 @@
+{
+  "case": 13,
+  "topic": "Varicella",
+  "search_term": "varicella",
+  "fallback_term": "chickenpox",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped13_01_imaging.jpg",
+      "label": "FACT SHEET\n\nChickenpox fact sheet",
+      "alt": "Chickenpox fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee500.jpg",
+      "bytes": 145370,
+      "w": 1462,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped13_02_imaging.jpg",
+      "label": "FACT SHEET\n\nCongenital varicella syndrome TORCH fact sheet",
+      "alt": "Congenital varicella syndrome TORCH fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee4da.jpg",
+      "bytes": 117123,
+      "w": 1501,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped13_03_photo.jpg",
+      "label": "PHOTO\n\nChickenpox",
+      "alt": "Chickenpox",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_638f7115ce8845.97239996.jpg",
+      "bytes": 152394,
+      "w": 1115,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped13_04_photo.jpg",
+      "label": "PHOTO\n\nVaricella",
+      "alt": "Varicella",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65f1c072cfc654.87573853.jpg",
+      "bytes": 209921,
+      "w": 1366,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped13_05_photo.jpg",
+      "label": "PHOTO\n\nDisseminated varicella-zoster virus (VZV) infection",
+      "alt": "Disseminated varicella-zoster virus (VZV) infection",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_619cf91ed729f.jpg",
+      "bytes": 260022,
+      "w": 1500,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "case": 23,
+  "topic": "Bacterial meningitis",
+  "search_term": "bacterial meningitis",
+  "fallback_term": "meningococcal meningitis",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped23_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nKernig sign",
+      "alt": "Kernig sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5cbef18a4d779.jpg",
+      "bytes": 79708,
+      "w": 1600,
+      "h": 850,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped23_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nBrudzinski sign",
+      "alt": "Brudzinski sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5cbf26f416fc6.jpg",
+      "bytes": 51965,
+      "w": 1320,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped23_03_imaging.jpg",
+      "label": "MICROSCOPY\n\nBacterial meningitis",
+      "alt": "Bacterial meningitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5c9cfd02ed6.51098664.jpg",
+      "bytes": 217744,
+      "w": 1289,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped23_04_imaging.jpg",
+      "label": "MRI\n\nCryptococcal meningitis",
+      "alt": "Cryptococcal meningitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_60dc345b6dc02.jpg",
+      "bytes": 81869,
+      "w": 852,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped23_05_photo.jpg",
+      "label": "PHOTO\n\nTuberculous meningitis",
+      "alt": "Tuberculous meningitis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_61825c87c9620.jpg",
+      "bytes": 92893,
+      "w": 1599,
+      "h": 839,
+      "primary": false
+    }
+  ]
+}

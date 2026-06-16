@@ -1,0 +1,64 @@
+{
+  "case": 17,
+  "topic": "Scarlet fever",
+  "search_term": "scarlet fever",
+  "fallback_term": "streptococcal scarlatina",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped17_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nInfectious rashes in children",
+      "alt": "Infectious rashes in children",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_674f0b8c88e812.50471047.jpg",
+      "bytes": 155842,
+      "w": 1600,
+      "h": 832,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped17_02_imaging.jpg",
+      "label": "FACT SHEET\n\nScarlet fever fact sheet",
+      "alt": "Scarlet fever fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6928419fec669cbdbacd054a.jpg",
+      "bytes": 170879,
+      "w": 1496,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped17_03_photo.jpg",
+      "label": "PHOTO\n\nSkin manifestations in scarlet fever",
+      "alt": "Skin manifestations in scarlet fever",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64885a86beb1f9.06689712.jpg",
+      "bytes": 110744,
+      "w": 750,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped17_04_photo.jpg",
+      "label": "PHOTO\n\nScarlet fever rash",
+      "alt": "Scarlet fever rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_57d26f1ae112d.jpg",
+      "bytes": 112015,
+      "w": 664,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped17_05_photo.jpg",
+      "label": "PHOTO\n\nScarlet fever rash",
+      "alt": "Scarlet fever rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65d5e005439865.47175620.jpg",
+      "bytes": 174696,
+      "w": 784,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

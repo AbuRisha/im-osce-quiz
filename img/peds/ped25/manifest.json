@@ -1,0 +1,53 @@
+{
+  "case": 25,
+  "topic": "Neonatal jaundice ABO",
+  "search_term": "neonatal jaundice",
+  "fallback_term": "ABO incompatibility hemolytic",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped25_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nBhutani nomogram",
+      "alt": "Bhutani nomogram",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6409dc9a714de2.49006575.jpg",
+      "bytes": 164465,
+      "w": 1447,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped25_02_photo.jpg",
+      "label": "PHOTO\n\nNeonatal jaundice",
+      "alt": "Neonatal jaundice",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5a0444a1e4fb5.jpg",
+      "bytes": 87950,
+      "w": 667,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped25_03_photo.jpg",
+      "label": "PHOTO\n\nNeonatal phototherapy",
+      "alt": "Neonatal phototherapy",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_675a197cab7135.18229840.jpg",
+      "bytes": 219890,
+      "w": 1442,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped25_04_photo.jpg",
+      "label": "PHOTO\n\nKernicterus",
+      "alt": "Kernicterus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_517be8d568661.jpg",
+      "bytes": 158539,
+      "w": 1343,
+      "h": 999,
+      "primary": false
+    }
+  ]
+}

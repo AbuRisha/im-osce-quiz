@@ -1,0 +1,42 @@
+{
+  "case": 28,
+  "topic": "Duodenal atresia",
+  "search_term": "duodenal atresia",
+  "fallback_term": "double bubble sign",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped28_01_imaging.jpg",
+      "label": "X-RAY\n\nDouble bubble sign",
+      "alt": "Double bubble sign",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_61cc9fa4bbdb8.jpg",
+      "bytes": 57757,
+      "w": 792,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped28_02_imaging.jpg",
+      "label": "X-RAY\n\nDuodenal atresia in a newborn",
+      "alt": "Duodenal atresia in a newborn",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d9155c6a8.jpg",
+      "bytes": 111620,
+      "w": 622,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped28_03_other.jpg",
+      "label": "FLOWCHART\n\nManagement of bilious vomiting in the newborn",
+      "alt": "Management of bilious vomiting in the newborn",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6183ee8415aab.jpg",
+      "bytes": 299415,
+      "w": 2357,
+      "h": 2000,
+      "primary": false
+    }
+  ]
+}

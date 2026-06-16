@@ -1,0 +1,42 @@
+{
+  "case": 20,
+  "topic": "Lobar pneumonia",
+  "search_term": "lobar pneumonia",
+  "fallback_term": "pneumococcal pneumonia child",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped20_01_imaging.jpg",
+      "label": "X-RAY\n\nLobar pneumonia with parapneumonic effusion",
+      "alt": "Lobar pneumonia with parapneumonic effusion",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_64f06844d93588.38521465.jpg",
+      "bytes": 159322,
+      "w": 1600,
+      "h": 983,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped20_02_imaging.jpg",
+      "label": "X-RAY\n\nRight middle lobe pneumonia",
+      "alt": "Right middle lobe pneumonia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65e5d23cc48602.76780096.jpg",
+      "bytes": 146169,
+      "w": 1331,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped20_03_other.jpg",
+      "label": "SMARTZOOM\n\nLobar pneumonia",
+      "alt": "Lobar pneumonia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5a266a54d1dfd.jpg",
+      "bytes": 357837,
+      "w": 1600,
+      "h": 600,
+      "primary": false
+    }
+  ]
+}

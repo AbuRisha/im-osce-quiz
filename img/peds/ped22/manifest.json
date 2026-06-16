@@ -1,0 +1,64 @@
+{
+  "case": 22,
+  "topic": "Cystic fibrosis",
+  "search_term": "cystic fibrosis",
+  "fallback_term": "CF lung disease",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped22_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nCystic fibrosis",
+      "alt": "Cystic fibrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee520.jpg",
+      "bytes": 150558,
+      "w": 1315,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped22_02_illustration.jpg",
+      "label": "ILLUSTRATION\n\nCystic fibrosis pathophysiology",
+      "alt": "Cystic fibrosis pathophysiology",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5d8b41586721f.jpg",
+      "bytes": 85323,
+      "w": 1171,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped22_03_imaging.jpg",
+      "label": "X-RAY\n\nBronchiectasis in Cystic Fibrosis",
+      "alt": "Bronchiectasis in Cystic Fibrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_68deba29ad40ab6f6a4b015f.jpg",
+      "bytes": 65857,
+      "w": 696,
+      "h": 768,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped22_04_imaging.jpg",
+      "label": "CT\n\nBronchiectasis",
+      "alt": "Bronchiectasis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6a1ec1850b08db7e2cd6b50c.jpg",
+      "bytes": 174218,
+      "w": 1429,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped22_05_photo.jpg",
+      "label": "PHOTO\n\nRectal prolapse in cystic fibrosis",
+      "alt": "Rectal prolapse in cystic fibrosis",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d924d3cb2.jpg",
+      "bytes": 423022,
+      "w": 1495,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "case": 11,
+  "topic": "Meningococcemia",
+  "search_terms": [
+    "purpura fulminans",
+    "meningococcal rash",
+    "petechial rash meningitis",
+    "waterhouse-friderichsen",
+    "meningococcemia skin"
+  ],
+  "skip_filter": [
+    "lifecycle",
+    "molecular",
+    "endotoxin",
+    "schematic",
+    "mechanism"
+  ],
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_01_photo.jpg",
+      "label": "PHOTO\n\nPurpura fulminans",
+      "alt": "Purpura fulminans",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_603bfcb4bb9b4.jpg",
+      "bytes": 193983,
+      "w": 1600,
+      "h": 949,
+      "primary": true
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_02_photo.jpg",
+      "label": "PHOTO\n\nPurpura fulminans",
+      "alt": "Purpura fulminans",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_603c03e78186f.jpg",
+      "bytes": 167286,
+      "w": 1273,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_03_photo.jpg",
+      "label": "PHOTO\n\nHeliotrope rash",
+      "alt": "Heliotrope rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6012821147958.jpg",
+      "bytes": 106822,
+      "w": 1329,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_04_photo.jpg",
+      "label": "PHOTO\n\nMalar rash in systemic lupus erythematosus",
+      "alt": "Malar rash in systemic lupus erythematosus",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5081d942149bd.jpg",
+      "bytes": 348273,
+      "w": 1529,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_05_photo.jpg",
+      "label": "PHOTO\n\nMeasles rash",
+      "alt": "Measles rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_54575982416bd.jpg",
+      "bytes": 149569,
+      "w": 1443,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped11_v2_06_photo.jpg",
+      "label": "PHOTO\n\nRocky Mountain spotted fever rash",
+      "alt": "Rocky Mountain spotted fever rash",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_58c6bf31e30fb.jpg",
+      "bytes": 224353,
+      "w": 1557,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

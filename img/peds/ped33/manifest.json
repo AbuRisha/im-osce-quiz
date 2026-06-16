@@ -1,0 +1,20 @@
+{
+  "case": 33,
+  "topic": "Cerebral palsy",
+  "search_term": "cerebral palsy",
+  "fallback_term": "spastic diplegia",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped33_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nTypes of cerebral palsy",
+      "alt": "Types of cerebral palsy",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_678fcd2a6e6141.87517652.jpg",
+      "bytes": 146138,
+      "w": 1463,
+      "h": 1000,
+      "primary": true
+    }
+  ]
+}

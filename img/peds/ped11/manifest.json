@@ -1,0 +1,42 @@
+{
+  "case": 11,
+  "topic": "Meningococcemia",
+  "search_term": "meningococcemia",
+  "fallback_term": "meningococcal sepsis",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "IMAGING",
+      "filename": "ped11_01_imaging.jpg",
+      "label": "FACT SHEET\n\nSepsis fact sheet",
+      "alt": "Sepsis fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_692842bacc87dc0a359ee53c.jpg",
+      "bytes": 155935,
+      "w": 1600,
+      "h": 909,
+      "primary": true
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped11_02_other.jpg",
+      "label": "VIDEO\n\nShock & sepsis management USMLE style question walkthrough",
+      "alt": "Shock & sepsis management USMLE style question walkthrough",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_62b41db01d4d99.94127826.jpg",
+      "bytes": 157667,
+      "w": 1600,
+      "h": 900,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped11_03_other.jpg",
+      "label": "VIDEO\n\nSepsis 101: Diagnosis and Treatment",
+      "alt": "Sepsis 101: Diagnosis and Treatment",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_6108217f8a225.jpg",
+      "bytes": 50454,
+      "w": 1600,
+      "h": 882,
+      "primary": false
+    }
+  ]
+}

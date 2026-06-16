@@ -1,0 +1,64 @@
+{
+  "case": 15,
+  "topic": "Roseola",
+  "search_term": "roseola infantum",
+  "fallback_term": "exanthem subitum",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped15_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nInfectious rashes in children",
+      "alt": "Infectious rashes in children",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_674f0b8c88e812.50471047.jpg",
+      "bytes": 155842,
+      "w": 1600,
+      "h": 832,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped15_02_imaging.jpg",
+      "label": "FACT SHEET\n\nRoseola infantum (sixth disease) fact sheet",
+      "alt": "Roseola infantum (sixth disease) fact sheet",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_69282520ede93c6cf9deee89.jpg",
+      "bytes": 131130,
+      "w": 1559,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped15_03_photo.jpg",
+      "label": "PHOTO\n\nRoseola infantum (exanthem subitum)",
+      "alt": "Roseola infantum (exanthem subitum)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_55d2e5fb3b382.jpg",
+      "bytes": 177442,
+      "w": 1600,
+      "h": 977,
+      "primary": false
+    },
+    {
+      "type": "PHOTO",
+      "filename": "ped15_04_photo.jpg",
+      "label": "PHOTO\n\nRoseola infantum (exanthem subitum)",
+      "alt": "Roseola infantum (exanthem subitum)",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5999a69466a87.jpg",
+      "bytes": 181675,
+      "w": 1528,
+      "h": 1000,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped15_05_other.jpg",
+      "label": "VIDEO\n\nChalk Talk: Pediatric rashes - Part 1",
+      "alt": "Chalk Talk: Pediatric rashes - Part 1",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_5dfa15b2d6a88.jpg",
+      "bytes": 48452,
+      "w": 1000,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}

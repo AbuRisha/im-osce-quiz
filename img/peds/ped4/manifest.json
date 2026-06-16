@@ -1,0 +1,53 @@
+{
+  "case": 4,
+  "topic": "Respiratory distress syndrome",
+  "search_term": "neonatal respiratory distress syndrome",
+  "fallback_term": "hyaline membrane disease",
+  "source": "AMBOSS",
+  "images": [
+    {
+      "type": "ILLUSTRATION",
+      "filename": "ped4_01_illustration.jpg",
+      "label": "ILLUSTRATION\n\nAlveolar collapse in surfactant deficiency",
+      "alt": "Alveolar collapse in surfactant deficiency",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_649b038d02fb78.48884520.jpg",
+      "bytes": 116587,
+      "w": 1334,
+      "h": 1000,
+      "primary": true
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped4_02_imaging.jpg",
+      "label": "X-RAY\n\nNeonatal respiratory distress syndrome",
+      "alt": "Neonatal respiratory distress syndrome",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_61d6a2bbc8dd8.jpg",
+      "bytes": 198513,
+      "w": 916,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "IMAGING",
+      "filename": "ped4_03_imaging.jpg",
+      "label": "X-RAY\n\nBronchopulmonary dysplasia",
+      "alt": "Bronchopulmonary dysplasia",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_65bbafea75f8d5.25482255.jpg",
+      "bytes": 105652,
+      "w": 1091,
+      "h": 999,
+      "primary": false
+    },
+    {
+      "type": "OTHER",
+      "filename": "ped4_04_other.jpg",
+      "label": "MICROSCOPY\n\nHyaline membranes in ARDS",
+      "alt": "Hyaline membranes in ARDS",
+      "source_url": "https://media-us.amboss.com/media/thumbs/big_58b3fa1a95046.jpg",
+      "bytes": 564174,
+      "w": 1500,
+      "h": 1000,
+      "primary": false
+    }
+  ]
+}
